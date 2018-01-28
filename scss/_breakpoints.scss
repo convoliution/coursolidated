@@ -1,0 +1,18 @@
+$small:  27rem;
+$medium: 40rem;
+$large:  64rem;
+
+@mixin breakpoint($size) {
+    @if $size == small {
+        @media only screen and (min-width: $small) { @content; }
+    }
+    @else if $size == medium {
+        @media only screen and (min-width: $medium) { @content; }
+    }
+    @else if $size == large {
+        @media only screen and (min-width: $large) { @content; }
+    }
+    @else {
+        @warn "Breakpoint mixin only supports: small, medium, large.";
+    }
+}

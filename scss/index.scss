@@ -1,0 +1,22 @@
+@import 'breakpoints';
+
+#schedule {
+    position: absolute;
+    overflow: hidden;
+}
+
+.quarter {
+    position: relative;
+    display: flex;
+    flex: none;
+    > .slot {
+        background-color: blue;
+        height: 2rem;
+        width: 4rem;
+        margin: .5rem;
+    }
+}
+
+.draggable {
+    position: relative;
+}
