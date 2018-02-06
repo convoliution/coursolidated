@@ -1,0 +1,23 @@
+@mixin transform($transformations...) {
+    -webkit-transform: #{$transformations};
+        -ms-transform: #{$transformations};
+            transform: #{$transformations};
+}
+
+@mixin rotate($angle) {
+    -webkit-transform: rotate($angle);
+        -ms-transform: rotate($angle);
+            transform: rotate($angle);
+}
+
+@mixin translateX($distance) {
+    -webkit-transform: translateX($distance);
+        -ms-transform: translateX($distance);
+            transform: translateX($distance);
+}
+
+@mixin translateY($distance) {
+    -webkit-transform: translateY($distance);
+        -ms-transform: translateY($distance);
+            transform: translateY($distance);
+}
