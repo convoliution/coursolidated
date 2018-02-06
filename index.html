@@ -7,233 +7,91 @@
         <title></title>
         <!-- totally more pragmatic than Reset -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
         <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
+        <div id="topbar">
+            <button>menu</button>
+        </div>
+        <div id="menu">
+        </div>
         <main>
             <div id="schedule">
                 <div class="year" id="1">
                     <div class="quarter fall" id="1-fall">
-                        <div class="slot" id="1-fall-1">
-                        </div>
-                        <div class="slot" id="1-fall-2">
-                        </div>
-                        <div class="slot" id="1-fall-3">
-                        </div>
-                        <div class="slot" id="1-fall-4">
-                        </div>
-                        <div class="slot" id="1-fall-5">
-                        </div>
-                        <div class="slot" id="1-fall-6">
-                        </div>
+                        <div class="quarter-label">fall</div>
+                        <div></div>
                     </div>
                     <div class="quarter winter" id="1-winter">
-                        <div class="slot" id="1-winter-1">
-                        </div>
-                        <div class="slot" id="1-winter-2">
-                        </div>
-                        <div class="slot" id="1-winter-3">
-                        </div>
-                        <div class="slot" id="1-winter-4">
-                        </div>
-                        <div class="slot" id="1-winter-5">
-                        </div>
-                        <div class="slot" id="1-winter-6">
-                        </div>
+                        <div class="quarter-label">winter</div>
+                        <div></div>
                     </div>
                     <div class="quarter spring" id="1-spring">
-                        <div class="slot" id="1-spring-1">
-                        </div>
-                        <div class="slot" id="1-spring-2">
-                        </div>
-                        <div class="slot" id="1-spring-3">
-                        </div>
-                        <div class="slot" id="1-spring-4">
-                        </div>
-                        <div class="slot" id="1-spring-5">
-                        </div>
-                        <div class="slot" id="1-spring-6">
-                        </div>
+                        <div class="quarter-label">spring</div>
+                        <div></div>
                     </div>
                 </div>
                 <div class="year" id="2">
                     <div class="quarter fall" id="2-fall">
-                        <div class="slot" id="2-fall-1">
-                        </div>
-                        <div class="slot" id="2-fall-2">
-                        </div>
-                        <div class="slot" id="2-fall-3">
-                        </div>
-                        <div class="slot" id="2-fall-4">
-                        </div>
-                        <div class="slot" id="2-fall-5">
-                        </div>
-                        <div class="slot" id="2-fall-6">
-                        </div>
+                        <div class="quarter-label">fall</div>
+                        <div></div>
                     </div>
                     <div class="quarter winter" id="2-winter">
-                        <div class="slot" id="2-winter-1">
-                        </div>
-                        <div class="slot" id="2-winter-2">
-                        </div>
-                        <div class="slot" id="2-winter-3">
-                        </div>
-                        <div class="slot" id="2-winter-4">
-                        </div>
-                        <div class="slot" id="2-winter-5">
-                        </div>
-                        <div class="slot" id="2-winter-6">
-                        </div>
+                        <div class="quarter-label">winter</div>
+                        <div></div>
                     </div>
                     <div class="quarter spring" id="2-spring">
-                        <div class="slot" id="2-spring-1">
-                        </div>
-                        <div class="slot" id="2-spring-2">
-                        </div>
-                        <div class="slot" id="2-spring-3">
-                        </div>
-                        <div class="slot" id="2-spring-4">
-                        </div>
-                        <div class="slot" id="2-spring-5">
-                        </div>
-                        <div class="slot" id="2-spring-6">
-                        </div>
+                        <div class="quarter-label">spring</div>
+                        <div></div>
                     </div>
                 </div>
                 <div class="year" id="3">
                     <div class="quarter fall" id="3-fall">
-                        <div class="slot" id="3-fall-1">
-                        </div>
-                        <div class="slot" id="3-fall-2">
-                        </div>
-                        <div class="slot" id="3-fall-3">
-                        </div>
-                        <div class="slot" id="3-fall-4">
-                        </div>
-                        <div class="slot" id="3-fall-5">
-                        </div>
-                        <div class="slot" id="3-fall-6">
-                        </div>
+                        <div class="quarter-label">fall</div>
+                        <div></div>
                     </div>
                     <div class="quarter winter" id="3-winter">
-                        <div class="slot" id="3-winter-1">
-                        </div>
-                        <div class="slot" id="3-winter-2">
-                        </div>
-                        <div class="slot" id="3-winter-3">
-                        </div>
-                        <div class="slot" id="3-winter-4">
-                        </div>
-                        <div class="slot" id="3-winter-5">
-                        </div>
-                        <div class="slot" id="3-winter-6">
-                        </div>
+                        <div class="quarter-label">winter</div>
+                        <div></div>
                     </div>
                     <div class="quarter spring" id="3-spring">
-                        <div class="slot" id="3-spring-1">
-                        </div>
-                        <div class="slot" id="3-spring-2">
-                        </div>
-                        <div class="slot" id="3-spring-3">
-                        </div>
-                        <div class="slot" id="3-spring-4">
-                        </div>
-                        <div class="slot" id="3-spring-5">
-                        </div>
-                        <div class="slot" id="3-spring-6">
-                        </div>
+                        <div class="quarter-label">spring</div>
+                        <div></div>
                     </div>
                 </div>
                 <div class="year" id="4">
                     <div class="quarter fall" id="4-fall">
-                        <div class="slot" id="4-fall-1">
-                        </div>
-                        <div class="slot" id="4-fall-2">
-                        </div>
-                        <div class="slot" id="4-fall-3">
-                        </div>
-                        <div class="slot" id="4-fall-4">
-                        </div>
-                        <div class="slot" id="4-fall-5">
-                        </div>
-                        <div class="slot" id="4-fall-6">
-                        </div>
+                        <div class="quarter-label">fall</div>
+                        <div></div>
                     </div>
                     <div class="quarter winter" id="4-winter">
-                        <div class="slot" id="4-winter-1">
-                        </div>
-                        <div class="slot" id="4-winter-2">
-                        </div>
-                        <div class="slot" id="4-winter-3">
-                        </div>
-                        <div class="slot" id="4-winter-4">
-                        </div>
-                        <div class="slot" id="4-winter-5">
-                        </div>
-                        <div class="slot" id="4-winter-6">
-                        </div>
+                        <div class="quarter-label">winter</div>
+                        <div></div>
                     </div>
                     <div class="quarter spring" id="4-spring">
-                        <div class="slot" id="4-spring-1">
-                        </div>
-                        <div class="slot" id="4-spring-2">
-                        </div>
-                        <div class="slot" id="4-spring-3">
-                        </div>
-                        <div class="slot" id="4-spring-4">
-                        </div>
-                        <div class="slot" id="4-spring-5">
-                        </div>
-                        <div class="slot" id="4-spring-6">
-                        </div>
+                        <div class="quarter-label">spring</div>
+                        <div></div>
                     </div>
                 </div>
                 <div class="year" id="4">
                     <div class="quarter fall" id="5-fall">
-                        <div class="slot" id="5-fall-1">
-                        </div>
-                        <div class="slot" id="5-fall-2">
-                        </div>
-                        <div class="slot" id="5-fall-3">
-                        </div>
-                        <div class="slot" id="5-fall-4">
-                        </div>
-                        <div class="slot" id="5-fall-5">
-                        </div>
-                        <div class="slot" id="5-fall-6">
-                        </div>
+                        <div class="quarter-label">fall</div>
+                        <div></div>
                     </div>
                     <div class="quarter winter" id="5-winter">
-                        <div class="slot" id="5-winter-1">
-                        </div>
-                        <div class="slot" id="5-winter-2">
-                        </div>
-                        <div class="slot" id="5-winter-3">
-                        </div>
-                        <div class="slot" id="5-winter-4">
-                        </div>
-                        <div class="slot" id="5-winter-5">
-                        </div>
-                        <div class="slot" id="5-winter-6">
-                        </div>
+                        <div class="quarter-label">winter</div>
+                        <div></div>
                     </div>
                     <div class="quarter spring" id="5-spring">
-                        <div class="slot" id="5-spring-1">
-                        </div>
-                        <div class="slot" id="5-spring-2">
-                        </div>
-                        <div class="slot" id="5-spring-3">
-                        </div>
-                        <div class="slot" id="5-spring-4">
-                        </div>
-                        <div class="slot" id="5-spring-5">
-                        </div>
-                        <div class="slot" id="5-spring-6">
-                        </div>
+                        <div class="quarter-label">spring</div>
+                        <div></div>
                     </div>
                 </div>
             </div>
         </main>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/index.js"></script>
     </body>
 </html>
