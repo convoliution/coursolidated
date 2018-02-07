@@ -48,7 +48,7 @@ main {
     grid-row-gap: 1rem; }
     main #schedule > .year {
       display: grid;
-      grid-template-columns: 1rem 1rem 1fr;
+      grid-template-columns: repeat(2, 2rem) 1fr;
       grid-template-rows: repeat(3, 1fr); }
       main #schedule > .year > .quarter {
         height: 6em;
