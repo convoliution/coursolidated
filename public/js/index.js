@@ -1,12 +1,12 @@
 // menu animation
 $(function() {
-    var menuWidth = $(window).width()/3;
     var menuAnimTime = 250;
+    var menuWidth = $('#menu').width();
     $('#topbar > button').prop('visible', false);
     $('#topbar > button').tap(function() {
         if (!$('#topbar > button').prop('visible')) {
             $('#menu').animate({
-                width: menuWidth
+                left: 0
             }, menuAnimTime);
             $('main').animate({
                 marginLeft: menuWidth
@@ -14,7 +14,7 @@ $(function() {
             $('#topbar > button').prop('visible', true);
         } else {
             $('#menu').animate({
-                width: 0
+                left: -$('#menu').width()
             }, menuAnimTime);
             $('main').animate({
                 marginLeft: 0

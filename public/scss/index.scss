@@ -36,18 +36,20 @@ html {
 }
 
 #menu {
+    $width: 33vw;
     position: fixed;
     z-index: 1;
     @include calc(height, '100vh - #{$navbar-height} - #{$navbar-border-height}');
-    width: 0;
+    width: $width;
     @include calc(top, '#{$navbar-height} + #{$navbar-border-height}');
+    left: -$width;
 
     display: grid;
     grid-template-rows: repeat(6, 1fr);
     grid-row-gap: 2px;
 
     background-color: black;
-    > div {
+    > button {
         background-color: white;
     }
 
