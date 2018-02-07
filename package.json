@@ -12,11 +12,14 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "connect": "^3.6.5",
     "express": "3.x",
-    "express3-handlebars": "*",
+    "express-handlebars": "^3.0.0",
+    "minimatch": "^3.0.4",
     "mongodb": "*",
     "mongoose": "*",
-    "nodemon": "^1.14.12"
+    "nodemon": "^1.14.12",
+    "uglify-js": "^3.3.9"
   },
   "engines": {
     "node": "0.10.x"
