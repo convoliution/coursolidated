@@ -1,6 +1,6 @@
 // menu animation
 $(function() {
-    var menuWidth = '16rem';
+    var menuWidth = $(window).width()/3;
     var menuAnimTime = 250;
     $('#topbar > button').prop('visible', false);
     $('#topbar > button').tap(function() {

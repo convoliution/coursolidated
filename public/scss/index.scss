@@ -4,11 +4,19 @@
 @import 'sizes';
 @import 'calc';
 
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 #topbar {
     position: fixed;
     z-index: 1;
     height: $navbar-height;
     width: 100%;
+
     display: grid;
     grid-template-columns: $navbar-height 1fr;
 
@@ -19,7 +27,8 @@
     > button {
         height: $menu-button-size;
         width: $menu-button-size;
-        margin: 0;
+        margin: 0; // override jQuery Mobile
+
         grid-column: 1 / 2;
         justify-self: center;
         align-self: center;
@@ -32,6 +41,15 @@
     @include calc(height, '100vh - #{$navbar-height} - #{$navbar-border-height}');
     width: 0;
     @include calc(top, '#{$navbar-height} + #{$navbar-border-height}');
+
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-row-gap: 2px;
+
+    background-color: black;
+    > div {
+        background-color: white;
+    }
 }
 
 main {
@@ -39,16 +57,17 @@ main {
 
     #schedule {
         display: grid;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(5, 1fr);
         grid-row-gap: 1rem;
 
         > .year {
             display: grid;
             grid-template-columns: 1rem 1rem 1fr ;
-            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-rows: repeat(3, 1fr);
 
             > .quarter {
                 height: 6em;
+
                 grid-column: 2 / 4;
                 &.fall {
                     grid-row: 1 / 2;
@@ -64,8 +83,10 @@ main {
                 }
 
                 > .quarter-label {
-                    grid-column: 2 / 3;
                     width: 4rem;
+
+                    grid-column: 2 / 3;
+
                     @include transform(rotate(270deg));
                     text-align: center;
                 }
