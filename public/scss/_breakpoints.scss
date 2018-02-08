@@ -1,18 +1,30 @@
-$small:  27rem;
-$medium: 40rem;
-$large:  64rem;
+$height-small:  36rem;
+$height-medium: 0;
+$height-large:  0;
+$width-small:  27rem;
+$width-medium: 40rem;
+$width-large:  60rem;
 
 @mixin breakpoint($size) {
-    @if $size == small {
-        @media only screen and (min-width: $small) { @content; }
+    @if $size == "height-small" {
+        @media only screen and (min-height: $height-small) { @content; }
     }
-    @else if $size == medium {
-        @media only screen and (min-width: $medium) { @content; }
+    @else if $size == "height-medium" {
+        @media only screen and (min-height: $height-medium) { @content; }
     }
-    @else if $size == large {
-        @media only screen and (min-width: $large) { @content; }
+    @else if $size == "height-large" {
+        @media only screen and (min-height: $height-large) { @content; }
+    }
+    @else if $size == "width-small" {
+        @media only screen and (min-width: $width-small) { @content; }
+    }
+    @else if $size == "width-medium" {
+        @media only screen and (min-width: $width-medium) { @content; }
+    }
+    @else if $size == "width-large" {
+        @media only screen and (min-width: $width-large) { @content; }
     }
     @else {
-        @warn "Breakpoint mixin only supports: small, medium, large.";
+        @warn "Breakpoint mixin only supports: height-small, height-medium, height-large, width-small, width-medium, width-large.";
     }
 }
