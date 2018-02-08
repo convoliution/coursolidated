@@ -63,16 +63,14 @@ main {
       grid-row-gap: 2px; }
       main #schedule > .year > .quarter {
         height: 6em;
+        border: 2px solid black;
         grid-column: 2 / 4; }
         main #schedule > .year > .quarter.fall {
-          grid-row: 1 / 2;
-          background-color: #182B49; }
+          grid-row: 1 / 2; }
         main #schedule > .year > .quarter.winter {
-          grid-row: 2 / 3;
-          background-color: #006A96; }
+          grid-row: 2 / 3; }
         main #schedule > .year > .quarter.spring {
-          grid-row: 3 / 4;
-          background-color: #C69214; }
+          grid-row: 3 / 4; }
         main #schedule > .year > .quarter > .quarter-label {
           width: 4rem;
           grid-column: 2 / 3;

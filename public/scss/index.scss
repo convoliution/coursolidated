@@ -79,19 +79,20 @@ main {
 
             > .quarter {
                 height: 6em;
+                border: 2px solid black;
 
                 grid-column: 2 / 4;
                 &.fall {
                     grid-row: 1 / 2;
-                    background-color: $navy;
+                    //background-color: $navy;
                 }
                 &.winter {
                     grid-row: 2 / 3;
-                    background-color: $blue;
+                    //background-color: $blue;
                 }
                 &.spring {
                     grid-row: 3 / 4;
-                    background-color: $gold;
+                    //background-color: $gold;
                 }
 
                 > .quarter-label {
