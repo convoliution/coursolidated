@@ -14,35 +14,41 @@ html {
 #topbar {
     position: fixed;
     z-index: 1;
-    height: $navbar-height;
+    height: $topbar-height;
     width: 100%;
 
     display: grid;
-    grid-template-columns: $navbar-height 1fr;
+    grid-template-columns: $topbar-height 1fr;
 
-    border-bottom: $navbar-border-height solid $gray;
+    border-bottom: $topbar-border-height solid $gray;
 
-    background-color: $lightest-gray;
+    > #menu-top {
+        position: fixed;
+        @include calc(height, '#{$topbar-height} - #{$topbar-border-height}');
+        width: $menu-width;
+        @include calc(left, '-#{$menu-width} + #{$topbar-height}');
 
-    > button {
-        height: $menu-button-size;
-        width: $menu-button-size;
-        margin: 0; // override jQuery Mobile
+        display: grid;
+        grid-template-columns: $topbar-height 1fr $topbar-height;
 
-        grid-column: 1 / 2;
-        justify-self: center;
-        align-self: center;
+        > button {
+            height: $menu-button-size;
+            width: $menu-button-size;
+
+            grid-column: 3 / 4;
+            justify-self: center;
+            align-self: center;
+        }
     }
 }
 
 #menu {
-    $width: 33vw;
     position: fixed;
     z-index: 1;
-    @include calc(height, '100vh - #{$navbar-height} - #{$navbar-border-height}');
-    width: $width;
-    @include calc(top, '#{$navbar-height} + #{$navbar-border-height}');
-    left: -$width;
+    @include calc(height, '100vh - #{$topbar-height}');
+    width: $menu-width;
+    @include calc(top, '#{$topbar-height}');
+    left: -$menu-width;
 
     display: grid;
     grid-template-rows: repeat(6, 1fr);
@@ -57,17 +63,18 @@ html {
 }
 
 main {
-    padding-top: $navbar-height;
+    padding-top: $topbar-height;
 
     #schedule {
         display: grid;
         grid-template-rows: repeat(5, 1fr);
-        grid-row-gap: 1rem;
+        grid-row-gap: 2px;
 
         > .year {
             display: grid;
             grid-template-columns: repeat(2, 2rem) 1fr ;
             grid-template-rows: repeat(3, 1fr);
+            grid-row-gap: 2px;
 
             > .quarter {
                 height: 6em;
@@ -91,6 +98,7 @@ main {
 
                     grid-column: 2 / 3;
 
+                    @include transform-origin(50%, 50%);
                     @include transform(rotate(270deg));
                     text-align: center;
                 }

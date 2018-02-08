@@ -1,25 +1,30 @@
 // menu animation
 $(function() {
     var menuAnimTime = 250;
-    $('#topbar > button').prop('visible', false);
-    $('#topbar > button').tap(function() {
-        var menuWidth = $('#menu').width();
-        if (!$('#topbar > button').prop('visible')) {
+    $('#menu-top > button').prop('visible', false);
+    $('#menu-top > button').tap(function() {
+        if (!$('#menu').prop('visible')) {
             $('#menu').animate({
                 left: 0
             }, menuAnimTime);
-            $('main').animate({
-                marginLeft: menuWidth
+            $('#menu-top').animate({
+                left: 0
             }, menuAnimTime);
-            $('#topbar > button').prop('visible', true);
+            $('main').animate({
+                marginLeft: $('#menu').width()
+            }, menuAnimTime);
+            $('#menu').prop('visible', true);
         } else {
             $('#menu').animate({
-                left: -menuWidth
+                left: -$('#menu').width()
+            }, menuAnimTime);
+            $('#menu-top').animate({
+                left: -$('#menu').width() + $('#topbar').outerHeight()
             }, menuAnimTime);
             $('main').animate({
                 marginLeft: 0
             }, menuAnimTime);
-            $('#topbar > button').prop('visible', false);
+            $('#menu').prop('visible', false);
         }
     });
 });
