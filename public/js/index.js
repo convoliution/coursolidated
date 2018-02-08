@@ -1,3 +1,8 @@
+$(function() {
+    // hide jQuery Mobile loading msg
+    $.mobile.loading().hide();
+});
+
 // menu animation
 $(function() {
     let menuAnimTime = 250;
