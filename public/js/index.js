@@ -19,10 +19,10 @@ $(function() {
         $(menuID).animate({
             left: 0
         }, menuAnimTime);
-        $('main').animate({
-            marginLeft: $(menuID).width()
-        }, menuAnimTime);
         if (menuID === '#main-menu') {
+            $('main').animate({
+                marginLeft: $(menuID).width()
+            }, menuAnimTime);
             $('#menu-top').animate({
                 left: 0
             }, menuAnimTime);
@@ -33,10 +33,10 @@ $(function() {
         $(menuID).animate({
             left: -$(menuID).width()
         }, menuAnimTime);
-        $('main').animate({
-            marginLeft: 0
-        }, menuAnimTime);
         if (menuID === '#main-menu') {
+            $('main').animate({
+                marginLeft: 0
+            }, menuAnimTime);
             $('#menu-top').animate({
                 left: -$(menuID).width() + $('#topbar').outerHeight()
             }, menuAnimTime);
