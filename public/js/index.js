@@ -1,6 +1,6 @@
 // menu animation
 $(function() {
-    var menuAnimTime = 250;
+    let menuAnimTime = 250;
     $('#menu-top > button').tap(function() {
         menuID = '#main-menu';
         if (!$(menuID).prop('visible')) {
