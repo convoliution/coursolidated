@@ -1,30 +1,41 @@
 // menu animation
 $(function() {
     var menuAnimTime = 250;
-    $('#menu-top > button').prop('visible', false);
     $('#menu-top > button').tap(function() {
-        if (!$('#menu').prop('visible')) {
-            $('#menu').animate({
-                left: 0
-            }, menuAnimTime);
-            $('#menu-top').animate({
-                left: 0
-            }, menuAnimTime);
-            $('main').animate({
-                marginLeft: $('#menu').width()
-            }, menuAnimTime);
-            $('#menu').prop('visible', true);
+        menuID = '#main-menu';
+        if (!$(menuID).prop('visible')) {
+            showMenu(menuID);
         } else {
-            $('#menu').animate({
-                left: -$('#menu').width()
-            }, menuAnimTime);
-            $('#menu-top').animate({
-                left: -$('#menu').width() + $('#topbar').outerHeight()
-            }, menuAnimTime);
-            $('main').animate({
-                marginLeft: 0
-            }, menuAnimTime);
-            $('#menu').prop('visible', false);
+            hideMenu(menuID);
         }
     });
+
+    function showMenu(menuID) {
+        $(menuID).animate({
+            left: 0
+        }, menuAnimTime);
+        $('main').animate({
+            marginLeft: $(menuID).width()
+        }, menuAnimTime);
+        if (menuID === '#main-menu') {
+            $('#menu-top').animate({
+                left: 0
+            }, menuAnimTime);
+        }
+        $(menuID).prop('visible', true);
+    }
+    function hideMenu(menuID) {
+        $(menuID).animate({
+            left: -$(menuID).width()
+        }, menuAnimTime);
+        $('main').animate({
+            marginLeft: 0
+        }, menuAnimTime);
+        if (menuID === '#main-menu') {
+            $('#menu-top').animate({
+                left: -$(menuID).width() + $('#topbar').outerHeight()
+            }, menuAnimTime);
+        }
+        $(menuID).prop('visible', false);
+    }
 });

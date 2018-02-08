@@ -43,7 +43,7 @@ html {
     }
 }
 
-#menu {
+.menu {
     position: fixed;
     z-index: 1;
     @include calc(height, '100vh - #{$topbar-height}');
@@ -51,16 +51,19 @@ html {
     @include calc(top, '#{$topbar-height}');
     left: -$menu-width;
 
-    display: grid;
-    grid-template-rows: repeat(6, 1fr);
-    grid-row-gap: 2px;
-
     background-color: black;
-    > button {
-        background-color: white;
-    }
 
     overflow-x: hidden;
+
+    &#main-menu {
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        grid-row-gap: 2px;
+        
+        > button {
+            background-color: white;
+        }
+    }
 }
 
 main {
