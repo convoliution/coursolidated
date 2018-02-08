@@ -7,29 +7,29 @@ html {
 #topbar {
   position: fixed;
   z-index: 5;
-  height: 10vh;
+  height: 12vh;
   width: 100vw;
   display: grid;
-  grid-template-columns: 10vh 1fr;
+  grid-template-columns: 12vh 1fr;
   background-color: white;
   border-bottom: 2px solid #747678; }
   #topbar > #menu-top {
     position: fixed;
-    height: -moz-calc(10vh - 2px);
-    height: -webkit-calc(10vh - 2px);
-    height: calc(10vh - 2px);
+    height: -moz-calc(12vh - 2px);
+    height: -webkit-calc(12vh - 2px);
+    height: calc(12vh - 2px);
     width: 33vw;
-    left: -moz-calc(-33vw + 10vh);
-    left: -webkit-calc(-33vw + 10vh);
-    left: calc(-33vw + 10vh);
+    left: -moz-calc(-33vw + 12vh);
+    left: -webkit-calc(-33vw + 12vh);
+    left: calc(-33vw + 12vh);
     display: grid;
-    grid-template-columns: 10vh 1fr 10vh; }
+    grid-template-columns: 12vh 1fr 12vh; }
     @media only screen and (min-width: 60rem) {
       #topbar > #menu-top {
         width: 20rem;
-        left: -moz-calc(-20rem + 10vh);
-        left: -webkit-calc(-20rem + 10vh);
-        left: calc(-20rem + 10vh); } }
+        left: -moz-calc(-20rem + 12vh);
+        left: -webkit-calc(-20rem + 12vh);
+        left: calc(-20rem + 12vh); } }
     #topbar > #menu-top > button {
       height: 80%;
       width: 80%;
@@ -40,12 +40,12 @@ html {
 .menu {
   position: fixed;
   z-index: 1;
-  height: -moz-calc(100vh - 10vh);
-  height: -webkit-calc(100vh - 10vh);
-  height: calc(100vh - 10vh);
-  top: -moz-calc(10vh);
-  top: -webkit-calc(10vh);
-  top: calc(10vh);
+  height: -moz-calc(100vh - 12vh);
+  height: -webkit-calc(100vh - 12vh);
+  height: calc(100vh - 12vh);
+  top: -moz-calc(12vh);
+  top: -webkit-calc(12vh);
+  top: calc(12vh);
   width: 33vw;
   left: -33vw;
   background-color: black;
@@ -62,7 +62,7 @@ html {
       background-color: white; }
 
 main {
-  padding-top: 10vh; }
+  padding-top: 12vh; }
   main #schedule {
     display: grid;
     grid-template-rows: repeat(5, 1fr); }
