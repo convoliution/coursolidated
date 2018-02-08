@@ -15,7 +15,7 @@ html {
     position: fixed;
     z-index: 5;
     height: $topbar-height;
-    width: 100%;
+    width: 100vw;
 
     display: grid;
     grid-template-columns: $topbar-height 1fr;
@@ -77,11 +77,22 @@ main {
             grid-template-rows: repeat(3, 1fr);
             grid-row-gap: 2px;
 
+            > .quarter-label {
+                width: 4rem;
+
+                grid-column: 2 / 3;
+                justify-self: center;
+                align-self: center;
+
+                @include transform(rotate(270deg));
+                text-align: center;
+            }
+
             > .quarter {
                 height: 6em;
                 border: 2px solid black;
 
-                grid-column: 2 / 4;
+                grid-column: 3 / 4;
                 &.fall {
                     grid-row: 1 / 2;
                     //background-color: $navy;
@@ -93,16 +104,6 @@ main {
                 &.spring {
                     grid-row: 3 / 4;
                     //background-color: $gold;
-                }
-
-                > .quarter-label {
-                    width: 4rem;
-
-                    grid-column: 2 / 3;
-
-                    @include transform-origin(50%, 50%);
-                    @include transform(rotate(270deg));
-                    text-align: center;
                 }
             }
         }

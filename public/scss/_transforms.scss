@@ -21,9 +21,3 @@
         -ms-transform: translateY($distance);
             transform: translateY($distance);
 }
-
-@mixin transform-origin($x-offset, $y-offset) {
-    -webkit-transform-origin: #{$x-offset} #{$y-offset};
-       -moz-transform-origin: #{$x-offset} #{$y-offset};
-            transform-origin: #{$x-offset} #{$y-offset};
-}

@@ -8,7 +8,7 @@ html {
   position: fixed;
   z-index: 5;
   height: 4rem;
-  width: 100%;
+  width: 100vw;
   display: grid;
   grid-template-columns: 4rem 1fr;
   background-color: white;
@@ -61,25 +61,24 @@ main {
       grid-template-columns: repeat(2, 2rem) 1fr;
       grid-template-rows: repeat(3, 1fr);
       grid-row-gap: 2px; }
+      main #schedule > .year > .quarter-label {
+        width: 4rem;
+        grid-column: 2 / 3;
+        justify-self: center;
+        align-self: center;
+        -webkit-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+        transform: rotate(270deg);
+        text-align: center; }
       main #schedule > .year > .quarter {
         height: 6em;
         border: 2px solid black;
-        grid-column: 2 / 4; }
+        grid-column: 3 / 4; }
         main #schedule > .year > .quarter.fall {
           grid-row: 1 / 2; }
         main #schedule > .year > .quarter.winter {
           grid-row: 2 / 3; }
         main #schedule > .year > .quarter.spring {
           grid-row: 3 / 4; }
-        main #schedule > .year > .quarter > .quarter-label {
-          width: 4rem;
-          grid-column: 2 / 3;
-          -webkit-transform-origin: 50% 50%;
-          -moz-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-          -webkit-transform: rotate(270deg);
-          -ms-transform: rotate(270deg);
-          transform: rotate(270deg);
-          text-align: center; }
 
 /*# sourceMappingURL=index.css.map */
