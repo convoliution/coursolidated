@@ -14,28 +14,23 @@ html {
 #topbar {
     position: fixed;
     z-index: 5;
-    height: $topbar-height;
+    height: $tile-height;
     width: 100vw;
 
     display: grid;
-    grid-template-columns: $topbar-height 1fr;
+    grid-template-columns: $tile-height 1fr;
 
     background-color: white; // prevent transparency
     border-bottom: $topbar-border-height solid $gray;
 
     > #menu-top {
         position: fixed;
-        @include calc(height, '#{$topbar-height} - #{$topbar-border-height}');
-
         width: $menu-width;
-        @include calc(left, '-#{$menu-width} + #{$topbar-height}');
-        @include breakpoint("width-large") {
-            width: $menu-width-largept;
-            @include calc(left, '-#{$menu-width-largept} + #{$topbar-height}');
-        }
+        @include calc(height, '#{$tile-height} - #{$topbar-border-height}');
+        @include calc(left, '-#{$menu-width} + #{$tile-height}');
 
         display: grid;
-        grid-template-columns: $topbar-height 1fr $topbar-height;
+        grid-template-columns: $tile-height 1fr $tile-height;
 
         > button {
             height: $menu-button-size;
@@ -51,15 +46,10 @@ html {
 .menu {
     position: fixed;
     z-index: 1;
-    @include calc(height, '100vh - #{$topbar-height}');
-    @include calc(top, '#{$topbar-height}');
-
+    @include calc(height, '100vh - #{$tile-height}');
+    @include calc(top, '#{$tile-height}');
     width: $menu-width;
     left: -$menu-width;
-    @include breakpoint("width-large") {
-        width: $menu-width-largept;
-        left: -$menu-width-largept;
-    }
 
     background-color: black;
 
@@ -77,7 +67,7 @@ html {
 }
 
 main {
-    padding-top: $topbar-height;
+    padding-top: $tile-height;
 
     #schedule {
         display: grid;

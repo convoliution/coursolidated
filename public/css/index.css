@@ -15,21 +15,15 @@ html {
   border-bottom: 2px solid #747678; }
   #topbar > #menu-top {
     position: fixed;
+    width: 33vw;
     height: -moz-calc(12vh - 2px);
     height: -webkit-calc(12vh - 2px);
     height: calc(12vh - 2px);
-    width: 33vw;
     left: -moz-calc(-33vw + 12vh);
     left: -webkit-calc(-33vw + 12vh);
     left: calc(-33vw + 12vh);
     display: grid;
     grid-template-columns: 12vh 1fr 12vh; }
-    @media only screen and (min-width: 60rem) {
-      #topbar > #menu-top {
-        width: 20rem;
-        left: -moz-calc(-20rem + 12vh);
-        left: -webkit-calc(-20rem + 12vh);
-        left: calc(-20rem + 12vh); } }
     #topbar > #menu-top > button {
       height: 80%;
       width: 80%;
@@ -50,10 +44,6 @@ html {
   left: -33vw;
   background-color: black;
   overflow-x: hidden; }
-  @media only screen and (min-width: 60rem) {
-    .menu {
-      width: 20rem;
-      left: -20rem; } }
   .menu#main-menu {
     display: grid;
     grid-template-rows: repeat(6, 1fr);
