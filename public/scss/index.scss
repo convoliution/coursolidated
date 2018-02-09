@@ -14,7 +14,13 @@ html {
 .menu {
     position: absolute;
     height: 100vh;
-    width: $menu-width;
+    width: $menu-width-small;
+    @include breakpoint(small) {
+        width: $menu-width-medium;
+    }
+    @include breakpoint(medium) {
+        width: $menu-width-large;
+    }
 
     background-color: white;
     border-right: 2px solid black;
@@ -37,7 +43,13 @@ html {
     }
 
     > .menu-content {
-        @include calc(width, '#{$menu-width} - #{$tile-height} - #{$border-size}');
+        @include calc(width, '#{$menu-width-small} - #{$tile-height} - #{$border-size}');
+        @include breakpoint(small) {
+            @include calc(width, '#{$menu-width-medium} - #{$tile-height} - #{$border-size}');
+        }
+        @include breakpoint(medium) {
+            @include calc(width, '#{$menu-width-large} - #{$tile-height} - #{$border-size}');
+        }
 
         > button {
             height: $tile-height;
@@ -47,12 +59,24 @@ html {
     }
 
     &#main-menu {
-        @include calc(left, '-#{$menu-width} + #{$tile-height} + #{$border-size}');
-        z-index: 1;
+        @include calc(left, '-#{$menu-width-small} + #{$tile-height} + #{$border-size}');
+        @include breakpoint(small) {
+            @include calc(left, '-#{$menu-width-medium} + #{$tile-height} + #{$border-size}');
+        }
+        @include breakpoint(medium) {
+            @include calc(left, '-#{$menu-width-large} + #{$tile-height} + #{$border-size}');
+        }
+        z-index: 2;
     }
     &#profile-menu, &#majors-menu, &#minors-menu, &#gened-menu, &#catalog-menu, &#toadd-menu, &#settings-menu {
-        left: -$menu-width;
-        z-index: 2;
+        left: -$menu-width-small;
+        @include breakpoint(small) {
+            left: -$menu-width-medium;
+        }
+        @include breakpoint(medium) {
+            left: -$menu-width-large;
+        }
+        z-index: 3;
     }
 }
 
@@ -77,14 +101,14 @@ main {
             display: grid;
             grid-template-columns: repeat(2, 2rem) 1fr ;
             grid-template-rows: repeat(3, 1fr);
-            grid-row-gap: 2px;
+            grid-gap: $border-size;
 
-            border-width: 2px 0;
+            border-width: $border-size 0;
             border-style: solid;
             border-color: $gray;
 
             > .year-label {
-                width: 4rem;
+                width: 8rem;
 
                 grid-column: 1 / 2;
                 grid-row: 1 / 4;
@@ -108,7 +132,6 @@ main {
 
             > .quarter {
                 height: 6em;
-                border: 2px solid black;
 
                 grid-column: 3 / 4;
                 &.fall {

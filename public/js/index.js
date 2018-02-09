@@ -5,10 +5,9 @@ $(function() {
 
 // menu animation
 $(function() {
+    let animTime = 250;
     $('.menu-top > button').tap(function() {
-        let animTime = 250;
         let menuID = "#" + $(this).parent().parent().attr('id');
-        console.log(menuID);
         if (!$(menuID).prop('visible')) {
             showMenu(menuID, animTime);
         } else {
@@ -16,7 +15,8 @@ $(function() {
         }
     });
     $('#main-menu > .menu-content > button').tap(function() {
-        console.log($(this).text());
+        let menuID = "#" + $(this).text().replace(/\s/g, '').toLowerCase() + "-menu";
+        showMenu(menuID, animTime);
     });
 });
 function showMenu(menuID, animTime) {
