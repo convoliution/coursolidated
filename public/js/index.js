@@ -27,6 +27,7 @@ function showMenu(menuID, animTime) {
         $('#main-menu > .menu-content').animate({
             width: $(menuID).width()
         }, animTime);
+        $('#main-menu > .menu-top > button').text('<');
     }
     $(menuID).animate({
         left: 0
@@ -44,6 +45,7 @@ function hideMenu(menuID, animTime) {
         $('#main-menu > .menu-content').animate({
             width: $(menuID).width() - $('#topbar').outerHeight()
         }, animTime);
+        $('#main-menu > .menu-top > button').text('>');
     } else {
         $(menuID).animate({
             left: -$(menuID).width()
