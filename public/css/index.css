@@ -4,59 +4,54 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
-#topbar {
-  position: fixed;
-  z-index: 5;
-  height: 12vh;
-  width: 100vw;
-  display: grid;
-  grid-template-columns: 12vh 1fr;
+.menu {
+  position: absolute;
+  height: 100vh;
+  width: 33vw;
   background-color: white;
-  border-bottom: 2px solid #747678; }
-  #topbar > #menu-top {
-    position: fixed;
-    width: 33vw;
-    height: -moz-calc(12vh - 2px);
-    height: -webkit-calc(12vh - 2px);
-    height: calc(12vh - 2px);
-    left: -moz-calc(-33vw + 12vh);
-    left: -webkit-calc(-33vw + 12vh);
-    left: calc(-33vw + 12vh);
+  border-right: 2px solid black; }
+  .menu > .menu-top {
+    height: 12vh;
+    width: 100%;
     display: grid;
     grid-template-columns: 12vh 1fr 12vh; }
-    #topbar > #menu-top > button {
+    .menu > .menu-top > button {
       height: 80%;
       width: 80%;
       grid-column: 3 / 4;
       justify-self: center;
       align-self: center; }
-
-.menu {
-  position: fixed;
-  z-index: 1;
-  height: -moz-calc(100vh - 12vh);
-  height: -webkit-calc(100vh - 12vh);
-  height: calc(100vh - 12vh);
-  top: -moz-calc(12vh);
-  top: -webkit-calc(12vh);
-  top: calc(12vh);
-  width: 33vw;
-  left: -33vw;
-  background-color: black;
-  overflow-x: hidden; }
-  .menu#main-menu {
-    display: grid;
-    grid-template-rows: repeat(6, 1fr);
-    grid-row-gap: 2px; }
-    .menu#main-menu > button {
+  .menu > .menu-content {
+    width: -moz-calc(33vw - 12vh - 2px);
+    width: -webkit-calc(33vw - 12vh - 2px);
+    width: calc(33vw - 12vh - 2px); }
+    .menu > .menu-content > button {
+      height: 12vh;
+      width: 100%;
       background-color: white; }
+  .menu#main-menu {
+    left: -moz-calc(-33vw + 12vh + 2px);
+    left: -webkit-calc(-33vw + 12vh + 2px);
+    left: calc(-33vw + 12vh + 2px);
+    z-index: 1; }
+  .menu#profile-menu, .menu#majors-menu, .menu#minors-menu, .menu#gened-menu, .menu#catalog-menu, .menu#toadd-menu, .menu#settings-menu {
+    left: -33vw;
+    z-index: 2; }
 
 main {
-  padding-top: 12vh; }
-  main #schedule {
+  height: 100vh;
+  margin-left: 12vh; }
+  main > #topbar {
+    height: 12vh;
+    border-bottom: 2px solid black; }
+  main > #schedule {
+    height: -moz-calc(100% - 12vh);
+    height: -webkit-calc(100% - 12vh);
+    height: calc(100% - 12vh);
+    overflow-y: scroll;
     display: grid;
     grid-template-rows: repeat(5, 1fr); }
-    main #schedule > .year {
+    main > #schedule > .year {
       display: grid;
       grid-template-columns: repeat(2, 2rem) 1fr;
       grid-template-rows: repeat(3, 1fr);
@@ -64,7 +59,7 @@ main {
       border-width: 2px 0;
       border-style: solid;
       border-color: #747678; }
-      main #schedule > .year > .year-label {
+      main > #schedule > .year > .year-label {
         width: 4rem;
         grid-column: 1 / 2;
         grid-row: 1 / 4;
@@ -74,7 +69,7 @@ main {
         -ms-transform: rotate(270deg);
         transform: rotate(270deg);
         text-align: center; }
-      main #schedule > .year > .quarter-label {
+      main > #schedule > .year > .quarter-label {
         width: 4rem;
         grid-column: 2 / 3;
         justify-self: center;
@@ -83,15 +78,15 @@ main {
         -ms-transform: rotate(270deg);
         transform: rotate(270deg);
         text-align: center; }
-      main #schedule > .year > .quarter {
+      main > #schedule > .year > .quarter {
         height: 6em;
         border: 2px solid black;
         grid-column: 3 / 4; }
-        main #schedule > .year > .quarter.fall {
+        main > #schedule > .year > .quarter.fall {
           grid-row: 1 / 2; }
-        main #schedule > .year > .quarter.winter {
+        main > #schedule > .year > .quarter.winter {
           grid-row: 2 / 3; }
-        main #schedule > .year > .quarter.spring {
+        main > #schedule > .year > .quarter.spring {
           grid-row: 3 / 4; }
 
 /*# sourceMappingURL=index.css.map */

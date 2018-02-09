@@ -5,42 +5,49 @@ $(function() {
 
 // menu animation
 $(function() {
-    let menuAnimTime = 250;
-    $('#menu-top > button').tap(function() {
-        menuID = '#main-menu';
+    $('.menu-top > button').tap(function() {
+        let animTime = 250;
+        let menuID = "#" + $(this).parent().parent().attr('id');
+        console.log(menuID);
         if (!$(menuID).prop('visible')) {
-            showMenu(menuID);
+            showMenu(menuID, animTime);
         } else {
-            hideMenu(menuID);
+            hideMenu(menuID, animTime);
         }
     });
-
-    function showMenu(menuID) {
-        $(menuID).animate({
-            left: 0
-        }, menuAnimTime);
-        if (menuID === '#main-menu') {
-            $('main').animate({
-                marginLeft: $(menuID).width()
-            }, menuAnimTime);
-            $('#menu-top').animate({
-                left: 0
-            }, menuAnimTime);
-        }
-        $(menuID).prop('visible', true);
+    $('#main-menu > .menu-content > button').tap(function() {
+        console.log($(this).text());
+    });
+});
+function showMenu(menuID, animTime) {
+    if (menuID === '#main-menu') {
+        $('main').animate({
+            marginLeft: $(menuID).width()
+        }, animTime);
+        $('#main-menu > .menu-content').animate({
+            width: $(menuID).width()
+        }, animTime);
     }
-    function hideMenu(menuID) {
+    $(menuID).animate({
+        left: 0
+    }, animTime);
+    $(menuID).prop('visible', true);
+}
+function hideMenu(menuID, animTime) {
+    if (menuID === '#main-menu') {
+        $('main').animate({
+            marginLeft: $('#topbar').outerHeight()
+        }, animTime);
+        $('#main-menu').animate({
+            left: -$(menuID).width() + $('#topbar').outerHeight()
+        }, animTime);
+        $('#main-menu > .menu-content').animate({
+            width: $(menuID).width() - $('#topbar').outerHeight()
+        }, animTime);
+    } else {
         $(menuID).animate({
             left: -$(menuID).width()
-        }, menuAnimTime);
-        if (menuID === '#main-menu') {
-            $('main').animate({
-                marginLeft: 0
-            }, menuAnimTime);
-            $('#menu-top').animate({
-                left: -$(menuID).width() + $('#topbar').outerHeight()
-            }, menuAnimTime);
-        }
-        $(menuID).prop('visible', false);
+        }, animTime);
     }
-});
+    $(menuID).prop('visible', false);
+}
