@@ -9,7 +9,18 @@ html {
   height: 100vh;
   width: 12rem;
   background-color: white;
-  border-right: 2px solid black; }
+  border-right: 2px solid black;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+     supported by Chrome and Opera */ }
   @media only screen and (min-width: 27rem) {
     .menu {
       width: 33vw; } }
@@ -20,28 +31,36 @@ html {
     height: 12vh;
     width: 100%;
     display: grid;
-    grid-template-columns: 12vh 1fr 12vh; }
+    grid-template-columns: 1fr 12vh; }
+    .menu > .menu-top > div {
+      grid-column: 1 / 2;
+      justify-self: center;
+      align-self: center; }
     .menu > .menu-top > button {
       height: 80%;
       width: 80%;
-      grid-column: 3 / 4;
+      grid-column: 2 / 3;
       justify-self: center;
       align-self: center; }
   .menu > .menu-content {
-    width: -moz-calc(12rem - 12vh - 2px);
-    width: -webkit-calc(12rem - 12vh - 2px);
-    width: calc(12rem - 12vh - 2px); }
+    height: -moz-calc(100% - 12vh);
+    height: -webkit-calc(100% - 12vh);
+    height: calc(100% - 12vh);
+    width: -moz-calc(12rem - 2px);
+    width: -webkit-calc(12rem - 2px);
+    width: calc(12rem - 2px);
+    overflow-y: scroll; }
     @media only screen and (min-width: 27rem) {
       .menu > .menu-content {
-        width: -moz-calc(33vw - 12vh - 2px);
-        width: -webkit-calc(33vw - 12vh - 2px);
-        width: calc(33vw - 12vh - 2px); } }
+        width: -moz-calc(33vw - 2px);
+        width: -webkit-calc(33vw - 2px);
+        width: calc(33vw - 2px); } }
     @media only screen and (min-width: 56rem) {
       .menu > .menu-content {
-        width: -moz-calc(20rem - 12vh - 2px);
-        width: -webkit-calc(20rem - 12vh - 2px);
-        width: calc(20rem - 12vh - 2px); } }
-    .menu > .menu-content > button {
+        width: -moz-calc(20rem - 2px);
+        width: -webkit-calc(20rem - 2px);
+        width: calc(20rem - 2px); } }
+    .menu > .menu-content > * {
       height: 12vh;
       width: 100%;
       background-color: white; }
@@ -60,6 +79,20 @@ html {
         left: -moz-calc(-20rem + 12vh + 2px);
         left: -webkit-calc(-20rem + 12vh + 2px);
         left: calc(-20rem + 12vh + 2px); } }
+    .menu#main-menu > .menu-content {
+      width: -moz-calc(12rem - 12vh - 2px);
+      width: -webkit-calc(12rem - 12vh - 2px);
+      width: calc(12rem - 12vh - 2px); }
+      @media only screen and (min-width: 27rem) {
+        .menu#main-menu > .menu-content {
+          width: -moz-calc(33vw - 12vh - 2px);
+          width: -webkit-calc(33vw - 12vh - 2px);
+          width: calc(33vw - 12vh - 2px); } }
+      @media only screen and (min-width: 56rem) {
+        .menu#main-menu > .menu-content {
+          width: -moz-calc(20rem - 12vh - 2px);
+          width: -webkit-calc(20rem - 12vh - 2px);
+          width: calc(20rem - 12vh - 2px); } }
   .menu#profile-menu, .menu#majors-menu, .menu#minors-menu, .menu#gened-menu, .menu#catalog-menu, .menu#toadd-menu, .menu#settings-menu {
     left: -12rem;
     z-index: 3; }
@@ -77,9 +110,9 @@ main {
     height: 12vh;
     border-bottom: 2px solid black; }
   main > #schedule {
-    height: -moz-calc(100% - 12vh);
-    height: -webkit-calc(100% - 12vh);
-    height: calc(100% - 12vh);
+    height: -moz-calc(100vh - 12vh);
+    height: -webkit-calc(100vh - 12vh);
+    height: calc(100vh - 12vh);
     overflow-y: scroll;
     display: grid;
     grid-template-rows: repeat(5, 1fr); }

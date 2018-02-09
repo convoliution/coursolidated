@@ -25,38 +25,55 @@ html {
     background-color: white;
     border-right: 2px solid black;
 
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+
     > .menu-top {
         height: $tile-height;
         width: 100%;
 
         display: grid;
-        grid-template-columns: $tile-height 1fr $tile-height;
+        grid-template-columns: 1fr $tile-height;
+
+        > div {
+            grid-column: 1 / 2;
+            justify-self: center;
+            align-self: center;
+        }
 
         > button {
             height: $menu-button-size;
             width: $menu-button-size;
 
-            grid-column: 3 / 4;
+            grid-column: 2 / 3;
             justify-self: center;
             align-self: center;
         }
     }
 
     > .menu-content {
-        @include calc(width, '#{$menu-width-small} - #{$tile-height} - #{$border-size}');
+        @include calc(height, '100% - #{$tile-height}');
+        @include calc(width, '#{$menu-width-small} - #{$border-size}');
         @include breakpoint(small) {
-            @include calc(width, '#{$menu-width-medium} - #{$tile-height} - #{$border-size}');
+            @include calc(width, '#{$menu-width-medium} - #{$border-size}');
         }
         @include breakpoint(medium) {
-            @include calc(width, '#{$menu-width-large} - #{$tile-height} - #{$border-size}');
+            @include calc(width, '#{$menu-width-large} - #{$border-size}');
         }
 
-        > button {
+        overflow-y: scroll;
+
+        > * {
             height: $tile-height;
             width: 100%;
             background-color: white;
         }
     }
+
 
     &#main-menu {
         @include calc(left, '-#{$menu-width-small} + #{$tile-height} + #{$border-size}');
@@ -67,6 +84,16 @@ html {
             @include calc(left, '-#{$menu-width-large} + #{$tile-height} + #{$border-size}');
         }
         z-index: 2;
+
+        > .menu-content {
+            @include calc(width, '#{$menu-width-small} - #{$tile-height} - #{$border-size}');
+            @include breakpoint(small) {
+                @include calc(width, '#{$menu-width-medium} - #{$tile-height} - #{$border-size}');
+            }
+            @include breakpoint(medium) {
+                @include calc(width, '#{$menu-width-large} - #{$tile-height} - #{$border-size}');
+            }
+        }
     }
     &#profile-menu, &#majors-menu, &#minors-menu, &#gened-menu, &#catalog-menu, &#toadd-menu, &#settings-menu {
         left: -$menu-width-small;
@@ -91,7 +118,7 @@ main {
     }
 
     > #schedule {
-        @include calc(height, '100% - #{$tile-height}');
+        @include calc(height, '100vh - #{$tile-height}');
         overflow-y: scroll;
 
         display: grid;
