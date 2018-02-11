@@ -11,6 +11,24 @@ html {
     box-sizing: inherit;
 }
 
+#topbar {
+    height: $tile-height;
+
+    border-bottom: $border-size solid black;
+
+    display: grid;
+    grid-template-columns: $tile-height 1fr;
+
+    > button {
+        height: $menu-button-size;
+        width: $menu-button-size;
+
+        grid-column: 1 / 2;
+        justify-self: center;
+        align-self: center;
+    }
+}
+
 .menu {
     position: absolute;
     height: 100vh;
@@ -92,28 +110,10 @@ html {
 }
 
 main {
-    height: 100vh;
-
-    > #topbar {
-        height: $tile-height;
-
-        border-bottom: $border-size solid black;
-
-        display: grid;
-        grid-template-columns: $tile-height 1fr;
-
-        > button {
-            height: $menu-button-size;
-            width: $menu-button-size;
-
-            grid-column: 1 / 2;
-            justify-self: center;
-            align-self: center;
-        }
-    }
+    @include calc(height, '100vh - #{$tile-height}');
 
     > #schedule {
-        @include calc(height, '100vh - #{$tile-height}');
+        height: 100%;//@include calc(height, '100vh - #{$tile-height}');
         overflow-y: scroll;
 
         display: grid;

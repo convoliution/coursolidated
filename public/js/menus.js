@@ -25,6 +25,9 @@ function showMenu(menuID, animTime) {
         $('main').animate({
             marginLeft: $(menuID).outerWidth()
         }, animTime);
+        $('#tabs').animate({
+            marginLeft: $(menuID).outerWidth() - $('#topbar').outerHeight()
+        }, animTime);
     }
     $(menuID).animate({
         left: 0
@@ -34,6 +37,9 @@ function showMenu(menuID, animTime) {
 function hideMenu(menuID, animTime) {
     if (menuID === '#main-menu') {
         $('main').animate({
+            marginLeft: 0
+        }, animTime);
+        $('#tabs').animate({
             marginLeft: 0
         }, animTime);
     }
