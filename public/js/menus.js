@@ -3,6 +3,7 @@ $(function() {
     $.mobile.loading().hide();
 });
 
+// menu show/hide
 $(function() {
     let animTime = 250;
 
@@ -19,11 +20,6 @@ $(function() {
         let menuID = "#" + $(this).text().replace(/\s/g, '').toLowerCase() + "-menu";
         showMenu(menuID, animTime);
     });
-
-    $('.menu-content > .choice > button.name').tap(function(event) {
-        event.preventDefault();
-        $(this).parent().toggleClass('active');
-    })
 });
 function showMenu(menuID, animTime) {
     if (menuID === '#main-menu') {
@@ -53,3 +49,20 @@ function hideMenu(menuID, animTime) {
     }, animTime);
     $(menuID).prop('visible', false);
 }
+
+// submenu buttons
+$(function() {
+    let activeChoice;
+    $('.menu-content > .choice > button.name').tap(function(event) {
+        event.preventDefault();
+        if (activeChoice !== undefined) {
+            activeChoice.removeClass('active');
+            if (activeChoice.is($(this).parent())) {
+                activeChoice = undefined;
+            }
+        } else {
+            activeChoice = $(this).parent();
+            activeChoice.addClass('active');
+        }
+    });
+});
