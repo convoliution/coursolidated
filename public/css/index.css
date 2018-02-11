@@ -102,48 +102,54 @@ html {
         height: -moz-calc(2 * 12vh);
         height: -webkit-calc(2 * 12vh);
         height: calc(2 * 12vh); }
+    .menu > .menu-content > .set {
+      width: 100%; }
+      .menu > .menu-content > .set > .requirement {
+        height: 12vh;
+        width: 100%; }
   .menu#main-menu {
     z-index: 2; }
   .menu#profile-menu, .menu#majors-menu, .menu#minors-menu, .menu#gened-menu, .menu#catalog-menu, .menu#toadd-menu, .menu#settings-menu {
     z-index: 3; }
 
+main > #info {
+  position: absolute;
+  left: -moz-calc(-100vw + 12rem);
+  left: -webkit-calc(-100vw + 12rem);
+  left: calc(-100vw + 12rem);
+  height: -moz-calc(100vh - 12vh);
+  height: -webkit-calc(100vh - 12vh);
+  height: calc(100vh - 12vh);
+  width: -moz-calc(100vw - 12rem);
+  width: -webkit-calc(100vw - 12rem);
+  width: calc(100vw - 12rem);
+  z-index: 1;
+  background-color: white; }
+  @media only screen and (min-width: 27rem) {
+    main > #info {
+      left: -moz-calc(-100vw + 33vw);
+      left: -webkit-calc(-100vw + 33vw);
+      left: calc(-100vw + 33vw); } }
+  @media only screen and (min-width: 56rem) {
+    main > #info {
+      left: -moz-calc(-100vw + 20rem);
+      left: -webkit-calc(-100vw + 20rem);
+      left: calc(-100vw + 20rem); } }
+  @media only screen and (min-width: 27rem) {
+    main > #info {
+      width: -moz-calc(100vw - 33vw);
+      width: -webkit-calc(100vw - 33vw);
+      width: calc(100vw - 33vw); } }
+  @media only screen and (min-width: 56rem) {
+    main > #info {
+      width: -moz-calc(100vw - 20rem);
+      width: -webkit-calc(100vw - 20rem);
+      width: calc(100vw - 20rem); } }
+
 main {
   height: -moz-calc(100vh - 12vh);
   height: -webkit-calc(100vh - 12vh);
   height: calc(100vh - 12vh); }
-  main > #info {
-    position: absolute;
-    left: -moz-calc(-100vw + 12rem);
-    left: -webkit-calc(-100vw + 12rem);
-    left: calc(-100vw + 12rem);
-    height: -moz-calc(100vh - 12vh);
-    height: -webkit-calc(100vh - 12vh);
-    height: calc(100vh - 12vh);
-    width: -moz-calc(100vw - 12rem);
-    width: -webkit-calc(100vw - 12rem);
-    width: calc(100vw - 12rem);
-    z-index: 1;
-    background-color: white; }
-    @media only screen and (min-width: 27rem) {
-      main > #info {
-        left: -moz-calc(-100vw + 33vw);
-        left: -webkit-calc(-100vw + 33vw);
-        left: calc(-100vw + 33vw); } }
-    @media only screen and (min-width: 56rem) {
-      main > #info {
-        left: -moz-calc(-100vw + 20rem);
-        left: -webkit-calc(-100vw + 20rem);
-        left: calc(-100vw + 20rem); } }
-    @media only screen and (min-width: 27rem) {
-      main > #info {
-        width: -moz-calc(100vw - 33vw);
-        width: -webkit-calc(100vw - 33vw);
-        width: calc(100vw - 33vw); } }
-    @media only screen and (min-width: 56rem) {
-      main > #info {
-        width: -moz-calc(100vw - 20rem);
-        width: -webkit-calc(100vw - 20rem);
-        width: calc(100vw - 20rem); } }
   main > #schedule {
     height: 100%;
     overflow-y: scroll;

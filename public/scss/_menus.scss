@@ -86,6 +86,25 @@
                 @include calc(height, '2 * #{$tile-height}');
             }
         }
+
+        > .set {
+            width: 100%;
+
+            > .requirement {
+                height: $tile-height;
+                width: 100%;
+
+                &.empty {
+
+                }
+                &.ready {
+
+                }
+                &.met {
+
+                }
+            }
+        }
     }
 
 
@@ -95,4 +114,27 @@
     &#profile-menu, &#majors-menu, &#minors-menu, &#gened-menu, &#catalog-menu, &#toadd-menu, &#settings-menu {
         z-index: 3;
     }
+}
+
+main > #info {
+    position: absolute;
+    @include calc(left, '-100vw + #{$menu-width-small}');
+    @include breakpoint(small) {
+        @include calc(left, '-100vw + #{$menu-width-medium}');
+    }
+    @include breakpoint(medium) {
+        @include calc(left, '-100vw + #{$menu-width-large}');
+    }
+
+    @include calc(height, '100vh - #{$tile-height}');
+    @include calc(width, '100vw - #{$menu-width-small}');
+    @include breakpoint(small) {
+        @include calc(width, '100vw - #{$menu-width-medium}');
+    }
+    @include breakpoint(medium) {
+        @include calc(width, '100vw - #{$menu-width-large}');
+    }
+    z-index: 1;
+
+    background-color: white;
 }
