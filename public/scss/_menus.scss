@@ -1,0 +1,97 @@
+.menu {
+    position: absolute;
+    left: -$menu-width-small;
+    @include breakpoint(small) {
+        left: -$menu-width-medium;
+    }
+    @include breakpoint(medium) {
+        left: -$menu-width-large;
+    }
+
+    height: 100vh;
+    width: $menu-width-small;
+    @include breakpoint(small) {
+        width: $menu-width-medium;
+    }
+    @include breakpoint(medium) {
+        width: $menu-width-large;
+    }
+
+    background-color: white;
+    border-right: 2px solid black;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+
+    > .menu-top {
+        height: $tile-height;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: $tile-height 1fr;
+
+        > button {
+            height: $menu-button-size;
+            width: $menu-button-size;
+
+            grid-column: 1 / 2;
+            justify-self: center;
+            align-self: center;
+        }
+
+        > div {
+            grid-column: 2 / 3;
+            justify-self: center;
+            align-self: center;
+        }
+    }
+
+    > .menu-content {
+        @include calc(height, '100% - #{$tile-height}');
+        @include calc(width, '#{$menu-width-small} - #{$border-size}');
+        @include breakpoint(small) {
+            @include calc(width, '#{$menu-width-medium} - #{$border-size}');
+        }
+        @include breakpoint(medium) {
+            @include calc(width, '#{$menu-width-large} - #{$border-size}');
+        }
+
+        overflow-y: scroll;
+
+        > button {
+            height: $tile-height;
+            width: 100%;
+            background-color: white;
+        }
+
+        > .choice {
+            height: $tile-height;
+            width: 100%;
+
+            overflow-y: hidden;
+
+            > button {
+                height: $tile-height;
+                width: 100%;
+                background-color: white;
+            }
+
+            @include transition(height, .250s);
+            &.active {
+                @include calc(height, '2 * #{$tile-height}');
+            }
+        }
+    }
+
+
+    &#main-menu {
+        z-index: 2;
+    }
+    &#profile-menu, &#majors-menu, &#minors-menu, &#gened-menu, &#catalog-menu, &#toadd-menu, &#settings-menu {
+        z-index: 3;
+    }
+}

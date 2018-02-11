@@ -1,0 +1,17 @@
+#topbar {
+    height: $tile-height;
+
+    border-bottom: $border-size solid black;
+
+    display: grid;
+    grid-template-columns: $tile-height 1fr;
+
+    > button {
+        height: $menu-button-size;
+        width: $menu-button-size;
+
+        grid-column: 1 / 2;
+        justify-self: center;
+        align-self: center;
+    }
+}

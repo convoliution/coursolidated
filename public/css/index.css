@@ -92,18 +92,13 @@ html {
       -o-transition: height 0.25s;
       transition: height 0.25s; }
       .menu > .menu-content > .choice > button {
+        height: 12vh;
         width: 100%;
         background-color: white; }
-        .menu > .menu-content > .choice > button.name {
-          height: 12vh; }
-        .menu > .menu-content > .choice > button.confirm {
-          height: -moz-calc(12vh / 3);
-          height: -webkit-calc(12vh / 3);
-          height: calc(12vh / 3); }
       .menu > .menu-content > .choice.active {
-        height: -moz-calc(4 * 12vh / 3);
-        height: -webkit-calc(4 * 12vh / 3);
-        height: calc(4 * 12vh / 3); }
+        height: -moz-calc(2 * 12vh);
+        height: -webkit-calc(2 * 12vh);
+        height: calc(2 * 12vh); }
   .menu#main-menu {
     z-index: 2; }
   .menu#profile-menu, .menu#majors-menu, .menu#minors-menu, .menu#gened-menu, .menu#catalog-menu, .menu#toadd-menu, .menu#settings-menu {

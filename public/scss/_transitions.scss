@@ -1,0 +1,24 @@
+@mixin transition($property, $duration) {
+    -webkit-transition: $property $duration;
+       -moz-transition: $property $duration;
+         -o-transition: $property $duration;
+            transition: $property $duration;
+}
+@mixin transition-multiple($transitions...) {
+    -webkit-transition: #{$transitions};
+       -moz-transition: #{$transitions};
+         -o-transition: #{$transitions};
+            transition: #{$transitions};
+}
+@mixin transition-with-function($property, $duration, $timing-function) {
+    -webkit-transition: $property $duration $timing-function;
+       -moz-transition: $property $duration $timing-function;
+         -o-transition: $property $duration $timing-function;
+            transition: $property $duration $timing-function;
+}
+@mixin transition-with-delay($property, $duration, $delay) {
+    -webkit-transition: $property $duration $delay;
+       -moz-transition: $property $duration $delay;
+         -o-transition: $property $duration $delay;
+            transition: $property $duration $delay;
+}
