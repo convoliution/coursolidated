@@ -8,6 +8,7 @@ html {
   position: absolute;
   height: 100vh;
   width: 12rem;
+  left: -12rem;
   background-color: white;
   border-right: 2px solid black;
   -webkit-touch-callout: none;
@@ -27,18 +28,24 @@ html {
   @media only screen and (min-width: 56rem) {
     .menu {
       width: 20rem; } }
+  @media only screen and (min-width: 27rem) {
+    .menu {
+      left: -33vw; } }
+  @media only screen and (min-width: 56rem) {
+    .menu {
+      left: -20rem; } }
   .menu > .menu-top {
     height: 12vh;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 12vh; }
-    .menu > .menu-top > div {
-      grid-column: 1 / 2;
-      justify-self: center;
-      align-self: center; }
+    grid-template-columns: 12vh 1fr; }
     .menu > .menu-top > button {
       height: 80%;
       width: 80%;
+      grid-column: 1 / 2;
+      justify-self: center;
+      align-self: center; }
+    .menu > .menu-top > div {
       grid-column: 2 / 3;
       justify-self: center;
       align-self: center; }
@@ -65,50 +72,23 @@ html {
       width: 100%;
       background-color: white; }
   .menu#main-menu {
-    left: -moz-calc(-12rem + 12vh + 2px);
-    left: -webkit-calc(-12rem + 12vh + 2px);
-    left: calc(-12rem + 12vh + 2px);
     z-index: 2; }
-    @media only screen and (min-width: 27rem) {
-      .menu#main-menu {
-        left: -moz-calc(-33vw + 12vh + 2px);
-        left: -webkit-calc(-33vw + 12vh + 2px);
-        left: calc(-33vw + 12vh + 2px); } }
-    @media only screen and (min-width: 56rem) {
-      .menu#main-menu {
-        left: -moz-calc(-20rem + 12vh + 2px);
-        left: -webkit-calc(-20rem + 12vh + 2px);
-        left: calc(-20rem + 12vh + 2px); } }
-    .menu#main-menu > .menu-content {
-      width: -moz-calc(12rem - 12vh - 2px);
-      width: -webkit-calc(12rem - 12vh - 2px);
-      width: calc(12rem - 12vh - 2px); }
-      @media only screen and (min-width: 27rem) {
-        .menu#main-menu > .menu-content {
-          width: -moz-calc(33vw - 12vh - 2px);
-          width: -webkit-calc(33vw - 12vh - 2px);
-          width: calc(33vw - 12vh - 2px); } }
-      @media only screen and (min-width: 56rem) {
-        .menu#main-menu > .menu-content {
-          width: -moz-calc(20rem - 12vh - 2px);
-          width: -webkit-calc(20rem - 12vh - 2px);
-          width: calc(20rem - 12vh - 2px); } }
   .menu#profile-menu, .menu#majors-menu, .menu#minors-menu, .menu#gened-menu, .menu#catalog-menu, .menu#toadd-menu, .menu#settings-menu {
-    left: -12rem;
     z-index: 3; }
-    @media only screen and (min-width: 27rem) {
-      .menu#profile-menu, .menu#majors-menu, .menu#minors-menu, .menu#gened-menu, .menu#catalog-menu, .menu#toadd-menu, .menu#settings-menu {
-        left: -33vw; } }
-    @media only screen and (min-width: 56rem) {
-      .menu#profile-menu, .menu#majors-menu, .menu#minors-menu, .menu#gened-menu, .menu#catalog-menu, .menu#toadd-menu, .menu#settings-menu {
-        left: -20rem; } }
 
 main {
-  height: 100vh;
-  margin-left: 12vh; }
+  height: 100vh; }
   main > #topbar {
     height: 12vh;
-    border-bottom: 2px solid black; }
+    border-bottom: 2px solid black;
+    display: grid;
+    grid-template-columns: 12vh 1fr; }
+    main > #topbar > button {
+      height: 80%;
+      width: 80%;
+      grid-column: 1 / 2;
+      justify-self: center;
+      align-self: center; }
   main > #schedule {
     height: -moz-calc(100vh - 12vh);
     height: -webkit-calc(100vh - 12vh);
