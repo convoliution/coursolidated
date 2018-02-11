@@ -22,9 +22,7 @@ $(function() {
 
     $('.menu-content > .choice > button.name').tap(function(event) {
         event.preventDefault();
-        $(this).parent().animate({
-            height: 4 * $('#topbar').outerHeight() / 3
-        }, animTime);
+        $(this).parent().toggleClass('active');
     })
 });
 function showMenu(menuID, animTime) {

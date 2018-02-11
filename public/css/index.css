@@ -86,7 +86,11 @@ html {
     .menu > .menu-content > .choice {
       height: 12vh;
       width: 100%;
-      overflow-y: hidden; }
+      overflow-y: hidden;
+      -webkit-transition: height 0.25s;
+      -moz-transition: height 0.25s;
+      -o-transition: height 0.25s;
+      transition: height 0.25s; }
       .menu > .menu-content > .choice > button {
         width: 100%;
         background-color: white; }
@@ -96,6 +100,10 @@ html {
           height: -moz-calc(12vh / 3);
           height: -webkit-calc(12vh / 3);
           height: calc(12vh / 3); }
+      .menu > .menu-content > .choice.active {
+        height: -moz-calc(4 * 12vh / 3);
+        height: -webkit-calc(4 * 12vh / 3);
+        height: calc(4 * 12vh / 3); }
   .menu#main-menu {
     z-index: 2; }
   .menu#profile-menu, .menu#majors-menu, .menu#minors-menu, .menu#gened-menu, .menu#catalog-menu, .menu#toadd-menu, .menu#settings-menu {

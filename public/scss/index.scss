@@ -1,4 +1,5 @@
 @import 'breakpoints';
+@import 'transitions';
 @import 'transforms';
 @import 'colors';
 @import 'sizes';
@@ -110,6 +111,11 @@ html {
                 background-color: white;
                 &.name { height: $tile-height; }
                 &.confirm { @include calc(height, '#{$tile-height} / 3'); }
+            }
+
+            @include transition(height, .250s);
+            &.active {
+                @include calc(height, '4 * #{$tile-height} / 3');
             }
         }
     }
