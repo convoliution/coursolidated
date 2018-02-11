@@ -3,9 +3,9 @@ $(function() {
     $.mobile.loading().hide();
 });
 
-// menu animation
 $(function() {
     let animTime = 250;
+
     $('#topbar > button').tap(function(event) {
         showMenu('#main-menu', animTime);
     });
@@ -19,6 +19,13 @@ $(function() {
         let menuID = "#" + $(this).text().replace(/\s/g, '').toLowerCase() + "-menu";
         showMenu(menuID, animTime);
     });
+
+    $('.menu-content > .choice > button.name').tap(function(event) {
+        event.preventDefault();
+        $(this).parent().animate({
+            height: 4 * $('#topbar').outerHeight() / 3
+        }, animTime);
+    })
 });
 function showMenu(menuID, animTime) {
     if (menuID === '#main-menu') {

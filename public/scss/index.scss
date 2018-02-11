@@ -31,6 +31,14 @@ html {
 
 .menu {
     position: absolute;
+    left: -$menu-width-small;
+    @include breakpoint(small) {
+        left: -$menu-width-medium;
+    }
+    @include breakpoint(medium) {
+        left: -$menu-width-large;
+    }
+
     height: 100vh;
     width: $menu-width-small;
     @include breakpoint(small) {
@@ -38,14 +46,6 @@ html {
     }
     @include breakpoint(medium) {
         width: $menu-width-large;
-    }
-
-    left: -$menu-width-small;
-    @include breakpoint(small) {
-        left: -$menu-width-medium;
-    }
-    @include breakpoint(medium) {
-        left: -$menu-width-large;
     }
 
     background-color: white;
@@ -93,10 +93,24 @@ html {
 
         overflow-y: scroll;
 
-        > * {
+        > button {
             height: $tile-height;
             width: 100%;
             background-color: white;
+        }
+
+        > .choice {
+            height: $tile-height;
+            width: 100%;
+
+            overflow-y: hidden;
+
+            > button {
+                width: 100%;
+                background-color: white;
+                &.name { height: $tile-height; }
+                &.confirm { @include calc(height, '#{$tile-height} / 3'); }
+            }
         }
     }
 
@@ -112,8 +126,31 @@ html {
 main {
     @include calc(height, '100vh - #{$tile-height}');
 
+    > #info {
+        position: absolute;
+        @include calc(left, '-100vw + #{$menu-width-small}');
+        @include breakpoint(small) {
+            @include calc(left, '-100vw + #{$menu-width-medium}');
+        }
+        @include breakpoint(medium) {
+            @include calc(left, '-100vw + #{$menu-width-large}');
+        }
+
+        @include calc(height, '100vh - #{$tile-height}');
+        @include calc(width, '100vw - #{$menu-width-small}');
+        @include breakpoint(small) {
+            @include calc(width, '100vw - #{$menu-width-medium}');
+        }
+        @include breakpoint(medium) {
+            @include calc(width, '100vw - #{$menu-width-large}');
+        }
+        z-index: 1;
+
+        background-color: white;
+    }
+
     > #schedule {
-        height: 100%;//@include calc(height, '100vh - #{$tile-height}');
+        height: 100%;
         overflow-y: scroll;
 
         display: grid;
