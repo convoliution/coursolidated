@@ -8,35 +8,35 @@ $(function() {
     let animTime = 250;
 
     $('#topbar > button').tap(function(event) {
-        showMenu('#main-menu', animTime);
+        showMenu($('#main-menu'), animTime);
     });
     $('.menu-top > button').tap(function(event) {
         event.preventDefault();
-        let menuID = "#" + $(this).parent().parent().attr('id');
-        hideMenu(menuID, animTime);
+        let menu = $("#" + $(this).parent().parent().attr('id'));
+        hideMenu(menu, animTime);
     });
     $('#main-menu > .menu-content > button').tap(function(event) {
         event.preventDefault();
-        let menuID = "#" + $(this).text().replace(/\s/g, '').toLowerCase() + "-menu";
-        showMenu(menuID, animTime);
+        let menu = $("#" + $(this).text().replace(/\s/g, '').toLowerCase() + "-menu");
+        showMenu(menu, animTime);
     });
 });
-function showMenu(menuID, animTime) {
-    if (menuID === '#main-menu') {
+function showMenu(menu, animTime) {
+    if (menu.attr('id') === 'main-menu') {
         $('main').animate({
-            marginLeft: $(menuID).outerWidth()
+            marginLeft: menu.outerWidth()
         }, animTime);
         $('#tabs').animate({
-            marginLeft: $(menuID).outerWidth() - $('#topbar').outerHeight()
+            marginLeft: menu.outerWidth() - $('#topbar').outerHeight()
         }, animTime);
     }
-    $(menuID).animate({
+    menu.animate({
         left: 0
     }, animTime);
-    $(menuID).prop('visible', true);
+    menu.prop('visible', true);
 }
-function hideMenu(menuID, animTime) {
-    if (menuID === '#main-menu') {
+function hideMenu(menu, animTime) {
+    if (menu.attr('id') === 'main-menu') {
         $('main').animate({
             marginLeft: 0
         }, animTime);
@@ -44,25 +44,29 @@ function hideMenu(menuID, animTime) {
             marginLeft: 0
         }, animTime);
     }
-    $(menuID).animate({
-        left: -$(menuID).outerWidth()
+    if (menu.data('activeChoice') != null) { // deactivate active choice
+        menu.data('activeChoice').removeClass('active');
+        menu.data('activeChoice', null);
+    }
+    menu.animate({
+        left: -menu.outerWidth()
     }, animTime);
-    $(menuID).prop('visible', false);
+    menu.prop('visible', false);
 }
 
 // submenu buttons
 $(function() {
-    let activeChoice;
     $('.menu-content > .choice > button.name').tap(function(event) {
         event.preventDefault();
-        if (activeChoice !== undefined) {
-            activeChoice.removeClass('active');
-            if (activeChoice.is($(this).parent())) {
-                activeChoice = undefined;
+        let menu = $(this).parents('.menu').first();
+        if (menu.data('activeChoice') != null) {                  // if some choice is active,
+            menu.data('activeChoice').removeClass('active');      // deactivate
+            if (menu.data('activeChoice').is($(this).parent())) { // if that choice was this one,
+                menu.data('activeChoice', null);                  // no choices are active now
+                return;                                           // and we're done
             }
-        } else {
-            activeChoice = $(this).parent();
-            activeChoice.addClass('active');
         }
+        menu.data('activeChoice', $(this).parent());
+        menu.data('activeChoice').addClass('active');
     });
 });
