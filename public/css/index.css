@@ -107,6 +107,10 @@ html {
       .menu > .menu-content > .set > .requirement {
         height: 12vh;
         width: 100%; }
+        .menu > .menu-content > .set > .requirement > .course {
+          height: 12vh;
+          width: 100%;
+          border: 2px solid black; }
   .menu#main-menu {
     z-index: 2; }
   .menu#profile-menu, .menu#majors-menu, .menu#minors-menu, .menu#gened-menu, .menu#catalog-menu, .menu#toadd-menu, .menu#settings-menu {
@@ -184,12 +188,17 @@ main {
         text-align: center; }
       main > #schedule > .year > .quarter {
         height: 6em;
-        grid-column: 3 / 4; }
+        grid-column: 3 / 4;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-column-gap: 3px; }
         main > #schedule > .year > .quarter.fall {
           grid-row: 1 / 2; }
         main > #schedule > .year > .quarter.winter {
           grid-row: 2 / 3; }
         main > #schedule > .year > .quarter.spring {
           grid-row: 3 / 4; }
+        main > #schedule > .year > .quarter > .slot {
+          background-color: gray; }
 
 /*# sourceMappingURL=index.css.map */

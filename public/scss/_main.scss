@@ -54,6 +54,14 @@ main {
                 &.spring {
                     grid-row: 3 / 4;
                 }
+
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-column-gap: 3px;
+
+                > .slot {
+                    background-color: gray;
+                }
             }
         }
     }

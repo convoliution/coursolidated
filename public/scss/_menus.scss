@@ -103,6 +103,12 @@
                 &.met {
 
                 }
+
+                > .course { // for testing
+                    height: $tile-height;
+                    width: 100%;
+                    border: 2px solid black;
+                }
             }
         }
     }
