@@ -187,7 +187,7 @@ main {
         transform: rotate(270deg);
         text-align: center; }
       main > #schedule > .year > .quarter {
-        height: 6em;
+        height: 6rem;
         grid-column: 3 / 4;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
