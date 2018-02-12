@@ -200,5 +200,9 @@ main {
           grid-row: 3 / 4; }
         main > #schedule > .year > .quarter > .slot {
           background-color: gray; }
+          main > #schedule > .year > .quarter > .slot > .course {
+            background-color: white;
+            height: 100%;
+            width: 100%; }
 
 /*# sourceMappingURL=index.css.map */

@@ -61,6 +61,12 @@ main {
 
                 > .slot {
                     background-color: gray;
+
+                    > .course {
+                        background-color: white;
+                        height: 100%;
+                        width: 100%;
+                    }
                 }
             }
         }
