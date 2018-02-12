@@ -1,0 +1,151 @@
+User:
+
+{
+	"name": "",
+	"majors": [""],
+	"minors": [""],
+	"college": "",
+	"schedules": [
+	{
+		"name": "",
+		"years": [
+		{
+			"name": "",
+			"schedule":
+			{
+				"f": [""],
+				"w": [""],
+				"s": [""],
+				"s1": [""],
+				"s2": [""]
+			}
+		}]
+	}]
+}
+
+user is a dictionary with the following fields:
+	name
+	majors
+	minors
+	college
+	schedules
+
+	name is a string
+	majors is a list of strings
+	minors is a list of strings
+	college is a string
+
+	schedule is a list of dictionaries, with the following fields
+		name
+		years
+
+		name is a string (eg. My Schedule)
+		years is a list of dictionaries, with the following fields
+			name
+			schedule
+
+			name is a string (eg. Year 1)
+			schedule is a dictionary, with the following fields
+				f
+				w
+				s
+				s1
+				s2
+
+				Each of these is a list of strings
+
+
+
+Majors:
+
+{
+	"MajorCode": {
+		"Name": "",
+		"Required": [0, ""],
+		"Elective": [0, ""],
+		. . .
+	}
+}
+
+majors is a dictionary where the keys are all the major codes (eg. CG25)
+
+	each major is a dictionary, with the following fields
+		Name
+		Required
+		Other fields
+
+		Name is a string with the name of the major
+		Required, and any other fields, are lists
+			The first item in the list is a number. This is the number of items in that list that must be chosen to satisfy the requirements.
+			The rest of the list consists of strings representing classes, or of lists representing a choice between two or more classes.
+			(eg. [2, [1, "CourseA", "CourseB"], [1, "CourseC", "CourseD"]]
+			 denotes that the user must choose 1 course out of A or B, and 1 course out of C or D)
+
+
+
+Minors:
+
+{
+	"MinorCode": {
+		"Name": "",
+		"Required": [0, ""],
+		"Elective": [0, ""],
+		. . .
+	}
+}
+
+minors work the same way majors do
+
+
+
+Colleges:
+
+{
+	"CollegeName": {
+		"Required": [0, ""],
+		"Elective": [0, ""],
+		. . .
+	}
+}
+
+colleges work the same way majors and minors do, just without at "Name" field
+
+
+
+Courses:
+
+{
+	"CourseCode": {
+		"Department": "",
+		"Code": "",
+		"Division": 0,
+		"UpperDiv": 0,
+		"Consent": 0,
+		"Requirements": [0, ""],
+		"Offered": [""]
+	}
+}
+
+courses is a dictionary where the keys are all of the course codes
+
+	each of these keys corresponds to a dictionary with the following fields:
+		Department
+		Code
+		Division
+		UpperDiv
+		Consent
+		Requirements
+		Offered
+
+		Department is the letter part of the course code (eg. COGS, from COGS 1)
+		Code is the number part of the course code (eg. 6A, from CHEM 6A)
+		Division is 0 if the course is lower division, 1 if the course is upper division
+		UpperDiv is 1 if the course requires upper division standing, 0 otherwise
+		Consent is 1 if the course can be taken with professor/department consent, 0 otherwise
+		Requirements is a list of prerequisites, formatted in the same way requirements have been formatted above.
+		Offered is a list of strings, where each string corresponds to a quarter:
+			"f" is Fall
+			"w" is Winter
+			"s" is Spring
+			"s1" is Summer Session 1
+			"s2" is Summer Session 2

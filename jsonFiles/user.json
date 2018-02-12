@@ -1,0 +1,54 @@
+{
+	"name": "Ian Drosos",
+	"majors": [ "CG25" ],
+	"minors": [],
+	"college": "Revelle",
+	"schedules": [
+	{ 
+		"name": "my schedule",
+		"years": [
+		{
+			"name": "year1",
+			"schedule": {
+				"f": ["MATH20A", "COGS10", "CHEM6A"],
+				"w": ["MATH20B", "COGS1", "HUM1"],
+				"s": ["MATH18", "COGS13", "HUM2"],
+				"s1": [],
+				"s2": []
+			}
+		},
+
+		{
+			"name": "year2",
+			"schedule": {
+				"f": ["COGS17", "CHEM6B", "HUM3"],
+				"w": ["COGS14A", "TDAC1", "PHYS2A", "HUM4"],
+				"s": ["COGS14B", "COGS18", "BILD3"],
+				"s1": [],
+				"s2": []
+			}
+		},
+
+		{
+			"name": "year3",
+			"schedule": {
+				"f": ["COGS101A", "COGS100", "COGS107A"],
+				"w": ["COGS107B", "COGS101B", "LIGN7"],
+				"s": ["COGS108", "CHEM6C", "COGS11"],
+				"s1": [],
+				"s2": []
+			}
+		},
+
+		{
+			"name": "year4",
+			"schedule": {
+				"f": ["COGS115", "COGS163", "COGS164"],
+				"w": ["COGS169", "COGS171", "COGS172"],
+				"s": ["COGS174", "COGS175", "COGS176"],
+				"s1": [],
+				"s2": []
+			}
+		}
+	]}]
+}
