@@ -13,13 +13,28 @@ Users:
 				"years": [
 					{
 						"name": "",
-						"schedule": {
-							"f": [""],
-							"w": [""],
-							"s": [""],
-							"s1": [""],
-							"s2": [""]
-						}
+						"terms": [
+							{
+								"name: "",
+								"courses": [""],
+							},
+							{
+								"name: "",
+								"courses": [""],
+							},
+							{
+								"name: "",
+								"courses": [""],
+							},
+							{
+								"name: "",
+								"courses": [""],
+							},
+							{
+								"name: "",
+								"courses": [""],
+							}
+						]
 					}
 				]
 			}
@@ -48,19 +63,17 @@ users is a dictionary where the keys are the full names of users
 			years
 
 			name is a string (eg. My Schedule)
-			years is a list of dictionaries, with the following fields
+			years is a list of dictionaries, each with the following fields
 				name
-				schedule
+				terms
 
 				name is a string (eg. Year 1)
-				schedule is a dictionary, with the following fields
-					f
-					w
-					s
-					s1
-					s2
+				terms is a list of dictionaries, each with the following fields
+					id
+					courses
 
-					Each of these is a list of strings
+					id is a string (one of: "f", "w", "s", "s1", "s2")
+					courses is a list of strings
 
 
 
