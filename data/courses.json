@@ -1,878 +1,961 @@
 {
 	"BILD3": {
-		"Department": "BILD",
-		"Code": "3",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [],
-		"Offered": ["f", "w", "s", "s1", "s2"]
+		"name": "",
+		"department": "BILD",
+		"code": "3",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [],
+		"offered": ["f", "w", "s", "s1", "s2"]
 	},
 
 	"CHEM6A": {
-		"Department": "CHEM",
-		"Code": "6A",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [],
-		"Offered": ["f", "w", "s"]
+		"name": "",
+		"department": "CHEM",
+		"code": "6A",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [],
+		"offered": ["f", "w", "s"]
 	},
 
 	"CHEM6B": {
-		"Department": "CHEM",
-		"Code": "6B",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [2, [1, "CHEM6A", "CHEM6AH"], [1, "MATH10A", "MATH20A"]],
-		"Offered": ["f", "w", "s"]
+		"name": "",
+		"department": "CHEM",
+		"code": "6B",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [2, [1, "CHEM6A", "CHEM6AH"], [1, "MATH10A", "MATH20A"]],
+		"offered": ["f", "w", "s"]
 	},
 
 	"CHEM6C": {
-		"Department": "CHEM",
-		"Code": "6C",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [1, "CHEM6B", "CHEM6BH"],
-		"Offered": ["f", "w", "s"]
+		"name": "",
+		"department": "CHEM",
+		"code": "6C",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [1, "CHEM6B", "CHEM6BH"],
+		"offered": ["f", "w", "s"]
 	},
 
 	"COGS1": {
-		"Department": "COGS",
-		"Code": "1",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [],
-		"Offered": ["f", "w", "s"]
+		"name": "",
+		"department": "COGS",
+		"code": "1",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [],
+		"offered": ["f", "w", "s"]
 	},
 
 	"COGS10": {
-		"Department": "COGS",
-		"Code": "10",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [],
-		"Offered": ["s", "s2"]
+		"name": "",
+		"department": "COGS",
+		"code": "10",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [],
+		"offered": ["s", "s2"]
 	},
 
 	"COGS100": {
-		"Department": "COGS",
-		"Code": "100",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "COGS",
+		"code": "100",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [["COGS102A", 0]],
-		"Requirements": [1, "COGS1", "COGS10"],
-		"Offered": ["f", "s"]
+		"requirements": [1, "COGS1", "COGS10"],
+		"offered": ["f", "s"]
 	},
 
 	"COGS101A": {
-		"Department": "COGS",
-		"Code": "101A",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [1, "COGS1"],
-		"Offered": ["f", "s", "s1"]
+		"name": "",
+		"department": "COGS",
+		"code": "101A",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [1, "COGS1"],
+		"offered": ["f", "s", "s1"]
 	},
 
 	"COGS101B": {
-		"Department": "COGS",
-		"Code": "101B",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [1, "COGS1"],
-		"Offered": ["w", "s2"]
+		"name": "",
+		"department": "COGS",
+		"code": "101B",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [1, "COGS1"],
+		"offered": ["w", "s2"]
 	},
 
 	"COGS101C": {
-		"Department": "COGS",
-		"Code": "101C",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [2, "COGS1", "COGS14A"],
-		"Offered": ["s", "s1"]
+		"name": "",
+		"department": "COGS",
+		"code": "101C",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [2, "COGS1", "COGS14A"],
+		"offered": ["s", "s1"]
 	},
 
 	"COGS102A": {
-		"Department": "COGS",
-		"Code": "102A",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "COGS",
+		"code": "102A",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [["COGS100", 0]],
-		"Requirements": [2, "COGS1", "COGS14A"],
-		"Offered": ["s2"]
+		"requirements": [2, "COGS1", "COGS14A"],
+		"offered": ["s2"]
 	},
 
 	"COGS102B": {
-		"Department": "COGS",
-		"Code": "102B",
-		"Division": 1,
-		"UpperDiv": 1,
-		"Consent": 0,
-		"Requirements": [],
-		"Offered": ["w"]
+		"name": "",
+		"department": "COGS",
+		"code": "102B",
+		"division": 1,
+		"reqUpperDiv": true,
+		"consent": false,
+		"requirements": [],
+		"offered": ["w"]
 	},
 
 	"COGS102C": {
-		"Department": "COGS",
-		"Code": "102C",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 1,
-		"Requirements": [1, "COGS102B"],
-		"Offered": ["s"]
+		"name": "",
+		"department": "COGS",
+		"code": "102C",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": true,
+		"requirements": [1, "COGS102B"],
+		"offered": ["s"]
 	},
 
 	"COGS107A": {
-		"Department": "COGS",
-		"Code": "107A",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [1, "COGS1", "COGS17"],
-		"Offered": ["f", "w", "s", "s1"]
+		"name": "",
+		"department": "COGS",
+		"code": "107A",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [1, "COGS1", "COGS17"],
+		"offered": ["f", "w", "s", "s1"]
 	},
 
 	"COGS107B": {
-		"Department": "COGS",
-		"Code": "107B",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [1, "COGS107A"],
-		"Offered": ["w"]
+		"name": "",
+		"department": "COGS",
+		"code": "107B",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [1, "COGS107A"],
+		"offered": ["w"]
 	},
 
 	"COGS107C": {
-		"Department": "COGS",
-		"Code": "107C",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [1, "COGS107B"],
-		"Offered": ["s"]
+		"name": "",
+		"department": "COGS",
+		"code": "107C",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [1, "COGS107B"],
+		"offered": ["s"]
 	},
 
 	"COGS108": {
-		"Department": "COGS",
-		"Code": "108",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [1, "CSE11", "CSE8A", "CSE7", "COGS18"],
-		"Offered": ["w"]
+		"name": "",
+		"department": "COGS",
+		"code": "108",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [1, "CSE11", "CSE8A", "CSE7", "COGS18"],
+		"offered": ["w"]
 	},
 
 	"COGS11": {
-		"Department": "COGS",
-		"Code": "11",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [],
-		"Offered": ["f", "w", "s", "s1"]
+		"name": "",
+		"department": "COGS",
+		"code": "11",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [],
+		"offered": ["f", "w", "s", "s1"]
 	},
 
 	"COGS115": {
-		"Department": "COGS",
-		"Code": "115",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [1, "BILD10", "BILD12", "COGS107A", "COGS107B", "COGS17", "HDP110"],
-		"Offered": []
+		"name": "",
+		"department": "COGS",
+		"code": "115",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [1, "BILD10", "BILD12", "COGS107A", "COGS107B", "COGS17", "HDP110"],
+		"offered": []
 	},
 
 	"COGS120": {
-		"Department": "COGS",
-		"Code": "120",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "COGS",
+		"code": "120",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [["COGS170", 0]],
-		"Requirements": [2, [1, "CSE11", "CSE8A"], [1, "COGS1", "COGS187A", "DSGN1"]],
-		"Offered": ["f", "w"]
+		"requirements": [2, [1, "CSE11", "CSE8A"], [1, "COGS1", "COGS187A", "DSGN1"]],
+		"offered": ["f", "w"]
 	},
 
 	"COGS121": {
-		"Department": "COGS",
-		"Code": "121",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [2, [1, "COGS120"], [1, "CSE8B", "CSE11"]],
-		"Offered": ["s"]
+		"name": "",
+		"department": "COGS",
+		"code": "121",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [2, [1, "COGS120"], [1, "CSE8B", "CSE11"]],
+		"offered": ["s"]
 	},
 
 	"COGS13": {
-		"Department": "COGS",
-		"Code": "13",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [],
-		"Offered": ["s"]
+		"name": "",
+		"department": "COGS",
+		"code": "13",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [],
+		"offered": ["s"]
 	},
 
 	"COGS14A": {
-		"Department": "COGS",
-		"Code": "14A",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [],
-		"Offered": ["f", "w"]
+		"name": "",
+		"department": "COGS",
+		"code": "14A",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [],
+		"offered": ["f", "w"]
 	},
 
 	"COGS14B": {
-		"Department": "COGS",
-		"Code": "14B",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [1, "COGS14A"],
-		"Offered": ["w", "s", "s1"]
+		"name": "",
+		"department": "COGS",
+		"code": "14B",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [1, "COGS14A"],
+		"offered": ["w", "s", "s1"]
 	},
 
 	"COGS163": {
-		"Department": "COGS",
-		"Code": "163",
-		"Division": 1,
-		"UpperDiv": 1,
-		"Consent": 0,
-		"Requirements": [],
-		"Offered": ["s"]
+		"name": "",
+		"department": "COGS",
+		"code": "163",
+		"division": 1,
+		"reqUpperDiv": true,
+		"consent": false,
+		"requirements": [],
+		"offered": ["s"]
 	},
 
 	"COGS164": {
-		"Department": "COGS",
-		"Code": "164",
-		"Division": 1,
-		"UpperDiv": 1,
-		"Consent": 0,
-		"Requirements": [],
-		"Offered": ["s"]
+		"name": "",
+		"department": "COGS",
+		"code": "164",
+		"division": 1,
+		"reqUpperDiv": true,
+		"consent": false,
+		"requirements": [],
+		"offered": ["s"]
 	},
 
 	"COGS169": {
-		"Department": "COGS",
-		"Code": "169",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 1,
-		"Requirements": [2, "COGS1", "COGS107A"],
-		"Offered": ["w"]
+		"name": "",
+		"department": "COGS",
+		"code": "169",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": true,
+		"requirements": [2, "COGS1", "COGS107A"],
+		"offered": ["w"]
 	},
 
 	"COGS17": {
-		"Department": "COGS",
-		"Code": "17",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "COGS",
+		"code": "17",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [["BILD12", 0]],
-		"Requirements": [],
-		"Offered": ["f", "w", "s", "s1"]
+		"requirements": [],
+		"offered": ["f", "w", "s", "s1"]
 	},
 
 	"COGS171": {
-		"Department": "COGS",
-		"Code": "171",
-		"Division": 1,
-		"UpperDiv": 1,
-		"Consent": 0,
-		"Requirements": [],
-		"Offered": ["s2"]
+		"name": "",
+		"department": "COGS",
+		"code": "171",
+		"division": 1,
+		"reqUpperDiv": true,
+		"consent": false,
+		"requirements": [],
+		"offered": ["s2"]
 	},
 
 	"COGS172": {
-		"Department": "COGS",
-		"Code": "172",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "COGS",
+		"code": "172",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [["PSYC139", 0]],
-		"Requirements": [1, "COGS107A"],
-		"Offered": ["w"]
+		"requirements": [1, "COGS107A"],
+		"offered": ["w"]
 	},
 
 	"COGS174": {
-		"Department": "COGS",
-		"Code": "174",
-		"Division": 1,
-		"UpperDiv": 1,
-		"Consent": 0,
-		"Requirements": [],
-		"Offered": ["f", "s2"]
+		"name": "",
+		"department": "COGS",
+		"code": "174",
+		"division": 1,
+		"reqUpperDiv": true,
+		"consent": false,
+		"requirements": [],
+		"offered": ["f", "s2"]
 	},
 
 	"COGS175": {
-		"Department": "COGS",
-		"Code": "175",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [1, "COGS101A", "COGS107A"],
-		"Offered": ["f"]
+		"name": "",
+		"department": "COGS",
+		"code": "175",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [1, "COGS101A", "COGS107A"],
+		"offered": ["f"]
 	},
 
 	"COGS176": {
-		"Department": "COGS",
-		"Code": "176",
-		"Division": 1,
-		"UpperDiv": 1,
-		"Consent": 0,
-		"Requirements": [],
-		"Offered": ["w"]
+		"name": "",
+		"department": "COGS",
+		"code": "176",
+		"division": 1,
+		"reqUpperDiv": true,
+		"consent": false,
+		"requirements": [],
+		"offered": ["w"]
 	},
 
 	"COGS177": {
-		"Department": "COGS",
-		"Code": "177",
-		"Division": 1,
-		"UpperDiv": 1,
-		"Consent": 0,
-		"Requirements": [],
-		"Offered": ["w"]
+		"name": "",
+		"department": "COGS",
+		"code": "177",
+		"division": 1,
+		"reqUpperDiv": true,
+		"consent": false,
+		"requirements": [],
+		"offered": ["w"]
 	},
 
 	"COGS178": {
-		"Department": "COGS",
-		"Code": "178",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 1,
-		"Requirements": [2, "COGS107A", "COGS107B"],
-		"Offered": ["s"]
+		"name": "",
+		"department": "COGS",
+		"code": "178",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": true,
+		"requirements": [2, "COGS107A", "COGS107B"],
+		"offered": ["s"]
 	},
 
 	"COGS179": {
-		"Department": "COGS",
-		"Code": "179",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [2, [1, "COGS107A", "PSYC106"], [1, "COGS101A", "PSYC105"]],
-		"Offered": ["f"]
+		"name": "",
+		"department": "COGS",
+		"code": "179",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [2, [1, "COGS107A", "PSYC106"], [1, "COGS101A", "PSYC105"]],
+		"offered": ["f"]
 	},
 
 	"COGS18": {
-		"Department": "COGS",
-		"Code": "18",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "COGS",
+		"code": "18",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [["CSE7", 0]],
-		"Requirements": [],
-		"Offered": []
+		"requirements": [],
+		"offered": []
 	},
 
 	"COGS180": {
-		"Department": "COGS",
-		"Code": "180",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "COGS",
+		"code": "180",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [4, [1, "BILD12", "COGS107B", "PSYC106"],
+		"requirements": [4, [1, "BILD12", "COGS107B", "PSYC106"],
 	                        [1, "MATH31AH", "MATH18", "MATH20F"],
 	                        [1, "MATH20B"],
 	                        [1, "COGS108", "COGS109", "CSE7", "CSE8A", "CSE11"]],
-		"Offered": []
+		"offered": []
 	},
 
 	"COGS184": {
-		"Department": "COGS",
-		"Code": "184",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "COGS",
+		"code": "184",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [1, "COGS17", "COGS107A", "COGS107B", "COGS107C"],
-		"Offered": ["w"]
+		"requirements": [1, "COGS17", "COGS107A", "COGS107B", "COGS107C"],
+		"offered": ["w"]
 	},
 
 	"COGS187A": {
-		"Department": "COGS",
-		"Code": "187A",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "COGS",
+		"code": "187A",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [1, "CSE7"],
-		"Offered": ["f", "s2"]
+		"requirements": [1, "CSE7"],
+		"offered": ["f", "s2"]
 	},
 
 	"COGS187B": {
-		"Department": "COGS",
-		"Code": "187B",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 1,
+		"name": "",
+		"department": "COGS",
+		"code": "187B",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": true,
 		"Crosslist": [],
-		"Requirements": ["COGS187A"],
-		"Offered": ["w"]
+		"requirements": ["COGS187A"],
+		"offered": ["w"]
 	},
 
 	"COMM10": {
-		"Department": "COMM",
-		"Code": "10",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "COMM",
+		"code": "10",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": ["f", "w", "s1", "s2"]
+		"requirements": [],
+		"offered": ["f", "w", "s1", "s2"]
 	},
 
 	"COMM100A": {
-		"Department": "COMM",
-		"Code": "100A",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "COMM",
+		"code": "100A",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [["COHI100", 0]],
-		"Requirements": ["COMM10"],
-		"Offered": ["f"]
+		"requirements": ["COMM10"],
+		"offered": ["f"]
 	},
 
 	"COMM111D": {
-		"Department": "COMM",
-		"Code": "111D",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "COMM",
+		"code": "111D",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": []
+		"requirements": [],
+		"offered": []
 	},
 
 	"COMM124A": {
-		"Department": "COMM",
-		"Code": "124A",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "COMM",
+		"code": "124A",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [1, "COMM10", "COGS1", "ESYS10", "POLI10", "POLI10D", "USP1"],
-		"Offered": ["f"]
+		"requirements": [1, "COMM10", "COGS1", "ESYS10", "POLI10", "POLI10D", "USP1"],
+		"offered": ["f"]
 	},
 
 	"COMM124B": {
-		"Department": "COMM",
-		"Code": "124B",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "COMM",
+		"code": "124B",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [1, "COMM124A"],
-		"Offered": ["w"]
+		"requirements": [1, "COMM124A"],
+		"offered": ["w"]
 	},
 
 	"CSE11": {
-		"Department": "CSE",
-		"Code": "11",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "CSE",
+		"code": "11",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": ["f", "w", "s", "s1", "s2"]
+		"requirements": [],
+		"offered": ["f", "w", "s", "s1", "s2"]
 	},
 
 	"CSE110": {
-		"Department": "CSE",
-		"Code": "110",
-		"Division": 1,
-		"UpperDiv": 1,
-		"Consent": 0,
+		"name": "",
+		"department": "CSE",
+		"code": "110",
+		"division": 1,
+		"reqUpperDiv": true,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [1, "CSE100"],
-		"Offered": ["f", "w", "s"]
+		"requirements": [1, "CSE100"],
+		"offered": ["f", "w", "s"]
 	},
 
 	"CSE118": {
-		"Department": "CSE",
-		"Code": "118",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 1,
+		"name": "",
+		"department": "CSE",
+		"code": "118",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": true,
 		"Crosslist": [],
-		"Requirements": [1, "CSE131", "CSE132B", "COGS102C", "COGS121", "COGS184", "COMT111B", "COMT115", "ECE111", "ECE118", "ECE191", "ECE192", "ICAM160B"],
-		"Offered": ["f"]
+		"requirements": [1, "CSE131", "CSE132B", "COGS102C", "COGS121", "COGS184", "COMT111B", "COMT115", "ECE111", "ECE118", "ECE191", "ECE192", "ICAM160B"],
+		"offered": ["f"]
 	},
 
 	"CSE7": {
-		"Department": "CSE",
-		"Code": "7",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "CSE",
+		"code": "7",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": ["w", "s", "s2"]
+		"requirements": [],
+		"offered": ["w", "s", "s2"]
 	},
 
 	"CSE8A": {
-		"Department": "CSE",
-		"Code": "8A",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "CSE",
+		"code": "8A",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": ["f", "w", "s"]
+		"requirements": [],
+		"offered": ["f", "w", "s"]
 	},
 
 	"DSGN1": {
-		"Department": "DSGN",
-		"Code": "1",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "DSGN",
+		"code": "1",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": ["f", "w"]
+		"requirements": [],
+		"offered": ["f", "w"]
 	},
 
 	"DSGN100": {
-		"Department": "DSGN",
-		"Code": "100",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "DSGN",
+		"code": "100",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [1, "DSGN1"],
-		"Offered": ["w"]
+		"requirements": [1, "DSGN1"],
+		"offered": ["w"]
 	},
 
 	"DSGN119": {
-		"Department": "DSGN",
-		"Code": "119",
-		"Division": 1,
-		"UpperDiv": 1,
-		"Consent": 0,
+		"name": "",
+		"department": "DSGN",
+		"code": "119",
+		"division": 1,
+		"reqUpperDiv": true,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": ["f", "w", "s"]
+		"requirements": [],
+		"offered": ["f", "w", "s"]
 	},
 
 	"DSGN160": {
-		"Department": "DSGN",
-		"Code": "160",
-		"Division": 1,
-		"UpperDiv": 1,
-		"Consent": 1,
+		"name": "",
+		"department": "DSGN",
+		"code": "160",
+		"division": 1,
+		"reqUpperDiv": true,
+		"consent": true,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": []
+		"requirements": [],
+		"offered": []
 	},
 
 	"DSGN195": {
-		"Department": "DSGN",
-		"Code": "195",
-		"Division": 1,
-		"UpperDiv": 1,
-		"Consent": 1,
+		"name": "",
+		"department": "DSGN",
+		"code": "195",
+		"division": 1,
+		"reqUpperDiv": true,
+		"consent": true,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": []
+		"requirements": [],
+		"offered": []
 	},
 
 	"ENG100D": {
-		"Department": "ENG",
-		"Code": "100D",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "ENG",
+		"code": "100D",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [1, "CAT2", "DOC2", "HUM2", "MCWP40", "MMW2", "WCWP10B"],
-		"Offered": []
+		"requirements": [1, "CAT2", "DOC2", "HUM2", "MCWP40", "MMW2", "WCWP10B"],
+		"offered": []
 	},
 
 	"ENG100L": {
-		"Department": "ENG",
-		"Code": "100L",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 1,
+		"name": "",
+		"department": "ENG",
+		"code": "100L",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": true,
 		"Crosslist": [],
-		"Requirements": [1, "ENG100", "ENG100A", "ENG100D"],
-		"Offered": ["f", "w", "s", "s1", "s2"]
+		"requirements": [1, "ENG100", "ENG100A", "ENG100D"],
+		"offered": ["f", "w", "s", "s1", "s2"]
 	},
 
 	"HUM1": {
-		"Department": "HUM",
-		"Code": "1",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [],
-		"Offered": ["w"]
+		"name": "",
+		"department": "HUM",
+		"code": "1",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [],
+		"offered": ["w"]
 	},
 
 	"HUM2": {
-		"Department": "HUM",
-		"Code": "2",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [],
-		"Offered": ["s"]
+		"name": "",
+		"department": "HUM",
+		"code": "2",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [],
+		"offered": ["s"]
 	},
 
 	"HUM3": {
-		"Department": "HUM",
-		"Code": "3",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [],
-		"Offered": ["f"]
+		"name": "",
+		"department": "HUM",
+		"code": "3",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [],
+		"offered": ["f"]
 	},
 
 	"HUM4": {
-		"Department": "HUM",
-		"Code": "4",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [],
-		"Offered": ["w"]
+		"name": "",
+		"department": "HUM",
+		"code": "4",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [],
+		"offered": ["w"]
 	},
 
 	"HUM5": {
-		"Department": "HUM",
-		"Code": "5",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [],
-		"Offered": ["s"]
+		"name": "",
+		"department": "HUM",
+		"code": "5",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [],
+		"offered": ["s"]
 	},
 
 	"LIGN7": {
-		"Department": "LIGN",
-		"Code": "7",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [],
-		"Offered": ["w", "s"]
+		"name": "",
+		"department": "LIGN",
+		"code": "7",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [],
+		"offered": ["w", "s"]
 	},
 
 	"MAE3": {
-		"Department": "MAE",
-		"Code": "3",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 1,
+		"name": "",
+		"department": "MAE",
+		"code": "3",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": true,
 		"Crosslist": [],
-		"Requirements": [1, "PHYS2A", "PHYS2B"],
-		"Offered": []
+		"requirements": [1, "PHYS2A", "PHYS2B"],
+		"offered": []
 	},
 
 	"MATH10A": {
-		"Department": "MATH",
-		"Code": "10A",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "MATH",
+		"code": "10A",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": ["f", "w", "s"]
+		"requirements": [],
+		"offered": ["f", "w", "s"]
 	},
 
 	"MATH10B": {
-		"Department": "MATH",
-		"Code": "10B",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "MATH",
+		"code": "10B",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": ["f", "w", "s"]
+		"requirements": [],
+		"offered": ["f", "w", "s"]
 	},
 
 	"MATH18": {
-		"Department": "MATH",
-		"Code": "10C",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 1,
+		"name": "",
+		"department": "MATH",
+		"code": "10C",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": true,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": ["f", "w", "s"]
+		"requirements": [],
+		"offered": ["f", "w", "s"]
 	},
 
 	"MATH20A": {
-		"Department": "MATH",
-		"Code": "20A",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "MATH",
+		"code": "20A",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": ["f", "w", "s"]
+		"requirements": [],
+		"offered": ["f", "w", "s"]
 	},
 
 	"MATH20B": {
-		"Department": "MATH",
-		"Code": "20B",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "MATH",
+		"code": "20B",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": ["f", "w", "s"]
+		"requirements": [],
+		"offered": ["f", "w", "s"]
 	},
 
 	"MGT103": {
-		"Department": "MGT",
-		"Code": "103",
-		"Division": 1,
-		"UpperDiv": 1,
-		"Consent": 0,
+		"name": "",
+		"department": "MGT",
+		"code": "103",
+		"division": 1,
+		"reqUpperDiv": true,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": ["f", "w", "s", "s1", "s2"]
+		"requirements": [],
+		"offered": ["f", "w", "s", "s1", "s2"]
 	},
 
 	"MGT121A": {
-		"Department": "MGT",
-		"Code": "121A",
-		"Division": 1,
-		"UpperDiv": 1,
-		"Consent": 0,
+		"name": "",
+		"department": "MGT",
+		"code": "121A",
+		"division": 1,
+		"reqUpperDiv": true,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": ["f", "w", "s"]
+		"requirements": [],
+		"offered": ["f", "w", "s"]
 	},
 
 	"PHYS2A": {
-		"Department": "PHYS",
-		"Code": "2A",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [1, "MATH20A"],
-		"Offered": ["f", "w", "s"]
+		"name": "",
+		"department": "PHYS",
+		"code": "2A",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [1, "MATH20A"],
+		"offered": ["f", "w", "s"]
 	},
 
 	"PSYC148": {
-		"Department": "PSYC",
-		"Code": "148",
-		"Division": 1,
-		"UpperDiv": 1,
-		"Consent": 0,
+		"name": "",
+		"department": "PSYC",
+		"code": "148",
+		"division": 1,
+		"reqUpperDiv": true,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": []
+		"requirements": [],
+		"offered": []
 	},
 
 	"PSYC176": {
-		"Department": "PSYC",
-		"Code": "176",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "PSYC",
+		"code": "176",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": ["w"]
+		"requirements": [],
+		"offered": ["w"]
 	},
 
 	"TDAC1": {
-		"Department": "TDAC",
-		"Code": "1",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
-		"Requirements": [],
-		"Offered": ["f", "w", "s"]
+		"name": "",
+		"department": "TDAC",
+		"code": "1",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
+		"requirements": [],
+		"offered": ["f", "w", "s"]
 	},
 
 	"VIS100": {
-		"Department": "VIS",
-		"Code": "100",
-		"Division": 1,
-		"UpperDiv": 1,
-		"Consent": 0,
+		"name": "",
+		"department": "VIS",
+		"code": "100",
+		"division": 1,
+		"reqUpperDiv": true,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": ["s"]
+		"requirements": [],
+		"offered": ["s"]
 	},
 
 	"VIS100A": {
-		"Department": "VIS",
-		"Code": "100A",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "VIS",
+		"code": "100A",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [1, "VIS100"],
-		"Offered": ["f"]
+		"requirements": [1, "VIS100"],
+		"offered": ["f"]
 	},
 
 	"VIS101A": {
-		"Department": "VIS",
-		"Code": "101A",
-		"Division": 1,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "VIS",
+		"code": "101A",
+		"division": 1,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [1, "VIS101"],
-		"Offered": ["w"]
+		"requirements": [1, "VIS101"],
+		"offered": ["w"]
 	},
 
 	"VIS142": {
-		"Department": "VIS",
-		"Code": "142",
-		"Division": 1,
-		"UpperDiv": 1,
-		"Consent": 0,
+		"name": "",
+		"department": "VIS",
+		"code": "142",
+		"division": 1,
+		"reqUpperDiv": true,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": ["f"]
+		"requirements": [],
+		"offered": ["f"]
 	},
 
 	"VIS148": {
-		"Department": "VIS",
-		"Code": "148",
-		"Division": 1,
-		"UpperDiv": 1,
-		"Consent": 0,
+		"name": "",
+		"department": "VIS",
+		"code": "148",
+		"division": 1,
+		"reqUpperDiv": true,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": ["f", "w", "s", "s1", "s2"]
+		"requirements": [],
+		"offered": ["f", "w", "s", "s1", "s2"]
 	},
 
 	"VIS159": {
-		"Department": "VIS",
-		"Code": "159",
-		"Division": 1,
-		"UpperDiv": 1,
-		"Consent": 0,
+		"name": "",
+		"department": "VIS",
+		"code": "159",
+		"division": 1,
+		"reqUpperDiv": true,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": ["w"]
+		"requirements": [],
+		"offered": ["w"]
 	},
 
 	"VIS30": {
-		"Department": "VIS",
-		"Code": "30",
-		"Division": 0,
-		"UpperDiv": 0,
-		"Consent": 0,
+		"name": "",
+		"department": "VIS",
+		"code": "30",
+		"division": 0,
+		"reqUpperDiv": false,
+		"consent": false,
 		"Crosslist": [],
-		"Requirements": [],
-		"Offered": ["f"]
+		"requirements": [],
+		"offered": ["f"]
 	}
 }

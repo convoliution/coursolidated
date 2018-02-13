@@ -1,15 +1,17 @@
 {
 	"CG25": {
-		"Name": "Cognitive Science",
-		"Required": [8, "MATH18", "COGS1", "COGS13", "COGS14A", "COGS14B", "COGS17", "COGS100", 
-			         "COGS108"],
-		"Math": [1, [2, "MATH10A", "MATH10B"], [2, "MATH20A", "MATH20B"]],
-		"Design": [1, "COGS10", "DSGN1"],
-		"Programming": [1, "COGS18", "CSE7", "CSE8A", "CSE11"],
-		"Fundamental Cognitive Phenomena": [2, "COGS101A", "COGS101B", "COGS101C"],
-		"Cognitive Neuroscience": [2, "COGS107A", "COGS107B", "COGS107C"],
-		"Electives": [6, "COGS11", "COGS107A", "COGS107B", "COGS107C", "COGS115", "COGS163", 
-			          "COGS164", "COGS169", "COGS171", "COGS172", "COGS174", "COGS175", "COGS176", 
-			          "COGS177", "COGS178", "COGS179", "COGS180", "COGS184"]
+		"name": "Cognitive Science",
+		"requirements": {
+			"Required": [8, "MATH18", "COGS1", "COGS13", "COGS14A", "COGS14B", "COGS17", "COGS100",
+				         "COGS108"],
+			"Math": [1, [2, "MATH10A", "MATH10B"], [2, "MATH20A", "MATH20B"]],
+			"Design": [1, "COGS10", "DSGN1"],
+			"Programming": [1, "COGS18", "CSE7", "CSE8A", "CSE11"],
+			"Fundamental Cognitive Phenomena": [2, "COGS101A", "COGS101B", "COGS101C"],
+			"Cognitive Neuroscience": [2, "COGS107A", "COGS107B", "COGS107C"],
+			"Electives": [6, "COGS11", "COGS107A", "COGS107B", "COGS107C", "COGS115", "COGS163",
+				          "COGS164", "COGS169", "COGS171", "COGS172", "COGS174", "COGS175", "COGS176",
+				          "COGS177", "COGS178", "COGS179", "COGS180", "COGS184"]
+		}
 	}
 }
