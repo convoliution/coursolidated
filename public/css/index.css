@@ -168,7 +168,7 @@ main {
       border-style: solid;
       border-color: #747678; }
       main > .schedule > .year > .year-label {
-        width: 8rem;
+        width: 12rem;
         grid-column: 1 / 2;
         grid-row: 1 / 6;
         justify-self: center;
@@ -178,7 +178,7 @@ main {
         transform: rotate(270deg);
         text-align: center; }
       main > .schedule > .year > .term-label {
-        width: 4rem;
+        width: 6rem;
         grid-column: 2 / 3;
         justify-self: center;
         align-self: center;
