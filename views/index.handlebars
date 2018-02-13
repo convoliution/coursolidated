@@ -13,7 +13,7 @@
         <div class="menu" id="main-menu">
             <div class="menu-top">
                 <button>&lt;</button>
-                <div>Menu</div>
+                <div class="name">Menu</div>
             </div>
             <div class="menu-content">
                 <button>Profile</button>
@@ -28,7 +28,7 @@
         <div class="menu" id="profile-menu">
             <div class="menu-top">
                 <button>&lt;</button>
-                <div>Profile</div>
+                <div class="name">Profile</div>
             </div>
             <div class="menu-content">
                 <div>This is your profile:<br>You are awesome!</div>
@@ -37,39 +37,49 @@
         <div class="menu" id="majors-menu">
             <div class="menu-top">
                 <button>&lt;</button>
-                <div>Majors</div>
+                <div class="name">Majors</div>
             </div>
             <div class="menu-content">
+                {{#each majors}}
                 <div class="choice">
-                    <button class="name">Cognitive Science</button>
+                    <button class="name">{{name}}</button>
                     <button class="confirm">Confirm</button>
                 </div>
-                <div class="choice">
-                    <button class="name">Not Cognitive Science</button>
-                    <button class="confirm">Confirm</button>
-                </div>
+                {{/each}}
             </div>
         </div>
         <div class="menu" id="minors-menu">
             <div class="menu-top">
                 <button>&lt;</button>
-                <div>Minors</div>
+                <div class="name">Minors</div>
             </div>
             <div class="menu-content">
+                {{#each minors}}
+                <div class="choice">
+                    <button class="name">{{name}}</button>
+                    <button class="confirm">Confirm</button>
+                </div>
+                {{/each}}
             </div>
         </div>
         <div class="menu" id="gened-menu">
             <div class="menu-top">
                 <button>&lt;</button>
-                <div>Gen Ed</div>
+                <div class="name">Gen Ed</div>
             </div>
             <div class="menu-content">
+                {{#each colleges}}
+                <div class="choice">
+                    <button class="name">{{@key}}</button>
+                    <button class="confirm">Confirm</button>
+                </div>
+                {{/each}}
             </div>
         </div>
         <div class="menu" id="catalog-menu">
             <div class="menu-top">
                 <button>&lt;</button>
-                <div>Catalog</div>
+                <div class="name">Catalog</div>
             </div>
             <div class="menu-content">
                 <div>This is where you can locate any course offered at UCSD.</div>
@@ -79,7 +89,22 @@
         <div class="menu" id="toadd-menu">
             <div class="menu-top">
                 <button>&lt;</button>
-                <div>To Add</div>
+                <div class="name">To Add</div>
+            </div>
+            <div class="menu-content">
+                <div class="set">
+                    <div class=requirement>
+                        <div class="course">
+                            COGS 100
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu" id="requirement-menu">
+            <div class="menu-top">
+                <button>&lt;</button>
+                <div class="name"></div>
             </div>
             <div class="menu-content">
                 <div class="set">
@@ -94,7 +119,7 @@
         <div class="menu" id="settings-menu">
             <div class="menu-top">
                 <button>&lt;</button>
-                <div>Settings</div>
+                <div class="name">Settings</div>
             </div>
             <div class="menu-content">
                 <div>This is where you can adjust colors or something.</div>
@@ -110,158 +135,20 @@
             <div id="info">
 
             </div>
-            <div id="schedule">
-                <div class="year" id="1">
-					<div class="year-label">2017–2018</div>
-					<div class="quarter-label">fall</div>
-                    <div class="quarter fall" id="1-fall">
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                    </div>
-					<div class="quarter-label">winter</div>
-                    <div class="quarter winter" id="1-winter">
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                    </div>
-					<div class="quarter-label">spring</div>
-                    <div class="quarter spring" id="1-spring">
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                    </div>
+            {{#with user}}
+            {{#each schedules}}
+            <div class="schedule">
+                {{#each years}}
+                <div class="year" id="{{@index}}">
+					<div class="year-label">{{name}}</div>
+                    {{#each terms}}
+                    {{{populateTerm @key this}}}
+                    {{/each}}
                 </div>
-                <div class="year" id="2">
-					<div class="year-label">2018–2019</div>
-					<div class="quarter-label">fall</div>
-                    <div class="quarter fall" id="2-fall">
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                    </div>
-					<div class="quarter-label">winter</div>
-                    <div class="quarter winter" id="2-winter">
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                    </div>
-					<div class="quarter-label">spring</div>
-                    <div class="quarter spring" id="2-spring">
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                    </div>
-                </div>
-                <div class="year" id="3">
-					<div class="year-label">2019–2020</div>
-					<div class="quarter-label">fall</div>
-                    <div class="quarter fall" id="3-fall">
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                    </div>
-					<div class="quarter-label">winter</div>
-                    <div class="quarter winter" id="3-winter">
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                    </div>
-					<div class="quarter-label">spring</div>
-                    <div class="quarter spring" id="3-spring">
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                    </div>
-                </div>
-                <div class="year" id="4">
-					<div class="year-label">2020–2021</div>
-					<div class="quarter-label">fall</div>
-                    <div class="quarter fall" id="4-fall">
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                    </div>
-					<div class="quarter-label">winter</div>
-                    <div class="quarter winter" id="4-winter">
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                    </div>
-					<div class="quarter-label">spring</div>
-                    <div class="quarter spring" id="4-spring">
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                    </div>
-                </div>
-                <div class="year" id="5">
-					<div class="year-label">2021–2022</div>
-					<div class="quarter-label">fall</div>
-                    <div class="quarter fall" id="5-fall">
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                    </div>
-					<div class="quarter-label">winter</div>
-                    <div class="quarter winter" id="5-winter">
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                    </div>
-					<div class="quarter-label">spring</div>
-                    <div class="quarter spring" id="5-spring">
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                    </div>
-                </div>
+                {{/each}}
             </div>
+            {{/each}}
+            {{/with}}
         </main>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>

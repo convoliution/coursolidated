@@ -11,7 +11,7 @@ main {
         > .year {
             display: grid;
             grid-template-columns: repeat(2, 2rem) 1fr ;
-            grid-template-rows: repeat(3, 1fr);
+            grid-template-rows: repeat(5, 1fr);
             grid-gap: $border-size;
 
             border-width: $border-size 0;
@@ -22,7 +22,7 @@ main {
                 width: 8rem;
 
                 grid-column: 1 / 2;
-                grid-row: 1 / 4;
+                grid-row: 1 / 6;
                 justify-self: center;
                 align-self: center;
 
@@ -53,6 +53,12 @@ main {
                 }
                 &.spring {
                     grid-row: 3 / 4;
+                }
+                &.summer1 {
+                    grid-row: 4 / 5;
+                }
+                &.summer2 {
+                    grid-row: 5 / 6;
                 }
 
                 display: grid;

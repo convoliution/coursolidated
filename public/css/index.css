@@ -162,7 +162,7 @@ main {
     main > .schedule > .year {
       display: grid;
       grid-template-columns: repeat(2, 2rem) 1fr;
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: repeat(5, 1fr);
       grid-gap: 2px;
       border-width: 2px 0;
       border-style: solid;
@@ -170,7 +170,7 @@ main {
       main > .schedule > .year > .year-label {
         width: 8rem;
         grid-column: 1 / 2;
-        grid-row: 1 / 4;
+        grid-row: 1 / 6;
         justify-self: center;
         align-self: center;
         -webkit-transform: rotate(270deg);
@@ -198,6 +198,10 @@ main {
           grid-row: 2 / 3; }
         main > .schedule > .year > .term.spring {
           grid-row: 3 / 4; }
+        main > .schedule > .year > .term.summer1 {
+          grid-row: 4 / 5; }
+        main > .schedule > .year > .term.summer2 {
+          grid-row: 5 / 6; }
         main > .schedule > .year > .term > .slot {
           background-color: gray; }
           main > .schedule > .year > .term > .slot > .course {
