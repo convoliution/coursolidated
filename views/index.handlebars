@@ -31,7 +31,30 @@
                 <div class="name">Profile</div>
             </div>
             <div class="menu-content">
-                <div>This is your profile:<br>You are awesome!</div>
+                {{#with user}}
+                    <h1>Hello, {{firstName}}!</h1>
+                    {{#if majors}}
+                        <div>You are majoring in:
+                            <ul>
+                            {{#each majors}}
+                                <li>{{this}}</li>
+                            {{/each}}
+                            </ul>
+                        </div>
+                    {{/if}}
+                    {{#if minors}}
+                        <div>You are minoring in:
+                            <ul>
+                                {{#each minors}}
+                                <li>{{this}}</li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    {{/if}}
+                    {{#if college}}
+                        <div>You are in {{college}} College</div>
+                    {{/if}}
+                {{/with}}
             </div>
         </div>
         <div class="menu" id="majors-menu">
@@ -40,12 +63,12 @@
                 <div class="name">Majors</div>
             </div>
             <div class="menu-content">
-                {{#each majors}}
+            {{#each majors}}
                 <div class="choice">
                     <button class="name">{{name}}</button>
-                    <button class="confirm">Confirm</button>
+                    <button class="confirm">Add</button>
                 </div>
-                {{/each}}
+            {{/each}}
             </div>
         </div>
         <div class="menu" id="minors-menu">
@@ -54,12 +77,12 @@
                 <div class="name">Minors</div>
             </div>
             <div class="menu-content">
-                {{#each minors}}
+            {{#each minors}}
                 <div class="choice">
                     <button class="name">{{name}}</button>
-                    <button class="confirm">Confirm</button>
+                    <button class="confirm">Add</button>
                 </div>
-                {{/each}}
+            {{/each}}
             </div>
         </div>
         <div class="menu" id="gened-menu">
@@ -68,12 +91,12 @@
                 <div class="name">Gen Ed</div>
             </div>
             <div class="menu-content">
-                {{#each colleges}}
+            {{#each colleges}}
                 <div class="choice">
                     <button class="name">{{@key}}</button>
-                    <button class="confirm">Confirm</button>
+                    <button class="confirm">Select</button>
                 </div>
-                {{/each}}
+            {{/each}}
             </div>
         </div>
         <div class="menu" id="catalog-menu">
@@ -82,8 +105,12 @@
                 <div class="name">Catalog</div>
             </div>
             <div class="menu-content">
-                <div>This is where you can locate any course offered at UCSD.</div>
-                <div>There will be a search bar at the top,</div>
+                {{#each courses}}
+                    <div class="choice">
+                        <button class="name">{{@key}}</button>
+                        <button class="confirm">Plan</button>
+                    </div>
+                {{/each}}
             </div>
         </div>
         <div class="menu" id="toadd-menu">
@@ -92,6 +119,7 @@
                 <div class="name">To Add</div>
             </div>
             <div class="menu-content">
+                {{{populateToAdd user majors minors colleges courses}}}
                 <div class="set">
                     <div class=requirement>
                         <div class="course">
@@ -107,13 +135,6 @@
                 <div class="name"></div>
             </div>
             <div class="menu-content">
-                <div class="set">
-                    <div class=requirement>
-                        <div class="course">
-                            COGS 100
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="menu" id="settings-menu">
@@ -136,18 +157,18 @@
 
             </div>
             {{#with user}}
-            {{#each schedules}}
-            <div class="schedule">
-                {{#each years}}
-                <div class="year" id="{{@index}}">
-					<div class="year-label">{{name}}</div>
-                    {{#each terms}}
-                    {{{populateTerm @key this}}}
+                {{#each schedules}}
+                    <div class="schedule">
+                    {{#each years}}
+                        <div class="year" id="{{@index}}">
+        					<div class="year-label">{{name}}</div>
+                            {{#each terms}}
+                                {{{populateTerm id courses}}}
+                            {{/each}}
+                        </div>
                     {{/each}}
-                </div>
+                    </div>
                 {{/each}}
-            </div>
-            {{/each}}
             {{/with}}
         </main>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

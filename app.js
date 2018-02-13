@@ -12,26 +12,32 @@ var app = express();
 
 var handlebars = expresshbs.create({
     helpers: {
-        populateTerm: function(termKey, courses) {
+        populateTerm: function(termId, courses) {
             var termLabel = {
                 'f': "fall",
 				'w': "winter",
 				's': "spring",
-				's1': "summer1",
-                's2': "summer2"
-            }[termKey]
+				's1': "summer I",
+                's2': "summer II"
+            }[termId]
             ret = "<div class=\"term-label\">" + termLabel + "</div>\n"
-                + "<div class=\"term " + termLabel + "\" id=\"{{@index}}-" + termLabel + "\">\n"
+                + "<div class=\"term " + termLabel.replace(/\s/g, '-') + "\">\n"
             var coursesCount = 6;
             for (let course of courses) {
-                ret += "<div class=\"slot\">" + course + "</div>\n";
+                ret += "<div class=\"slot\">\n"
+                     + "<div class=\"course " + course + "\"></div>\n"
+                     + "</div>\n";
                 coursesCount--;
             }
             for (; coursesCount > 0; coursesCount--) {
                 ret += "<div class=\"slot\"></div>\n";
             }
             ret += "</div>"
+
             return ret;
+        },
+        populateToAdd: function(user, majors, minors, colleges, courses) {
+
         }
     }
 });
@@ -58,12 +64,15 @@ if ('development' == app.get('env')) {
 }
 
 var index = require('./routes/index');
-// Example route
-// var user = require('./routes/user');
+var plan = require('./routes/plan');
+var add = require('./routes/add');
 
 app.get('/', index.view);
-// Example route
-// app.get('/users', user.list);
+app.get('/plan-minor', plan.minor);
+app.get('/plan-major', plan.major);
+app.get('/plan-college', plan.college);
+app.get('/plan-course', plan.course);
+app.get('/add', add.course);
 
 http.createServer(app).listen(app.get('port'), function(){
     console.log('Express server listening on port ' + app.get('port'));
