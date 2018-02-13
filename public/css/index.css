@@ -154,12 +154,12 @@ main {
   height: -moz-calc(100vh - 12vh);
   height: -webkit-calc(100vh - 12vh);
   height: calc(100vh - 12vh); }
-  main > #schedule {
+  main > .schedule {
     height: 100%;
     overflow-y: scroll;
     display: grid;
     grid-template-rows: repeat(5, 1fr); }
-    main > #schedule > .year {
+    main > .schedule > .year {
       display: grid;
       grid-template-columns: repeat(2, 2rem) 1fr;
       grid-template-rows: repeat(3, 1fr);
@@ -167,7 +167,7 @@ main {
       border-width: 2px 0;
       border-style: solid;
       border-color: #747678; }
-      main > #schedule > .year > .year-label {
+      main > .schedule > .year > .year-label {
         width: 8rem;
         grid-column: 1 / 2;
         grid-row: 1 / 4;
@@ -177,7 +177,7 @@ main {
         -ms-transform: rotate(270deg);
         transform: rotate(270deg);
         text-align: center; }
-      main > #schedule > .year > .quarter-label {
+      main > .schedule > .year > .term-label {
         width: 4rem;
         grid-column: 2 / 3;
         justify-self: center;
@@ -186,21 +186,21 @@ main {
         -ms-transform: rotate(270deg);
         transform: rotate(270deg);
         text-align: center; }
-      main > #schedule > .year > .quarter {
+      main > .schedule > .year > .term {
         height: 6rem;
         grid-column: 3 / 4;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-column-gap: 3px; }
-        main > #schedule > .year > .quarter.fall {
+        main > .schedule > .year > .term.fall {
           grid-row: 1 / 2; }
-        main > #schedule > .year > .quarter.winter {
+        main > .schedule > .year > .term.winter {
           grid-row: 2 / 3; }
-        main > #schedule > .year > .quarter.spring {
+        main > .schedule > .year > .term.spring {
           grid-row: 3 / 4; }
-        main > #schedule > .year > .quarter > .slot {
+        main > .schedule > .year > .term > .slot {
           background-color: gray; }
-          main > #schedule > .year > .quarter > .slot > .course {
+          main > .schedule > .year > .term > .slot > .course {
             background-color: white;
             height: 100%;
             width: 100%; }
