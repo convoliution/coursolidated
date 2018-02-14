@@ -81,6 +81,7 @@
                 <button>&lt;</button>
                 <div>To Add</div>
             </div>
+          <div id="yes-drop" class="draggable drag-drop">
             <div class="menu-content">
                 <div class="set">
                     <div class=requirement>
@@ -90,6 +91,35 @@
                     </div>
                 </div>
             </div>
+          </div>
+          <div id="yes-drop" class="draggable drag-drop">
+            <div class="menu-content">
+                <div class="set">
+                    <div class=requirement>
+                        <div class="course">
+                            COGS 101
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div id="yes-drop" class="draggable drag-drop">
+            <div class="menu-content">
+                <div class="set">
+                    <div class=requirement>
+                        <div class="course">
+                            COGS 102
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div id="outer-dropzone" class="dropzone">
+  #outer-dropzone
+  <div id="inner-dropzone" class="dropzone">#inner-dropzone</div>
+ </div>
+
         </div>
         <div class="menu" id="settings-menu">
             <div class="menu-top">
@@ -115,12 +145,14 @@
 					<div class="year-label">2017–2018</div>
 					<div class="quarter-label">fall</div>
                     <div class="quarter fall" id="1-fall">
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
-                        <div class="slot"></div>
+                        <div class="dropzone">
+                        testing
+                        </div>
+                        <div class="dropzone"></div>
+                        <div class="dropzone"></div>
+                        <div class="dropzone"></div>
+                        <div class="dropzone"></div>
+                        <div class="dropzone"></div>
                     </div>
 					<div class="quarter-label">winter</div>
                     <div class="quarter winter" id="1-winter">
@@ -267,5 +299,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.9/interact.min.js"></script>
         <script src="/js/menus.js"></script>
+        <script src="/js/draggable.js"></script>
     </body>
 </html>
