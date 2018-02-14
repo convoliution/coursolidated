@@ -118,40 +118,21 @@
                 <button>&lt;</button>
                 <div class="name">To Add</div>
             </div>
-          <div id="yes-drop" class="draggable drag-drop">
             <div class="menu-content">
-                {{{populateToAdd user majors minors colleges courses}}}
                 <div class="set">
                     <div class=requirement>
-                        <div class="course">
+                        <div class="course draggable drag-drop">
                             COGS 100
                         </div>
-                    </div>
-                </div>
-            </div>
-          </div>
-          <div id="yes-drop" class="draggable drag-drop">
-            <div class="menu-content">
-                <div class="set">
-                    <div class=requirement>
-                        <div class="course">
+                        <div class="course draggable drag-drop">
                             COGS 101
                         </div>
-                    </div>
-                </div>
-            </div>
-          </div>
-          <div id="yes-drop" class="draggable drag-drop">
-            <div class="menu-content">
-                <div class="set">
-                    <div class=requirement>
-                        <div class="course">
+                        <div class="course draggable drag-drop">
                             COGS 102
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
         <div class="menu" id="requirement-menu">
             <div class="menu-top">
@@ -182,7 +163,7 @@
             </div>
             {{#with user}}
                 {{#each schedules}}
-                    <div class="schedule">
+                    <div class="schedule active">
                     {{#each years}}
                         <div class="year" id="{{@index}}">
         					<div class="year-label">{{name}}</div>

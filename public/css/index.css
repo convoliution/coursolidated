@@ -108,13 +108,16 @@ html {
         height: 12vh;
         width: 100%; }
         .menu > .menu-content > .set > .requirement > .course {
+          position: absolute;
           height: 12vh;
           width: 100%;
-          border: 2px solid black; }
+          border: 1px solid black; }
   .menu#main-menu {
     z-index: 2; }
   .menu#profile-menu, .menu#majors-menu, .menu#minors-menu, .menu#gened-menu, .menu#catalog-menu, .menu#toadd-menu, .menu#settings-menu {
     z-index: 3; }
+  .menu#requirement-menu {
+    z-index: 4; }
 
 main > #info {
   position: absolute;
@@ -163,7 +166,6 @@ main {
       display: grid;
       grid-template-columns: repeat(2, 2rem) 1fr;
       grid-template-rows: repeat(5, 1fr);
-      grid-gap: 2px;
       border-width: 2px 0;
       border-style: solid;
       border-color: #747678; }
@@ -190,8 +192,7 @@ main {
         height: 6rem;
         grid-column: 3 / 4;
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-column-gap: 3px; }
+        grid-template-columns: repeat(6, 1fr); }
         main > .schedule > .year > .term.fall {
           grid-row: 1 / 2; }
         main > .schedule > .year > .term.winter {
@@ -211,11 +212,9 @@ main {
 
 .slot {
   background-color: #ccc;
-  border: dashed 4px transparent;
+  border: dashed .2rem transparent;
   border-radius: 4px;
-  margin: 10px auto 30px;
-  padding: 10px;
-  width: 80%;
+  margin: .3rem;
   transition: background-color 0.3s; }
 
 .drop-active {

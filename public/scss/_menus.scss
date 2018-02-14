@@ -104,10 +104,11 @@
 
                 }
 
-                > .course { // for testing
+                > .course {
+                    position: absolute;
                     height: $tile-height;
                     width: 100%;
-                    border: 2px solid black;
+                    border: 1px solid black;
                 }
             }
         }
@@ -119,6 +120,9 @@
     }
     &#profile-menu, &#majors-menu, &#minors-menu, &#gened-menu, &#catalog-menu, &#toadd-menu, &#settings-menu {
         z-index: 3;
+    }
+    &#requirement-menu {
+        z-index: 4;
     }
 }
 
