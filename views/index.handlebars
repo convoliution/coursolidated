@@ -118,6 +118,7 @@
                 <button>&lt;</button>
                 <div class="name">To Add</div>
             </div>
+          <div id="yes-drop" class="draggable drag-drop">
             <div class="menu-content">
                 {{{populateToAdd user majors minors colleges courses}}}
                 <div class="set">
@@ -128,6 +129,29 @@
                     </div>
                 </div>
             </div>
+          </div>
+          <div id="yes-drop" class="draggable drag-drop">
+            <div class="menu-content">
+                <div class="set">
+                    <div class=requirement>
+                        <div class="course">
+                            COGS 101
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div id="yes-drop" class="draggable drag-drop">
+            <div class="menu-content">
+                <div class="set">
+                    <div class=requirement>
+                        <div class="course">
+                            COGS 102
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
         <div class="menu" id="requirement-menu">
             <div class="menu-top">
@@ -175,5 +199,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.9/interact.min.js"></script>
         <script src="/js/menus.js"></script>
+        <script src="/js/draggable.js"></script>
     </body>
 </html>
