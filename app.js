@@ -22,15 +22,8 @@ var handlebars = expresshbs.create({
             }[termId]
             ret = "<div class=\"term-label\">" + termLabel + "</div>\n"
                 + "<div class=\"term " + termLabel.replace(/\s/g, '-') + "\">\n"
-            var coursesCount = 6;
             for (let course of courses) {
-                ret += "<div class=\"slot\">\n"
-                     + "<div class=\"course " + course + "\"></div>\n"
-                     + "</div>\n";
-                coursesCount--;
-            }
-            for (; coursesCount > 0; coursesCount--) {
-                ret += "<div class=\"slot\"></div>\n";
+                ret += "<div class=\"course " + course + "\">"+course+"</div>\n";
             }
             ret += "</div>"
 

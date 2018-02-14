@@ -63,14 +63,12 @@ main {
                 display: grid;
                 grid-template-columns: repeat(6, 1fr);
 
-                > .slot {
-                    background-color: gray;
-
-                    > .course {
-                        background-color: white;
-                        height: 100%;
-                        width: 100%;
-                    }
+                > .course {
+                    background-color: #CCCCCC;
+                    border: dashed .2rem black;
+                    border-radius: 4px;
+                    margin: .6rem;
+                    transition: background-color 0.3s;
                 }
             }
         }

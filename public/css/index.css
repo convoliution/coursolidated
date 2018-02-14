@@ -108,7 +108,6 @@ html {
         height: 12vh;
         width: 100%; }
         .menu > .menu-content > .set > .requirement > .course {
-          position: absolute;
           height: 12vh;
           width: 100%;
           border: 1px solid black; }
@@ -203,41 +202,11 @@ main {
           grid-row: 4 / 5; }
         main > .schedule > .year > .term.summer2 {
           grid-row: 5 / 6; }
-        main > .schedule > .year > .term > .slot {
-          background-color: gray; }
-          main > .schedule > .year > .term > .slot > .course {
-            background-color: white;
-            height: 100%;
-            width: 100%; }
-
-.slot {
-  background-color: #ccc;
-  border: dashed .2rem transparent;
-  border-radius: 4px;
-  margin: .3rem;
-  transition: background-color 0.3s; }
-
-.drop-active {
-  border-color: #aaa; }
-
-.drop-target {
-  background-color: #29e;
-  border-color: #fff;
-  border-style: solid; }
-
-.drag-drop {
-  display: inline-block;
-  min-width: 40px;
-  padding: 2em 0.5em;
-  color: #fff;
-  background-color: #29e;
-  border: solid 2px #fff;
-  -webkit-transform: translate(0px, 0px);
-  transform: translate(0px, 0px);
-  transition: background-color 0.3s; }
-
-.drag-drop.can-drop {
-  color: #000;
-  background-color: #F00; }
+        main > .schedule > .year > .term > .course {
+          background-color: #CCCCCC;
+          border: dashed .2rem black;
+          border-radius: 4px;
+          margin: .6rem;
+          transition: background-color 0.3s; }
 
 /*# sourceMappingURL=index.css.map */
