@@ -6,10 +6,11 @@
 var http = require('http');
 var path = require('path');
 var express = require('express');
-var expresshbs = require('express3-handlebars')
+var expresshbs = require('express3-handlebars');
 
 var app = express();
 
+var templates = require('./templates');
 var handlebars = expresshbs.create({
     helpers: {
         populateTerm: function(termId, courses) {
@@ -19,11 +20,12 @@ var handlebars = expresshbs.create({
 				's': "spring",
 				's1': "summer I",
                 's2': "summer II"
-            }[termId]
+            }[termId];
+
             ret = "<div class=\"term-label\">" + termLabel + "</div>\n"
                 + "<div class=\"term " + termLabel.replace(/\s/g, '-') + "\">\n"
             for (let course of courses) {
-                ret += "<div class=\"course " + course + "\">"+course+"</div>\n";
+                ret += templates.courseCard(course);
             }
             ret += "</div>"
 
