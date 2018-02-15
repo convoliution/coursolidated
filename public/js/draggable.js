@@ -34,7 +34,7 @@ $(function() {
             "yearName": $(termElem).siblings('.year-label').text(),
             "termId": $(termElem).data('term'),
             "courses": $(termElem).children().map(function() {
-                return $(termElem).data('course');
+                return $(this).data('course');
             }).get()
         }
         $.post('/schedule-change', newCourses, callback);
