@@ -64,10 +64,12 @@
             </div>
             <div class="menu-content">
             {{#each majors}}
+                {{#unless (isIn @key ../user/majors)}}
                 <div class="choice">
                     <button class="name">{{name}}</button>
                     <button class="confirm">Add</button>
                 </div>
+                {{/unless}}
             {{/each}}
             </div>
         </div>
@@ -78,10 +80,12 @@
             </div>
             <div class="menu-content">
             {{#each minors}}
+                {{#unless (isIn @key ../user/minors)}}
                 <div class="choice">
                     <button class="name">{{name}}</button>
                     <button class="confirm">Add</button>
                 </div>
+                {{/unless}}
             {{/each}}
             </div>
         </div>
@@ -92,10 +96,12 @@
             </div>
             <div class="menu-content">
             {{#each colleges}}
+                {{#unless (isEqual @key ../user/college)}}
                 <div class="choice">
                     <button class="name">{{@key}}</button>
                     <button class="confirm">Select</button>
                 </div>
+                {{/unless}}
             {{/each}}
             </div>
         </div>

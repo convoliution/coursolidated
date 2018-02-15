@@ -13,6 +13,12 @@ var app = express();
 var templates = require('./templates');
 var handlebars = expresshbs.create({
     helpers: {
+        isEqual: function(obj1, obj2) {
+            return obj1 === obj2;
+        },
+        isIn: function(obj, lst) {
+            return lst.includes(obj);
+        },
         populateTerm: function(termId, courses) {
             var termLabel = {
                 'f': "fall",
