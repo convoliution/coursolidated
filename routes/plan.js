@@ -1,8 +1,8 @@
-var user = require('../data/users.json')['Ian Drosos']
-var majors = require('../data/majors.json')
-var minors = require('../data/minors.json')
-var colleges = require('../data/colleges.json')
-var courses = require('../data/courses.json')
+var user = require('../data/users.json')['Ian Drosos'];
+var majors = require('../data/majors.json');
+var minors = require('../data/minors.json');
+var colleges = require('../data/colleges.json');
+var courses = require('../data/courses.json');
 
 exports.major = function(req, res){
     var major = req.query.major;
