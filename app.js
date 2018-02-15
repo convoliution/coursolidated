@@ -29,7 +29,7 @@ var handlebars = expresshbs.create({
             }[termId];
 
             ret = "<div class=\"term-label\">" + termLabel + "</div>\n"
-                + "<div class=\"term " + termLabel.replace(/\s/g, '-') + "\">\n"
+                + "<div class=\"term " + termLabel.replace(/\s/g, '-') + "\" data-term=\"" + termId + "\">\n"
             for (let course of courses) {
                 ret += templates.courseCard(course);
             }
@@ -66,14 +66,17 @@ if ('development' == app.get('env')) {
 
 var index = require('./routes/index');
 var plan = require('./routes/plan');
-var add = require('./routes/add');
+var schedule = require('./routes/schedule');
 
 app.get('/', index.view);
-app.get('/plan-minor', plan.minor);
-app.get('/plan-major', plan.major);
-app.get('/plan-college', plan.college);
-app.get('/plan-course', plan.course);
-app.get('/add', add.course);
+
+app.post('/plan-major', plan.major);
+app.post('/plan-minor', plan.minor);
+app.post('/plan-college', plan.college);
+app.post('/plan-course', plan.course);
+
+app.post('/schedule-change', schedule.change);
+app.get('/schedule-check', schedule.check);
 
 http.createServer(app).listen(app.get('port'), function(){
     console.log('Express server listening on port ' + app.get('port'));

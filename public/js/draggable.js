@@ -7,16 +7,18 @@ $(function() {
             if ($(this).children().length >= 6) {
                 $(this).addClass('full');
             }
+            updateUserData(this, setCardStatuses);
         },
         remove: function(event, ui) {
             if ($(this).children().length < 6) {
                 $(this).removeClass('full');
             }
+            updateUserData(this);
         },
         // check prereqs for all courses on drop
-        deactivate: function(event, ui) {
+        /*deactivate: function(event, ui) {
             $(this).parents('.schedule').find('.course').map(setCardStatus);
-        }
+        }*/
     });
     $('#toadd-menu .requirement').sortable({
         connectWith: ".term:not(.full)",
@@ -25,7 +27,21 @@ $(function() {
         // resize card on grab
     });
 
-    function setCardStatus() {
+    function updateUserData(termElem, callback) {
+        newCourses = {
+            "userName": "Ian Drosos",
+            "scheduleName": "My Schedule",
+            "yearName": $(termElem).siblings('.year-label').text(),
+            "termId": $(termElem).data('term'),
+            "courses": $(termElem).children().map(function() {
+                return $(termElem).data('course');
+            }).get()
+        }
+        $.post('/schedule-change', newCourses, callback);
+    }
+
+    function setCardStatuses() {
+        $.get('/schedule-check');
                                 // courses from prev terms in same year
         let preceedingCourses = $(this).parent().prevAll('.term').children('.course')
                                 // courses from prev years
