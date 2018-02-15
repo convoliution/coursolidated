@@ -76,7 +76,7 @@ app.post('/plan-college', plan.college);
 app.post('/plan-course', plan.course);
 
 app.post('/schedule-change', schedule.change);
-app.get('/schedule-check', schedule.check);
+app.get('/schedule-check/:userName/:scheduleName', schedule.check);
 
 http.createServer(app).listen(app.get('port'), function(){
     console.log('Express server listening on port ' + app.get('port'));
