@@ -198,9 +198,9 @@ main {
           grid-row: 2 / 3; }
         main > .schedule > .year > .term.spring {
           grid-row: 3 / 4; }
-        main > .schedule > .year > .term.summer1 {
+        main > .schedule > .year > .term.summer-I {
           grid-row: 4 / 5; }
-        main > .schedule > .year > .term.summer2 {
+        main > .schedule > .year > .term.summer-II {
           grid-row: 5 / 6; }
         main > .schedule > .year > .term > .course {
           width: 3rem;
