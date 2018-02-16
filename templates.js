@@ -18,6 +18,6 @@ module.exports = {
              +         "<div class=\"course-offered-s1" + (courseInfo.offered.includes('s1')? " offered" : "") + "\">s1</div>\n"
              +         "<div class=\"course-offered-s2" + (courseInfo.offered.includes('s2')? " offered" : "") + "\">s2</div>\n"
              +     "</div>\n"
-             + "</div>\n"
+             + "</div>\n";
     },
 };
