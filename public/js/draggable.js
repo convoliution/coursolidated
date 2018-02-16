@@ -41,8 +41,12 @@ $(function() {
     }
 
     function setCardStatuses() {
-        $.get('/schedule-check');
-                                // courses from prev terms in same year
+        userName = "Ian Drosos";
+        scheduleName = "My Schedule";
+        $.get('/schedule-check/'+userName+'/'+scheduleName, function(result) {
+            console.log("GET success!");
+        });
+        /*                        // courses from prev terms in same year
         let preceedingCourses = $(this).parent().prevAll('.term').children('.course')
                                 // courses from prev years
                                 .add($(this).parent().parent().prevAll('.year')
@@ -50,6 +54,6 @@ $(function() {
         //console.log(new Set(preceedingCourses));
 
         // get requirements from courses.json
-        var course = $(this).data('course');
+        var course = $(this).data('course');*/
     }
 });
