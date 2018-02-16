@@ -5,10 +5,10 @@ html {
   box-sizing: inherit; }
 
 #topbar {
-  height: 12vh;
+  height: 4rem;
   border-bottom: 2px solid black;
   display: grid;
-  grid-template-columns: 12vh 1fr; }
+  grid-template-columns: 4rem 1fr; }
   #topbar > button {
     height: 80%;
     width: 80%;
@@ -47,10 +47,10 @@ html {
     .menu {
       width: 20rem; } }
   .menu > .menu-top {
-    height: 12vh;
+    height: 4rem;
     width: 100%;
     display: grid;
-    grid-template-columns: 12vh 1fr; }
+    grid-template-columns: 4rem 1fr; }
     .menu > .menu-top > button {
       height: 80%;
       width: 80%;
@@ -62,9 +62,9 @@ html {
       justify-self: center;
       align-self: center; }
   .menu > .menu-content {
-    height: -moz-calc(100% - 12vh);
-    height: -webkit-calc(100% - 12vh);
-    height: calc(100% - 12vh);
+    height: -moz-calc(100% - 4rem);
+    height: -webkit-calc(100% - 4rem);
+    height: calc(100% - 4rem);
     width: -moz-calc(12rem - 2px);
     width: -webkit-calc(12rem - 2px);
     width: calc(12rem - 2px);
@@ -80,11 +80,11 @@ html {
         width: -webkit-calc(20rem - 2px);
         width: calc(20rem - 2px); } }
     .menu > .menu-content > button {
-      height: 12vh;
+      height: 4rem;
       width: 100%;
       background-color: white; }
     .menu > .menu-content > .choice {
-      height: 12vh;
+      height: 4rem;
       width: 100%;
       overflow-y: hidden;
       -webkit-transition: height 0.25s;
@@ -92,23 +92,23 @@ html {
       -o-transition: height 0.25s;
       transition: height 0.25s; }
       .menu > .menu-content > .choice > button {
-        height: 12vh;
+        height: 4rem;
         width: 100%; }
         .menu > .menu-content > .choice > button.name {
           background-color: white; }
         .menu > .menu-content > .choice > button.confirm {
           background-color: lightgreen; }
       .menu > .menu-content > .choice.active {
-        height: -moz-calc(2 * 12vh);
-        height: -webkit-calc(2 * 12vh);
-        height: calc(2 * 12vh); }
+        height: -moz-calc(2 * 4rem);
+        height: -webkit-calc(2 * 4rem);
+        height: calc(2 * 4rem); }
     .menu > .menu-content > .set {
       width: 100%; }
       .menu > .menu-content > .set > .requirement {
-        height: 12vh;
+        height: 4rem;
         width: 100%; }
         .menu > .menu-content > .set > .requirement > .course {
-          height: 12vh;
+          height: 4rem;
           width: 100%;
           border: 1px solid black; }
   .menu#main-menu {
@@ -123,9 +123,9 @@ main > #info {
   left: -moz-calc(-100vw + 12rem);
   left: -webkit-calc(-100vw + 12rem);
   left: calc(-100vw + 12rem);
-  height: -moz-calc(100vh - 12vh);
-  height: -webkit-calc(100vh - 12vh);
-  height: calc(100vh - 12vh);
+  height: -moz-calc(100vh - 4rem);
+  height: -webkit-calc(100vh - 4rem);
+  height: calc(100vh - 4rem);
   width: -moz-calc(100vw - 12rem);
   width: -webkit-calc(100vw - 12rem);
   width: calc(100vw - 12rem);
@@ -153,9 +153,9 @@ main > #info {
       width: calc(100vw - 20rem); } }
 
 main {
-  height: -moz-calc(100vh - 12vh);
-  height: -webkit-calc(100vh - 12vh);
-  height: calc(100vh - 12vh); }
+  height: -moz-calc(100vh - 4rem);
+  height: -webkit-calc(100vh - 4rem);
+  height: calc(100vh - 4rem); }
   main > .schedule {
     height: 100%;
     overflow-y: scroll;
