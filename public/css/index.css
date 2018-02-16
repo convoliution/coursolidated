@@ -205,7 +205,7 @@ main {
         main > .schedule > .year > .term > .course {
           width: 3rem;
           background-color: #f8f8f8;
-          border: dashed .2rem black;
+          border: solid .2rem black;
           border-radius: 4px;
           padding: .2rem;
           margin: .6rem;

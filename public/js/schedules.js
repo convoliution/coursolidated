@@ -1,24 +1,22 @@
 $(function() {
+    setCardStatuses();
+
     $('.term').sortable({
         connectWith: ".term:not(.full)",
         tolerance: "pointer",
         revert: 100,
         receive: function(event, ui) {
+            updateUserData(this, setCardStatuses);
             if ($(this).children().length >= 6) {
                 $(this).addClass('full');
             }
-            updateUserData(this, setCardStatuses);
         },
         remove: function(event, ui) {
+            updateUserData(this);
             if ($(this).children().length < 6) {
                 $(this).removeClass('full');
             }
-            updateUserData(this);
         },
-        // check prereqs for all courses on drop
-        /*deactivate: function(event, ui) {
-            $(this).parents('.schedule').find('.course').map(setCardStatus);
-        }*/
     });
     $('#toadd-menu .requirement').sortable({
         connectWith: ".term:not(.full)",
@@ -44,16 +42,25 @@ $(function() {
         userName = "Ian Drosos";
         scheduleName = "My Schedule";
         $.get('/schedule-check/'+userName+'/'+scheduleName, function(result) {
-            console.log("GET success!");
+            var years = result[scheduleName];
+            for (let year in years) {
+                for (let term in years[year]) {
+                    for (let course in years[year][term]) {
+                        let courseCard = $('.year').filter(function() {
+                            return $(this).data('year') === year;
+                        }).children('.term').filter(function() {
+                            return $(this).data('term') === term;
+                        }).children('.course').filter(function() {
+                            return $(this).data('course') === course;
+                        })
+                        if (years[year][term][course]) {
+                            courseCard.css('border-color', 'green');
+                        } else {
+                            courseCard.css('border-color', 'red');
+                        }
+                    }
+                }
+            }
         });
-        /*                        // courses from prev terms in same year
-        let preceedingCourses = $(this).parent().prevAll('.term').children('.course')
-                                // courses from prev years
-                                .add($(this).parent().parent().prevAll('.year')
-                                .children('.term').children('.course')).get();
-        //console.log(new Set(preceedingCourses));
-
-        // get requirements from courses.json
-        var course = $(this).data('course');*/
     }
 });

@@ -170,9 +170,9 @@
             </div>
             {{#with user}}
                 {{#each schedules}}
-                    <div class="schedule active">
+                    <div class="schedule" data-schedule="{{name}}">
                     {{#each years}}
-                        <div class="year" id="{{@index}}">
+                        <div class="year" data-year="{{name}}">
         					<div class="year-label">{{name}}</div>
                             {{#each terms}}
                                 {{{populateTerm id courses}}}
@@ -186,7 +186,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="/js/schedules.js"></script>
         <script src="/js/menus.js"></script>
-        <script src="/js/draggable.js"></script>
     </body>
 </html>
