@@ -66,7 +66,7 @@ main {
                     width: 3rem;
 
                     background-color: $lightest-gray;
-                    border: solid .2rem black;
+                    border: solid .2rem $black;
                     border-radius: 4px;
                     padding: .2rem;
                     margin: .6rem;
@@ -76,11 +76,15 @@ main {
                     display: grid;
                     grid-template-rows: 2fr 3fr 4fr;
 
+                    text-align: center;
+                    font-size: .75rem;
+
                     > .course-department {
                         grid-row: 1 / 2;
                     }
                     > .course-code {
                         grid-row: 2 / 3;
+                        font-size: 1rem;
                     }
                     > .course-offered {
                         grid-row: 3 / 4;
@@ -112,7 +116,7 @@ main {
 
                         color: $lighter-gray;
                         > .offered {
-                            color: green;
+                            color: $black;
                         }
                     }
                 }

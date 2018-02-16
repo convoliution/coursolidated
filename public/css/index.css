@@ -205,18 +205,21 @@ main {
         main > .schedule > .year > .term > .course {
           width: 3rem;
           background-color: #f8f8f8;
-          border: solid .2rem black;
+          border: solid 0.2rem #000000;
           border-radius: 4px;
           padding: .2rem;
           margin: .6rem;
           overflow: hidden;
           transition: background-color 0.3s;
           display: grid;
-          grid-template-rows: 2fr 3fr 4fr; }
+          grid-template-rows: 2fr 3fr 4fr;
+          text-align: center;
+          font-size: .75rem; }
           main > .schedule > .year > .term > .course > .course-department {
             grid-row: 1 / 2; }
           main > .schedule > .year > .term > .course > .course-code {
-            grid-row: 2 / 3; }
+            grid-row: 2 / 3;
+            font-size: 1rem; }
           main > .schedule > .year > .term > .course > .course-offered {
             grid-row: 3 / 4;
             display: grid;
@@ -239,6 +242,6 @@ main {
               grid-row: 2 / 3;
               grid-column: 4 / 6; }
             main > .schedule > .year > .term > .course > .course-offered > .offered {
-              color: green; }
+              color: #000000; }
 
 /*# sourceMappingURL=index.css.map */
