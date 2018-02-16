@@ -1,3 +1,22 @@
+// shoddy, fake, and unconvicing login menu
+$(function() {
+    $('#login').dialog({
+        autoOpen: true,
+        closeText: "Login"
+    });
+    $('.ui-dialog').css({
+        'height': '8rem',
+        'width': '16rem',
+        'background-color': 'white',
+        'border': '2px solid black',
+        'padding': '.5rem'
+    });
+    $('.ui-dialog-titlebar').css({
+        'background-color': 'gray',
+        'border-radius': '4px'
+    });
+});
+
 $(function() {
     setCardStatuses();
 
