@@ -8,6 +8,10 @@ module.exports = {
     courseCard: function(course) {
         var courseInfo = courses[course];
 
+        if (courseInfo == null) {
+            return "";
+        }
+
         return "<div class=\"course\" data-course=\"" + course + "\">\n"
              +     "<div class=\"course-department\">"  + courseInfo.department + "</div>\n"
              +     "<div class=\"course-code\">"        + courseInfo.code       + "</div>\n"
