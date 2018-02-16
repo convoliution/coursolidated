@@ -4,8 +4,10 @@ var minors = require('../data/minors.json');
 var colleges = require('../data/colleges.json');
 var courses = require('../data/courses.json');
 
+var templates = require('../templates');
+
 exports.major = function(req, res){
-    var major = req.query.major;
+    var major = req.body.code;
     console.log("requested major: " + major);
     if (user.majors.includes(major)) {
         // notify user major already exists
@@ -16,7 +18,7 @@ exports.major = function(req, res){
 };
 
 exports.minor = function(req, res){
-    var minor = req.query.minor;
+    var minor = req.body.code;
     console.log("requested minor: " + minor);
     if (user.minors.includes(minor)) {
         // notify user major already exists
@@ -27,14 +29,14 @@ exports.minor = function(req, res){
 };
 
 exports.college = function(req, res){
-    var college = req.query.college;
+    var college = req.body.code;
     console.log("requested college: " + college);
     // if no college
     // if college already exists
 };
 
 exports.course = function(req, res){
-    var course = req.query.course;
+    var course = req.body.code;
     console.log("requested course: " + course);
 };
 

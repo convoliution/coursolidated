@@ -65,20 +65,8 @@ html {
     height: -moz-calc(100% - 4rem);
     height: -webkit-calc(100% - 4rem);
     height: calc(100% - 4rem);
-    width: -moz-calc(12rem - 2px);
-    width: -webkit-calc(12rem - 2px);
-    width: calc(12rem - 2px);
+    width: 100%;
     overflow-y: scroll; }
-    @media only screen and (min-width: 27rem) {
-      .menu > .menu-content {
-        width: -moz-calc(33vw - 2px);
-        width: -webkit-calc(33vw - 2px);
-        width: calc(33vw - 2px); } }
-    @media only screen and (min-width: 56rem) {
-      .menu > .menu-content {
-        width: -moz-calc(20rem - 2px);
-        width: -webkit-calc(20rem - 2px);
-        width: calc(20rem - 2px); } }
     .menu > .menu-content > button {
       height: 4rem;
       width: 100%;
@@ -106,9 +94,20 @@ html {
       width: 100%; }
       .menu > .menu-content > .set > .requirement {
         width: 100%;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-end; }
+        display: grid;
+        grid-template-columns: 1.5rem 1fr; }
+        .menu > .menu-content > .set > .requirement .requirement-label {
+          grid-column: 1 / 2;
+          justify-self: center;
+          align-self: center;
+          -webkit-transform: rotate(270deg);
+          -ms-transform: rotate(270deg);
+          transform: rotate(270deg); }
+        .menu > .menu-content > .set > .requirement .requirement-courses {
+          grid-column: 2 / 3;
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-end; }
   .menu#main-menu {
     z-index: 2; }
   .menu#profile-menu, .menu#majors-menu, .menu#minors-menu, .menu#gened-menu, .menu#catalog-menu, .menu#toadd-menu, .menu#settings-menu {
@@ -165,24 +164,20 @@ main {
       border-style: solid;
       border-color: #747678; }
       main > .schedule > .year > .year-label {
-        width: 12rem;
         grid-column: 1 / 2;
         grid-row: 1 / 6;
         justify-self: center;
         align-self: center;
         -webkit-transform: rotate(270deg);
         -ms-transform: rotate(270deg);
-        transform: rotate(270deg);
-        text-align: center; }
+        transform: rotate(270deg); }
       main > .schedule > .year > .term-label {
-        width: 6rem;
         grid-column: 2 / 3;
         justify-self: center;
         align-self: center;
         -webkit-transform: rotate(270deg);
         -ms-transform: rotate(270deg);
-        transform: rotate(270deg);
-        text-align: center; }
+        transform: rotate(270deg); }
       main > .schedule > .year > .term {
         height: 6rem;
         grid-column: 3 / 4;

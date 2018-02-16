@@ -31,6 +31,16 @@ function showMenu(menu, animTime) {
         $('#tabs').animate({
             marginLeft: menu.outerWidth() - $('#topbar').outerHeight()
         }, animTime);
+    } else if (menu.attr('id') === 'toadd-menu') {
+        $.get('/populate-toadd', function(result) {
+            $('#toadd-menu > .menu-content').html(result);
+            $('#toadd-menu .requirement-courses').sortable({
+                cancel: ".requirement",
+                connectWith: ".term:not(.full)",
+                tolerance: "pointer",
+                revert: 100
+            });
+        });
     }
     menu.animate({
         left: 0
