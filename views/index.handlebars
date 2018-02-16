@@ -33,27 +33,31 @@
             <div class="menu-content">
                 {{#with user}}
                     <h1>Hello, {{firstName}}!</h1>
-                    {{#if majors}}
-                        <div>You are majoring in:
+                        <div id="user-major">
+                        {{#if majors}}
+                            You are majoring in:
                             <ul>
                             {{#each majors}}
                                 <li>{{this}}</li>
                             {{/each}}
                             </ul>
+                        {{/if}}
                         </div>
-                    {{/if}}
-                    {{#if minors}}
-                        <div>You are minoring in:
+                        <div id="user-minor">
+                        {{#if minors}}
+                            You are minoring in:
                             <ul>
                                 {{#each minors}}
                                 <li>{{this}}</li>
                                 {{/each}}
                             </ul>
+                        {{/if}}
                         </div>
-                    {{/if}}
-                    {{#if college}}
-                        <div>You are in {{college}} College</div>
-                    {{/if}}
+                        <div id="user-college">
+                        {{#if college}}
+                            You are in {{college}} College
+                        {{/if}}
+                        </div>
                 {{/with}}
             </div>
         </div>
@@ -66,7 +70,7 @@
             {{#each majors}}
                 {{#unless (isIn @key ../user/majors)}}
                 <div class="choice">
-                    <button class="name">{{name}}</button>
+                    <button class="name" data-code="{{@key}}">{{name}}</button>
                     <button class="confirm">Add</button>
                 </div>
                 {{/unless}}
@@ -82,7 +86,7 @@
             {{#each minors}}
                 {{#unless (isIn @key ../user/minors)}}
                 <div class="choice">
-                    <button class="name">{{name}}</button>
+                    <button class="name" data-code="{{@key}}">{{name}}</button>
                     <button class="confirm">Add</button>
                 </div>
                 {{/unless}}
@@ -98,7 +102,7 @@
             {{#each colleges}}
                 {{#unless (isEqual @key ../user/college)}}
                 <div class="choice">
-                    <button class="name">{{@key}}</button>
+                    <button class="name" data-code="{{@key}}">{{@key}}</button>
                     <button class="confirm">Select</button>
                 </div>
                 {{/unless}}
@@ -113,7 +117,7 @@
             <div class="menu-content">
                 {{#each courses}}
                     <div class="choice">
-                        <button class="name">{{@key}}</button>
+                        <button class="name" data-code="{{@key}}">{{@key}}</button>
                         <button class="confirm">Plan</button>
                     </div>
                 {{/each}}
@@ -128,15 +132,7 @@
                 {{{populateToAdd user majors minors colleges courses}}}
                 <div class="set">
                     <div class="requirement">
-                        <div class="course">
-                            COGS 100
-                        </div>
-                        <div class="course">
-                            COGS 101
-                        </div>
-                        <div class="course">
-                            COGS 102
-                        </div>
+
                     </div>
                 </div>
             </div>
