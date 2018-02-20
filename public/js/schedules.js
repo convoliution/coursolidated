@@ -1,12 +1,14 @@
 $(function() {
-    setCardStatuses();
+    setCardOutlineColors();
+    $('.schedule .course').each(setCardTermColors);
 
     $('.term').sortable({
         connectWith: ".term:not(.full)",
         tolerance: "pointer",
         revert: 100,
         receive: function(event, ui) {
-            updateUserData(this, setCardStatuses);
+            updateUserData(this, setCardOutlineColors);
+            setCardTermColors.apply(ui.item);
             if ($(this).children().length >= 6) {
                 $(this).addClass('full');
             }
@@ -26,7 +28,7 @@ $(function() {
     });
 
     function updateUserData(termElem, callback) {
-        newCourses = {
+        var newCourses = {
             "userName": "Ian Drosos",
             "scheduleName": "My Schedule",
             "yearName": $(termElem).siblings('.year-label').text(),
@@ -38,9 +40,9 @@ $(function() {
         $.post('/schedule-change', newCourses, callback);
     }
 
-    function setCardStatuses() {
-        userName = "Ian Drosos";
-        scheduleName = "My Schedule";
+    function setCardOutlineColors() {
+        var userName = "Ian Drosos";
+        var scheduleName = "My Schedule";
         $.get('/schedule-check/'+userName+'/'+scheduleName, function(result) {
             var years = result[scheduleName];
             for (let year in years) {
@@ -62,5 +64,19 @@ $(function() {
                 }
             }
         });
+    }
+
+    // only apply this to things; do not call on its own
+    function setCardTermColors() {
+        var parentTerm = $(this).parent('.term').data('term');
+        var termsOffered = $(this).find('.course-offered > .offered').map(function() {
+            return $(this).data('term');
+        }).get();
+        if (!termsOffered.includes(parentTerm)) {
+            $(this).find('.course-offered > .offered').css('color', 'red');
+        } else {
+            // restore to default
+            $(this).find('.course-offered > .offered').css('color', '');
+        }
     }
 });
