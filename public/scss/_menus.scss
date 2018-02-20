@@ -81,7 +81,7 @@
                 &.confirm { background-color: lightgreen; }
             }
 
-            @include transition(height, .250s);
+            @include transition(height, 250ms);
             &.active {
                 @include calc(height, '2 * #{$tile-height}');
             }

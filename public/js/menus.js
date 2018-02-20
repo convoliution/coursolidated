@@ -8,6 +8,7 @@ $(function() {
     let animTime = 250;
 
     $('#topbar > button').tap(function(event) {
+        event.preventDefault();
         showMenu($('#main-menu'), animTime);
     });
     $('.menu-top > button').tap(function(event) {
@@ -26,6 +27,7 @@ function showMenu(menu, animTime) {
         $('main').animate({
             marginLeft: menu.outerWidth()
         }, animTime);
+        $('.term > .course').addClass('compressed');
         $('#tabs').animate({
             marginLeft: menu.outerWidth() - $('#topbar').outerHeight()
         }, animTime);
@@ -40,6 +42,7 @@ function hideMenu(menu, animTime) {
         $('main').animate({
             marginLeft: 0
         }, animTime);
+        $('.term > .course').removeClass('compressed');
         $('#tabs').animate({
             marginLeft: 0
         }, animTime);
