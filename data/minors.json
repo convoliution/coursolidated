@@ -1,18 +1,18 @@
 {
 	"M079": {
 		"name": "Design",
-		"requirements": {
-			"Required": [0, "DSGN1", "DSGN100", "DSGN119"],
-			"Lower Division": [1, "COGS10", "COMM10", "MAE3", "VIS30"],
-			"Studio Sequence": [1, [0, "COGS102B", "COGS102C"], [0, "COMM124A", "COMM124B"],
-				               [0, "ENG100D", "ENG100L"], [0, "COGS120", "COGS121"],
-				               [0, "COGS187A", "COGS187B"], [0, "VIS100", "VIS101A"],
-				               [0, "VIS142", "VIS148"]],
-			"Upper Division": [1, "COGS102A", "COGS102B", "COGS102C", "COGS120", "COGS121", "COGS187A",
-				               "COGS187B", "COMM100A", "COMM100B", "COMM100C", "COMM111D", "COMM124A",
-				               "COMM124B", "CSE110", "CSE118", "DSGN160", "DSGN195", "ENG100D", "ENG100L",
-							   "MGT103", "MGT121A", "PSYC148", "PSYC176", "VIS100", "VIS100A", "VIS101A",
-			 				   "VIS142", "VIS148", "VIS159"]
-		}
+		"requirements": [0,
+			[0, "DSGN1"	, "DSGN100", "DSGN119"],
+			[1, "COGS10", "COMM10", "MAE3", "VIS30"],
+			[1, [0, "COGS102B", "COGS102C"], [0, "COMM124A", "COMM124B"],
+                [0, "ENG100D", "ENG100L"], [0, "COGS120", "COGS121"],
+                [0, "COGS187A", "COGS187B"], [0, "VIS100", "VIS101A"],
+                [0, "VIS142", "VIS148"]],
+			[1, "COGS102A", "COGS102B", "COGS102C", "COGS120", "COGS121", "COGS187A",
+	            "COGS187B", "COMM100A", "COMM100B", "COMM100C", "COMM111D", "COMM124A",
+	            "COMM124B", "CSE110", "CSE118", "DSGN160", "DSGN195", "ENG100D", "ENG100L",
+			    "MGT103", "MGT121A", "PSYC148", "PSYC176", "VIS100", "VIS100A", "VIS101A",
+				"VIS142", "VIS148", "VIS159"]
+		]
 	}
 }

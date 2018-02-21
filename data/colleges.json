@@ -1,21 +1,22 @@
 {
 	"Revelle": {
-		"requirements": {
-			"Humanities": [0, "HUM1", "HUM2", "HUM3", "HUM4", "HUM5"],
-			"Mathematics": [0, [1, "MATH10A", "MATH20A"],
-				               [1, "MATH10A", "MATH20B"],
-				               [1, "MATH10C", "MATH20C", "MATH11", "MATH18", "PHIL10"]],
-			"Natural Science": [0, [1, "BILD7", "BILD10", "BILD12", "BILD26", "BILD1", "BILD2", "BILD3"],
-				                   [1, "CHEM11", "CHEM12", "CHEM13", "CHEM15", "CHEM4", "CHEM6A", "CHEM6B", "CHEM6C", "CHEM6AH", "CHEM6BH", "CHEM6CH"],
-				                   [1, "PHYS5", "PHYS7", "PHYS8", "PHYS9", "PHYS10", "PHYS11", "PHYS12", "PHYS13",
-									   [0, "PHYS1A", "PHYS1AL"], [0, "PHYS1B", "PHYS1BL"], [0, "PHYS1C", "PHYS1CL"],
-									   "PHYS2A", "PHYS2B", "PHYS2C", "PHYS2D", "PHYS4A", "PHYS4B", "PHYS4C", "PHYS4D", "PHYS4E"],
-				               	   [2, "BILD7", "BILD10", "BILD12", "BILD26", "BILD1", "BILD2", "BILD3", "CHEM11", "CHEM12", "CHEM13", "CHEM15", "CHEM4", "CHEM6A",
-									   "CHEM6B", "CHEM6C", "CHEM6AH", "CHEM6BH", "CHEM6CH", "PHYS5", "PHYS7", "PHYS8", "PHYS9", "PHYS10", "PHYS11", "PHYS12", "PHYS13",
-									   [0, "PHYS1A", "PHYS1AL"], [0, "PHYS1B", "PHYS1BL"], [0, "PHYS1C", "PHYS1CL"],
-									   "PHYS2A", "PHYS2B", "PHYS2C", "PHYS2D", "PHYS4A", "PHYS4B", "PHYS4C", "PHYS4D", "PHYS4E"]],
-			"Social Science": [2, "ECON1", "ECON2", "ECON3", "ECON4", "ECON5"],
-			"Fine Arts": [1, "TDAC1", "TDAC101", "TDAC102", "TDAC103A", "TDAC103B", "TDAC104", "TDAC105", "TDAC106", "TDAC107", "TDAC108", "TDAC109", "TDAC110", "TDAC111", "TDAC112", "TDAC115", "TDAC120", "TDAC122", "TDAC123"]
-		}
+		"requirements": [0,
+			[0, "HUM1", "HUM2", "HUM3", "HUM4", "HUM5"],
+			[0, [1, "MATH10A", "MATH20A"],
+                [1, "MATH10A", "MATH20B"],
+                [1, "MATH10C", "MATH20C", "MATH11", "MATH18", "PHIL10"]],
+			[0, [1, "BILD7", "BILD10", "BILD12", "BILD26", "BILD1", "BILD2", "BILD3"],
+				[1, "CHEM11", "CHEM12", "CHEM13", "CHEM15", "CHEM4", "CHEM6A", "CHEM6B", "CHEM6C", "CHEM6AH", "CHEM6BH", "CHEM6CH"],
+				[1, "PHYS5", "PHYS7", "PHYS8", "PHYS9", "PHYS10", "PHYS11", "PHYS12", "PHYS13",
+					[0, "PHYS1A", "PHYS1AL"], [0, "PHYS1B", "PHYS1BL"], [0, "PHYS1C", "PHYS1CL"],
+					"PHYS2A", "PHYS2B", "PHYS2C", "PHYS2D", "PHYS4A", "PHYS4B", "PHYS4C", "PHYS4D", "PHYS4E"],
+				[2, "BILD7", "BILD10", "BILD12", "BILD26", "BILD1", "BILD2", "BILD3", "CHEM11", "CHEM12", "CHEM13", "CHEM15", "CHEM4", "CHEM6A",
+                    "CHEM6B", "CHEM6C", "CHEM6AH", "CHEM6BH", "CHEM6CH", "PHYS5", "PHYS7", "PHYS8", "PHYS9", "PHYS10", "PHYS11", "PHYS12", "PHYS13",
+					[0, "PHYS1A", "PHYS1AL"], [0, "PHYS1B", "PHYS1BL"], [0, "PHYS1C", "PHYS1CL"],
+					"PHYS2A", "PHYS2B", "PHYS2C", "PHYS2D", "PHYS4A", "PHYS4B", "PHYS4C", "PHYS4D", "PHYS4E"]],
+			[2, "ECON1", "ECON2", "ECON3", "ECON4", "ECON5"],
+			[1, "TDAC1", "TDAC101", "TDAC102", "TDAC103A", "TDAC103B", "TDAC104", "TDAC105", "TDAC106", "TDAC107",
+				"TDAC108", "TDAC109", "TDAC110", "TDAC111", "TDAC112", "TDAC115", "TDAC120", "TDAC122", "TDAC123"]
+		]
 	}
 }
