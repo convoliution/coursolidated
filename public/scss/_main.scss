@@ -18,8 +18,6 @@ main {
             border-color: $gray;
 
             > .year-label {
-                width: 12rem;
-
                 grid-column: 1 / 2;
                 grid-row: 1 / 6;
                 justify-self: center;
@@ -30,8 +28,6 @@ main {
             }
 
             > .term-label {
-                width: 6rem;
-
                 grid-column: 2 / 3;
                 justify-self: center;
                 align-self: center;
