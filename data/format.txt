@@ -82,11 +82,11 @@ Majors:
 {
 	"MajorCode": {
 		"name": "",
-		"requirements": {
-			"Required": [0, ""],
-			"Elective": [0, ""],
+		"requirements": [0,
+			[0, ""],
+			[0, ""],
 			. . .
-		}
+		]
 	}
 }
 
@@ -97,12 +97,12 @@ majors is a dictionary where the keys are all the major codes (eg. CG25)
 		requirements
 
 		name is a string with the name of the major
-		requirements is a dictionary, with the following fields
-			Required, and any other fields, are lists
-				The first item in the list is a number. This is the number of items in that list that must be chosen to satisfy the requirements.
-				The rest of the list consists of strings representing classes, or of lists representing a choice between two or more classes.
-				(eg. [2, [1, "CourseA", "CourseB"], [1, "CourseC", "CourseD"]]
-				 denotes that the user must choose 1 course out of A or B, and 1 course out of C or D)
+		requirements is a list
+			The first item in the list is a number. This is the number of items in that list that must be chosen to satisfy the requirements.
+			A 0 denotes that all items in the list must be met.
+			The rest of the list consists of strings representing classes, or of lists representing a choice between two or more classes.
+			(eg. [0, [1, "CourseA", "CourseB"], [1, "CourseC", "CourseD"]]
+			 denotes that the user must choose 1 course out of A or B, and 1 course out of C or D)
 
 
 
@@ -111,11 +111,11 @@ Minors:
 {
 	"MinorCode": {
 		"name": "",
-		"requirements": {
-			"Required": [0, ""],
-			"Elective": [0, ""],
+		"requirements": [0,
+			[0, ""],
+			[0, ""],
 			. . .
-		}
+		]
 	}
 }
 
@@ -127,11 +127,11 @@ Colleges:
 
 {
 	"CollegeName": {
-		"requirements": {
-			"Required": [0, ""],
-			"Elective": [0, ""],
+		"requirements": [0,
+			[0, ""],
+			[0, ""],
 			. . .
-		}
+		]
 	}
 }
 

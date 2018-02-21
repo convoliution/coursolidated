@@ -28,7 +28,7 @@
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [2, [1, "CHEM6A", "CHEM6AH"], [1, "MATH10A", "MATH20A"]],
+		"requirements": [0, [1, "CHEM6A", "CHEM6AH"], [1, "MATH10A", "MATH20A"]],
 		"offered": ["f", "w", "s"]
 	},
 
@@ -84,7 +84,7 @@
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [1, "COGS1"],
+		"requirements": [0, "COGS1"],
 		"offered": ["f", "s", "s1"]
 	},
 
@@ -95,7 +95,7 @@
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [1, "COGS1"],
+		"requirements": [0, "COGS1"],
 		"offered": ["w", "s2"]
 	},
 
@@ -106,7 +106,7 @@
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [2, "COGS1", "COGS14A"],
+		"requirements": [0, "COGS1", "COGS14A"],
 		"offered": ["s", "s1"]
 	},
 
@@ -118,7 +118,7 @@
 		"reqUpperDiv": false,
 		"consent": false,
 		"Crosslist": [["COGS100", 0]],
-		"requirements": [2, "COGS1", "COGS14A"],
+		"requirements": [0, "COGS1", "COGS14A"],
 		"offered": ["s2"]
 	},
 
@@ -140,7 +140,7 @@
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": true,
-		"requirements": [1, "COGS102B"],
+		"requirements": [0, "COGS102B"],
 		"offered": ["s"]
 	},
 
@@ -162,7 +162,7 @@
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [1, "COGS107A"],
+		"requirements": [0, "COGS107A"],
 		"offered": ["w"]
 	},
 
@@ -173,7 +173,7 @@
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [1, "COGS107B"],
+		"requirements": [0, "COGS107B"],
 		"offered": ["s"]
 	},
 
@@ -218,7 +218,7 @@
 		"reqUpperDiv": false,
 		"consent": false,
 		"Crosslist": [["COGS170", 0]],
-		"requirements": [2, [1, "CSE11", "CSE8A"], [1, "COGS1", "COGS187A", "DSGN1"]],
+		"requirements": [0, [1, "CSE11", "CSE8A"], [1, "COGS1", "COGS187A", "DSGN1"]],
 		"offered": ["f", "w"]
 	},
 
@@ -229,7 +229,7 @@
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [2, [1, "COGS120"], [1, "CSE8B", "CSE11"]],
+		"requirements": [0, [1, "COGS120"], [1, "CSE8B", "CSE11"]],
 		"offered": ["s"]
 	},
 
@@ -262,7 +262,7 @@
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [1, "COGS14A"],
+		"requirements": [0, "COGS14A"],
 		"offered": ["w", "s", "s1"]
 	},
 
@@ -295,7 +295,7 @@
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": true,
-		"requirements": [2, "COGS1", "COGS107A"],
+		"requirements": [0, "COGS1", "COGS107A"],
 		"offered": ["w"]
 	},
 
@@ -330,7 +330,7 @@
 		"reqUpperDiv": false,
 		"consent": false,
 		"Crosslist": [["PSYC139", 0]],
-		"requirements": [1, "COGS107A"],
+		"requirements": [0, "COGS107A"],
 		"offered": ["w"]
 	},
 
@@ -385,7 +385,7 @@
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": true,
-		"requirements": [2, "COGS107A", "COGS107B"],
+		"requirements": [0, "COGS107A", "COGS107B"],
 		"offered": ["s"]
 	},
 
@@ -396,7 +396,7 @@
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [2, [1, "COGS107A", "PSYC106"], [1, "COGS101A", "PSYC105"]],
+		"requirements": [0, [1, "COGS107A", "PSYC106"], [1, "COGS101A", "PSYC105"]],
 		"offered": ["f"]
 	},
 
@@ -420,9 +420,9 @@
 		"reqUpperDiv": false,
 		"consent": false,
 		"Crosslist": [],
-		"requirements": [4, [1, "BILD12", "COGS107B", "PSYC106"],
+		"requirements": [0, [1, "BILD12", "COGS107B", "PSYC106"],
 	                        [1, "MATH31AH", "MATH18", "MATH20F"],
-	                        [1, "MATH20B"],
+	                        [0, "MATH20B"],
 	                        [1, "COGS108", "COGS109", "CSE7", "CSE8A", "CSE11"]],
 		"offered": []
 	},
@@ -447,7 +447,7 @@
 		"reqUpperDiv": false,
 		"consent": false,
 		"Crosslist": [],
-		"requirements": [1, "CSE7"],
+		"requirements": [0, "CSE7"],
 		"offered": ["f", "s2"]
 	},
 
@@ -459,7 +459,7 @@
 		"reqUpperDiv": false,
 		"consent": true,
 		"Crosslist": [],
-		"requirements": ["COGS187A"],
+		"requirements": [0, "COGS187A"],
 		"offered": ["w"]
 	},
 
@@ -483,7 +483,7 @@
 		"reqUpperDiv": false,
 		"consent": false,
 		"Crosslist": [["COHI100", 0]],
-		"requirements": ["COMM10"],
+		"requirements": [0, "COMM10"],
 		"offered": ["f"]
 	},
 
@@ -519,7 +519,7 @@
 		"reqUpperDiv": false,
 		"consent": false,
 		"Crosslist": [],
-		"requirements": [1, "COMM124A"],
+		"requirements": [0, "COMM124A"],
 		"offered": ["w"]
 	},
 
@@ -543,7 +543,7 @@
 		"reqUpperDiv": true,
 		"consent": false,
 		"Crosslist": [],
-		"requirements": [1, "CSE100"],
+		"requirements": [0, "CSE100"],
 		"offered": ["f", "w", "s"]
 	},
 
@@ -603,7 +603,7 @@
 		"reqUpperDiv": false,
 		"consent": false,
 		"Crosslist": [],
-		"requirements": [1, "DSGN1"],
+		"requirements": [0, "DSGN1"],
 		"offered": ["w"]
 	},
 
@@ -836,7 +836,7 @@
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [1, "MATH20A"],
+		"requirements": [0, "MATH20A"],
 		"offered": ["f", "w", "s"]
 	},
 
@@ -895,7 +895,7 @@
 		"reqUpperDiv": false,
 		"consent": false,
 		"Crosslist": [],
-		"requirements": [1, "VIS100"],
+		"requirements": [0, "VIS100"],
 		"offered": ["f"]
 	},
 
@@ -907,7 +907,7 @@
 		"reqUpperDiv": false,
 		"consent": false,
 		"Crosslist": [],
-		"requirements": [1, "VIS101"],
+		"requirements": [0, "VIS101"],
 		"offered": ["w"]
 	},
 

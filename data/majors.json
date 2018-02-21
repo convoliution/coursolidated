@@ -2,7 +2,7 @@
 	"CG25": {
 		"name": "Cognitive Science",
 		"requirements": {
-			"Required": [8, "MATH18", "COGS1", "COGS13", "COGS14A", "COGS14B", "COGS17", "COGS100",
+			"Required": [0, "MATH18", "COGS1", "COGS13", "COGS14A", "COGS14B", "COGS17", "COGS100",
 				         "COGS108"],
 			"Math": [1, [2, "MATH10A", "MATH10B"], [2, "MATH20A", "MATH20B"]],
 			"Design": [1, "COGS10", "DSGN1"],
