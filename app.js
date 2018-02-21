@@ -36,9 +36,6 @@ var handlebars = expresshbs.create({
             ret += "</div>"
 
             return ret;
-        },
-        populateToAdd: function(user, majors, minors, colleges, courses) {
-
         }
     }
 });
