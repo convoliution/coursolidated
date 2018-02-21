@@ -24,7 +24,6 @@ main {
                 align-self: center;
 
                 @include transform(rotate(270deg));
-                text-align: center;
             }
 
             > .term-label {
@@ -33,7 +32,6 @@ main {
                 align-self: center;
 
                 @include transform(rotate(270deg));
-                text-align: center;
             }
 
             > .term {
