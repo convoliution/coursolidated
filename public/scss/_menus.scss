@@ -91,18 +91,11 @@
             width: 100%;
 
             > .requirement {
-                height: $tile-height;
                 width: 100%;
 
-                &.empty {
-
-                }
-                &.ready {
-
-                }
-                &.met {
-
-                }
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-end;
             }
         }
     }
@@ -113,9 +106,6 @@
     }
     &#profile-menu, &#majors-menu, &#minors-menu, &#gened-menu, &#catalog-menu, &#toadd-menu, &#settings-menu {
         z-index: 3;
-    }
-    &#requirement-menu {
-        z-index: 4;
     }
 }
 

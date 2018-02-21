@@ -105,14 +105,14 @@ html {
     .menu > .menu-content > .set {
       width: 100%; }
       .menu > .menu-content > .set > .requirement {
-        height: 4rem;
-        width: 100%; }
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end; }
   .menu#main-menu {
     z-index: 2; }
   .menu#profile-menu, .menu#majors-menu, .menu#minors-menu, .menu#gened-menu, .menu#catalog-menu, .menu#toadd-menu, .menu#settings-menu {
     z-index: 3; }
-  .menu#requirement-menu {
-    z-index: 4; }
 
 main > #info {
   position: absolute;
