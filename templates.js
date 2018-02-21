@@ -19,5 +19,5 @@ module.exports = {
              +         "<div class=\"course-offered-s2 course-offered-term" + (courseInfo.offered.includes('s2') ? " offered" : "") + "\" data-term=\"s2\">s2</div>\n"
              +     "</div>\n"
              + "</div>\n"
-    },
+    }
 };
