@@ -20,11 +20,11 @@ $(function() {
             }
         },
     });
-    $('#toadd-menu .requirement').sortable({
+    $('#toadd-menu .requirement-courses').sortable({
+        cancel: ".requirement",
         connectWith: ".term:not(.full)",
         tolerance: "pointer",
         revert: 100
-        // resize card on grab
     });
 
     function updateUserData(termElem, callback) {
