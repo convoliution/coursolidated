@@ -1,8 +1,9 @@
 {
 	"BILD3": {
-		"name": "",
+		"name": "Organismic and Evolutionary Biology",
 		"department": "BILD",
 		"code": "3",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -11,9 +12,10 @@
 	},
 
 	"CHEM6A": {
-		"name": "",
+		"name": "General Chemistry I",
 		"department": "CHEM",
 		"code": "6A",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -22,20 +24,22 @@
 	},
 
 	"CHEM6B": {
-		"name": "",
+		"name": "General Chemistry II",
 		"department": "CHEM",
 		"code": "6B",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [0, [1, "CHEM6A", "CHEM6AH"], [1, "MATH10A", "MATH20A"]],
+		"requirements": [2, [1, "CHEM6A", "CHEM6AH"], [1, "MATH10A", "MATH20A"]],
 		"offered": ["f", "w", "s"]
 	},
 
 	"CHEM6C": {
-		"name": "",
+		"name": "General Chemistry III",
 		"department": "CHEM",
 		"code": "6C",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -44,9 +48,10 @@
 	},
 
 	"COGS1": {
-		"name": "",
+		"name": "Introduction to Cognitive Science",
 		"department": "COGS",
 		"code": "1",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -55,9 +60,10 @@
 	},
 
 	"COGS10": {
-		"name": "",
+		"name": "Cognitive Consequences of Technology",
 		"department": "COGS",
 		"code": "10",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -66,9 +72,10 @@
 	},
 
 	"COGS100": {
-		"name": "",
+		"name": "Cyborgs Now and in the Future",
 		"department": "COGS",
 		"code": "100",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -78,54 +85,58 @@
 	},
 
 	"COGS101A": {
-		"name": "",
+		"name": "Sensation and Perception",
 		"department": "COGS",
 		"code": "101A",
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [0, "COGS1"],
+		"requirements": [1, "COGS1"],
 		"offered": ["f", "s", "s1"]
 	},
 
 	"COGS101B": {
-		"name": "",
+		"name": "Learning, Memory, and Attention",
 		"department": "COGS",
 		"code": "101B",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [0, "COGS1"],
+		"requirements": [1, "COGS1"],
 		"offered": ["w", "s2"]
 	},
 
 	"COGS101C": {
-		"name": "",
+		"name": "Language",
 		"department": "COGS",
 		"code": "101C",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [0, "COGS1", "COGS14A"],
+		"requirements": [2, "COGS1", "COGS14A"],
 		"offered": ["s", "s1"]
 	},
 
 	"COGS102A": {
-		"name": "",
+		"name": "Distributed Cognition",
 		"department": "COGS",
 		"code": "102A",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
 		"Crosslist": [["COGS100", 0]],
-		"requirements": [0, "COGS1", "COGS14A"],
+		"requirements": [2, "COGS1", "COGS14A"],
 		"offered": ["s2"]
 	},
 
 	"COGS102B": {
-		"name": "",
+		"name": "Cognitive Ethnography",
 		"department": "COGS",
 		"code": "102B",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": true,
 		"consent": false,
@@ -134,20 +145,22 @@
 	},
 
 	"COGS102C": {
-		"name": "",
+		"name": "Cognitive Design Studio",
 		"department": "COGS",
 		"code": "102C",
+		"units": 6,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": true,
-		"requirements": [0, "COGS102B"],
+		"requirements": [1, "COGS102B"],
 		"offered": ["s"]
 	},
 
 	"COGS107A": {
-		"name": "",
+		"name": "Neuroanatomy and Physiology",
 		"department": "COGS",
 		"code": "107A",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -156,31 +169,34 @@
 	},
 
 	"COGS107B": {
-		"name": "",
+		"name": "Systems Neuroscience",
 		"department": "COGS",
 		"code": "107B",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [0, "COGS107A"],
+		"requirements": [1, "COGS107A"],
 		"offered": ["w"]
 	},
 
 	"COGS107C": {
-		"name": "",
+		"name": "Cognitive Neuroscience",
 		"department": "COGS",
 		"code": "107C",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [0, "COGS107B"],
+		"requirements": [1, "COGS107B"],
 		"offered": ["s"]
 	},
 
 	"COGS108": {
-		"name": "",
+		"name": "Data Science in Practice",
 		"department": "COGS",
 		"code": "108",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -189,9 +205,10 @@
 	},
 
 	"COGS11": {
-		"name": "",
+		"name": "Minds and Brains",
 		"department": "COGS",
 		"code": "11",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -200,9 +217,10 @@
 	},
 
 	"COGS115": {
-		"name": "",
+		"name": "Neurological Development and Cognitive Change",
 		"department": "COGS",
 		"code": "115",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -211,32 +229,35 @@
 	},
 
 	"COGS120": {
-		"name": "",
+		"name": "Interaction Design",
 		"department": "COGS",
 		"code": "120",
+		"units": 5,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
 		"Crosslist": [["COGS170", 0]],
-		"requirements": [0, [1, "CSE11", "CSE8A"], [1, "COGS1", "COGS187A", "DSGN1"]],
+		"requirements": [2, [1, "CSE11", "CSE8A"], [1, "COGS1", "COGS187A", "DSGN1"]],
 		"offered": ["f", "w"]
 	},
 
 	"COGS121": {
-		"name": "",
+		"name": "Human Computer Interaction Programming Studio",
 		"department": "COGS",
 		"code": "121",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [0, [1, "COGS120"], [1, "CSE8B", "CSE11"]],
+		"requirements": [2, [1, "COGS120"], [1, "CSE8B", "CSE11"]],
 		"offered": ["s"]
 	},
 
 	"COGS13": {
-		"name": "",
+		"name": "Field Methods: Studying Cognition in the Wild",
 		"department": "COGS",
 		"code": "13",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -245,9 +266,10 @@
 	},
 
 	"COGS14A": {
-		"name": "",
+		"name": "Introduction to Research Methods",
 		"department": "COGS",
 		"code": "14A",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -256,20 +278,22 @@
 	},
 
 	"COGS14B": {
-		"name": "",
+		"name": "Introduction to Statistical Analysis",
 		"department": "COGS",
 		"code": "14B",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [0, "COGS14A"],
+		"requirements": [1, "COGS14A"],
 		"offered": ["w", "s", "s1"]
 	},
 
 	"COGS163": {
-		"name": "",
+		"name": "Metabolic Disorders of the Brain",
 		"department": "COGS",
 		"code": "163",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": true,
 		"consent": false,
@@ -278,9 +302,10 @@
 	},
 
 	"COGS164": {
-		"name": "",
+		"name": "Neurobiology of Motivation",
 		"department": "COGS",
 		"code": "164",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": true,
 		"consent": false,
@@ -289,20 +314,22 @@
 	},
 
 	"COGS169": {
-		"name": "",
+		"name": "Genetic Information for Behavior: From Single Cells to Mammals",
 		"department": "COGS",
 		"code": "169",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": true,
-		"requirements": [0, "COGS1", "COGS107A"],
+		"requirements": [2, "COGS1", "COGS107A"],
 		"offered": ["w"]
 	},
 
 	"COGS17": {
-		"name": "",
+		"name": "Neurobiology of Cognition",
 		"department": "COGS",
 		"code": "17",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -312,9 +339,10 @@
 	},
 
 	"COGS171": {
-		"name": "",
+		"name": "Mirror Neuron System",
 		"department": "COGS",
 		"code": "171",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": true,
 		"consent": false,
@@ -323,21 +351,23 @@
 	},
 
 	"COGS172": {
-		"name": "",
+		"name": "Brain Disorders and Cognition",
 		"department": "COGS",
 		"code": "172",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
 		"Crosslist": [["PSYC139", 0]],
-		"requirements": [0, "COGS107A"],
+		"requirements": [1, "COGS107A"],
 		"offered": ["w"]
 	},
 
 	"COGS174": {
-		"name": "",
+		"name": "Drugs: Brain, Mind, and Culture",
 		"department": "COGS",
 		"code": "174",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": true,
 		"consent": false,
@@ -346,9 +376,10 @@
 	},
 
 	"COGS175": {
-		"name": "",
+		"name": "The Neuropsychological Basis of Alternate States of Consciousness",
 		"department": "COGS",
 		"code": "175",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -357,9 +388,10 @@
 	},
 
 	"COGS176": {
-		"name": "",
+		"name": "From Sleep to Attention",
 		"department": "COGS",
 		"code": "176",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": true,
 		"consent": false,
@@ -368,9 +400,10 @@
 	},
 
 	"COGS177": {
-		"name": "",
+		"name": "Space and Time in the Brain",
 		"department": "COGS",
 		"code": "177",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": true,
 		"consent": false,
@@ -379,31 +412,34 @@
 	},
 
 	"COGS178": {
-		"name": "",
+		"name": "Genes, Brains, and Behavior",
 		"department": "COGS",
 		"code": "178",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": true,
-		"requirements": [0, "COGS107A", "COGS107B"],
+		"requirements": [2, "COGS107A", "COGS107B"],
 		"offered": ["s"]
 	},
 
 	"COGS179": {
-		"name": "",
+		"name": "Electrophysiology of Cognition",
 		"department": "COGS",
 		"code": "179",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [0, [1, "COGS107A", "PSYC106"], [1, "COGS101A", "PSYC105"]],
+		"requirements": [2, [1, "COGS107A", "PSYC106"], [1, "COGS101A", "PSYC105"]],
 		"offered": ["f"]
 	},
 
 	"COGS18": {
-		"name": "",
+		"name": "Introduction to Programming with Matlab",
 		"department": "COGS",
 		"code": "18",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -413,24 +449,26 @@
 	},
 
 	"COGS180": {
-		"name": "",
+		"name": "Decision Making in the Brain",
 		"department": "COGS",
 		"code": "180",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
 		"Crosslist": [],
-		"requirements": [0, [1, "BILD12", "COGS107B", "PSYC106"],
+		"requirements": [4, [1, "BILD12", "COGS107B", "PSYC106"],
 	                        [1, "MATH31AH", "MATH18", "MATH20F"],
-	                        [0, "MATH20B"],
+	                        [1, "MATH20B"],
 	                        [1, "COGS108", "COGS109", "CSE7", "CSE8A", "CSE11"]],
 		"offered": []
 	},
 
 	"COGS184": {
-		"name": "",
+		"name": "Modeling the Evolution of Cognition",
 		"department": "COGS",
 		"code": "184",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -440,33 +478,36 @@
 	},
 
 	"COGS187A": {
-		"name": "",
+		"name": "Usability and Information Architecture",
 		"department": "COGS",
 		"code": "187A",
+		"units": 6,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
 		"Crosslist": [],
-		"requirements": [0, "CSE7"],
+		"requirements": [1, "CSE7"],
 		"offered": ["f", "s2"]
 	},
 
 	"COGS187B": {
-		"name": "",
+		"name": "Practicum in Professional Web Design",
 		"department": "COGS",
 		"code": "187B",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": true,
 		"Crosslist": [],
-		"requirements": [0, "COGS187A"],
+		"requirements": ["COGS187A"],
 		"offered": ["w"]
 	},
 
 	"COMM10": {
-		"name": "",
+		"name": "Introduction to Communication",
 		"department": "COMM",
 		"code": "10",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -476,14 +517,15 @@
 	},
 
 	"COMM100A": {
-		"name": "",
+		"name": "Communication, the Person, and Everyday Life",
 		"department": "COMM",
 		"code": "100A",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
 		"Crosslist": [["COHI100", 0]],
-		"requirements": [0, "COMM10"],
+		"requirements": ["COMM10"],
 		"offered": ["f"]
 	},
 
@@ -491,6 +533,7 @@
 		"name": "",
 		"department": "COMM",
 		"code": "111D",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -500,9 +543,10 @@
 	},
 
 	"COMM124A": {
-		"name": "",
+		"name": "Critical Design Practice/Advanced Studio",
 		"department": "COMM",
 		"code": "124A",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -512,21 +556,23 @@
 	},
 
 	"COMM124B": {
-		"name": "",
+		"name": "Critical Design Practice/Topic Studio",
 		"department": "COMM",
 		"code": "124B",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
 		"Crosslist": [],
-		"requirements": [0, "COMM124A"],
+		"requirements": [1, "COMM124A"],
 		"offered": ["w"]
 	},
 
 	"CSE11": {
-		"name": "",
+		"name": "Introduction to Computer Science and Object-Oriented Programming: Java",
 		"department": "CSE",
 		"code": "11",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -536,21 +582,23 @@
 	},
 
 	"CSE110": {
-		"name": "",
+		"name": "Software Engineering",
 		"department": "CSE",
 		"code": "110",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": true,
 		"consent": false,
 		"Crosslist": [],
-		"requirements": [0, "CSE100"],
+		"requirements": [1, "CSE100"],
 		"offered": ["f", "w", "s"]
 	},
 
 	"CSE118": {
-		"name": "",
+		"name": "Ubiquitous Computing",
 		"department": "CSE",
 		"code": "118",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": true,
@@ -560,9 +608,10 @@
 	},
 
 	"CSE7": {
-		"name": "",
+		"name": "Introduction to Programming with Matlab",
 		"department": "CSE",
 		"code": "7",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -572,9 +621,10 @@
 	},
 
 	"CSE8A": {
-		"name": "",
+		"name": "Introduction to Computer Science: Java I",
 		"department": "CSE",
 		"code": "8A",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -584,9 +634,10 @@
 	},
 
 	"DSGN1": {
-		"name": "",
+		"name": "Design of Everyday Things",
 		"department": "DSGN",
 		"code": "1",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -596,21 +647,23 @@
 	},
 
 	"DSGN100": {
-		"name": "",
+		"name": "Prototyping",
 		"department": "DSGN",
 		"code": "100",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
 		"Crosslist": [],
-		"requirements": [0, "DSGN1"],
+		"requirements": [1, "DSGN1"],
 		"offered": ["w"]
 	},
 
 	"DSGN119": {
-		"name": "",
+		"name": "Design at Large",
 		"department": "DSGN",
 		"code": "119",
+		"units": 2,
 		"division": 1,
 		"reqUpperDiv": true,
 		"consent": false,
@@ -620,9 +673,10 @@
 	},
 
 	"DSGN160": {
-		"name": "",
+		"name": "Special Topics in Design",
 		"department": "DSGN",
 		"code": "160",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": true,
 		"consent": true,
@@ -632,9 +686,10 @@
 	},
 
 	"DSGN195": {
-		"name": "",
+		"name": "Instructional Apprenticeship in Design",
 		"department": "DSGN",
 		"code": "195",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": true,
 		"consent": true,
@@ -644,9 +699,10 @@
 	},
 
 	"ENG100D": {
-		"name": "",
+		"name": "Design for Development",
 		"department": "ENG",
 		"code": "100D",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -656,9 +712,10 @@
 	},
 
 	"ENG100L": {
-		"name": "",
+		"name": "Design for Development Lab",
 		"department": "ENG",
 		"code": "100L",
+		"units": 2,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": true,
@@ -668,9 +725,10 @@
 	},
 
 	"HUM1": {
-		"name": "",
+		"name": "The Foundations of Western Civilization: Israel and Greece",
 		"department": "HUM",
 		"code": "1",
+		"units": 6,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -679,9 +737,10 @@
 	},
 
 	"HUM2": {
-		"name": "",
+		"name": "Rome, Christianity, and the Middle Ages",
 		"department": "HUM",
 		"code": "2",
+		"units": 6,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -690,9 +749,10 @@
 	},
 
 	"HUM3": {
-		"name": "",
+		"name": "Renaissance, Reformation, and Early Modern Europe",
 		"department": "HUM",
 		"code": "3",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -701,9 +761,10 @@
 	},
 
 	"HUM4": {
-		"name": "",
+		"name": "Enlightenment, Romanticism, Revolution (1660–1848)",
 		"department": "HUM",
 		"code": "4",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -712,9 +773,10 @@
 	},
 
 	"HUM5": {
-		"name": "",
+		"name": "Modern Culture (1848–present)",
 		"department": "HUM",
 		"code": "5",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -723,9 +785,10 @@
 	},
 
 	"LIGN7": {
-		"name": "",
+		"name": "Sign Language and Its Culture",
 		"department": "LIGN",
 		"code": "7",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -734,9 +797,10 @@
 	},
 
 	"MAE3": {
-		"name": "",
+		"name": "Introduction to Engineering Graphics and Design",
 		"department": "MAE",
 		"code": "3",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": true,
@@ -746,9 +810,10 @@
 	},
 
 	"MATH10A": {
-		"name": "",
+		"name": "Calculus I",
 		"department": "MATH",
 		"code": "10A",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -758,9 +823,10 @@
 	},
 
 	"MATH10B": {
-		"name": "",
+		"name": "Calculus II",
 		"department": "MATH",
 		"code": "10B",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -770,9 +836,10 @@
 	},
 
 	"MATH18": {
-		"name": "",
+		"name": "Calculus III",
 		"department": "MATH",
 		"code": "10C",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": true,
@@ -782,9 +849,10 @@
 	},
 
 	"MATH20A": {
-		"name": "",
+		"name": "Calculus for Science and Engineering",
 		"department": "MATH",
 		"code": "20A",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -794,9 +862,10 @@
 	},
 
 	"MATH20B": {
-		"name": "",
+		"name": "Calculus for Science and Engineering",
 		"department": "MATH",
 		"code": "20B",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -806,9 +875,10 @@
 	},
 
 	"MGT103": {
-		"name": "",
+		"name": "Product Marketing and Management",
 		"department": "MGT",
 		"code": "103",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": true,
 		"consent": false,
@@ -818,9 +888,10 @@
 	},
 
 	"MGT121A": {
-		"name": "",
+		"name": "Innovation to Market A",
 		"department": "MGT",
 		"code": "121A",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": true,
 		"consent": false,
@@ -830,20 +901,22 @@
 	},
 
 	"PHYS2A": {
-		"name": "",
+		"name": "Physics—Mechanics",
 		"department": "PHYS",
 		"code": "2A",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [0, "MATH20A"],
+		"requirements": [1, "MATH20A"],
 		"offered": ["f", "w", "s"]
 	},
 
 	"PSYC148": {
-		"name": "",
+		"name": "Psychology of Judgment and Decision",
 		"department": "PSYC",
 		"code": "148",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": true,
 		"consent": false,
@@ -853,9 +926,10 @@
 	},
 
 	"PSYC176": {
-		"name": "",
+		"name": "Creativity",
 		"department": "PSYC",
 		"code": "176",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -865,9 +939,10 @@
 	},
 
 	"TDAC1": {
-		"name": "",
+		"name": "Introduction to Acting",
 		"department": "TDAC",
 		"code": "1",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
@@ -876,9 +951,10 @@
 	},
 
 	"VIS100": {
-		"name": "",
+		"name": "Introduction to Public Culture",
 		"department": "VIS",
 		"code": "100",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": true,
 		"consent": false,
@@ -888,33 +964,36 @@
 	},
 
 	"VIS100A": {
-		"name": "",
+		"name": "Design of Public Culture",
 		"department": "VIS",
 		"code": "100A",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
 		"Crosslist": [],
-		"requirements": [0, "VIS100"],
+		"requirements": [1, "VIS100"],
 		"offered": ["f"]
 	},
 
 	"VIS101A": {
-		"name": "",
+		"name": "Designing Urban Ecologies",
 		"department": "VIS",
 		"code": "101A",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": false,
 		"consent": false,
 		"Crosslist": [],
-		"requirements": [0, "VIS101"],
+		"requirements": [1, "VIS101"],
 		"offered": ["w"]
 	},
 
 	"VIS142": {
-		"name": "",
+		"name": "Practices in Computing Arts",
 		"department": "VIS",
 		"code": "142",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": true,
 		"consent": false,
@@ -924,9 +1003,10 @@
 	},
 
 	"VIS148": {
-		"name": "",
+		"name": "Visualizing Art Practice",
 		"department": "VIS",
 		"code": "148",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": true,
 		"consent": false,
@@ -936,9 +1016,10 @@
 	},
 
 	"VIS159": {
-		"name": "",
+		"name": "History of Art and Technology",
 		"department": "VIS",
 		"code": "159",
+		"units": 4,
 		"division": 1,
 		"reqUpperDiv": true,
 		"consent": false,
@@ -948,9 +1029,10 @@
 	},
 
 	"VIS30": {
-		"name": "",
+		"name": "Introduction to Speculative Design",
 		"department": "VIS",
 		"code": "30",
+		"units": 4,
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
