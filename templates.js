@@ -28,7 +28,7 @@ module.exports = {
     disabledCourseCard: function(course, year, term) {
         var courseInfo = courses[course];
 
-        return "<div class=\"course\" data-course=\"" + course + "\">\n"
+        return "<div class=\"course disabled\" data-course=\"" + course + "\">\n"
              +     "<div class=\"course-department\">" + courseInfo.department + "</div>\n"
              +     "<div class=\"course-code\">"       + courseInfo.code       + "</div>\n"
              +     "<div class=\"course-appears\">\n"
