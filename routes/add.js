@@ -52,17 +52,20 @@ function areReqsMet(reqs, allFirstAppears) {
     // courses become keys in one-pair dictionaries
     // if that course is not on the schedule, its value is false
     // if it is on the schedule, its value is the year+term in which it first appears
+    var ret = [];
+    ret[0] = reqs[0];
+
     for (let i = 1; i < reqs.length; i++) {
         if (reqs[i].constructor === Array) {
-            reqs[i] = areReqsMet(reqs[i], allFirstAppears);
+            ret[i] = areReqsMet(reqs[i], allFirstAppears);
         } else {
             let firstAppears = allFirstAppears[reqs[i]]
-            reqs[i] = {
+            ret[i] = {
                 [reqs[i]]: ((typeof firstAppears === 'undefined') ? false : firstAppears)
             }
         }
     }
-    return reqs;
+    return ret;
 }
 
 function createSet(set) {
