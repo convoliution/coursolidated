@@ -15,10 +15,7 @@ $(function() {
         receive: function(event, ui) {
             updateUserData(this, setCardOutlineColors);
             setCardTermColors.apply(ui.item);
-            // if added class is from the toadd menu, update that menu
-            if (ui.sender.attr("class").split(' ').includes("requirement-courses")) {
-                populateToadd();
-            }
+            populateToadd();
             if ($(this).children().length >= 6) {
                 $(this).addClass('full');
             }
