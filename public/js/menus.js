@@ -35,7 +35,7 @@ function showMenu(menu, animTime) {
         $.get('/populate-toadd', function(result) {
             $('#toadd-menu > .menu-content').html(result);
             $('#toadd-menu .requirement-courses').sortable({
-                cancel: ".requirement",
+                items: ".course:not(.disabled)",
                 connectWith: ".term:not(.full)",
                 tolerance: "pointer",
                 revert: 100
