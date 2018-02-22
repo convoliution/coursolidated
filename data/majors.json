@@ -3,7 +3,7 @@
 		"name": "Cognitive Science",
 		"requirements": [0,
 			[0, "MATH18", "COGS1", "COGS13", "COGS14A", "COGS14B", "COGS17", "COGS100", "COGS108"],
-			[1, [2, "MATH10A", "MATH10B"], [2, "MATH20A", "MATH20B"]],
+			[1, [0, "MATH10A", "MATH10B", "MATH10C"], [0, "MATH20A", "MATH20B"]],
 			[1, "COGS10", "DSGN1"],
 			[1, "COGS18", "CSE7", "CSE8A", "CSE11"],
 			[2, "COGS101A", "COGS101B", "COGS101C"],
