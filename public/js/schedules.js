@@ -20,12 +20,6 @@ $(function() {
             }
         },
     });
-    $('#toadd-menu .requirement-courses').sortable({
-        cancel: ".requirement",
-        connectWith: ".term:not(.full)",
-        tolerance: "pointer",
-        revert: 100
-    });
 
     function updateUserData(termElem, callback) {
         var newCourses = {
