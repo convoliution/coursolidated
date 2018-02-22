@@ -5,7 +5,7 @@ var colleges = require('./data/colleges.json');
 var courses = require('./data/courses.json');
 
 module.exports = {
-    courseCard: function(course) {
+    courseCard: function(course, isCompressed = false) {
         var courseInfo = courses[course];
 
         // if course info isn't in our system yet, just return COGS120
@@ -13,7 +13,7 @@ module.exports = {
             courseInfo = courses["COGS120"];
         }
 
-        return "<div class=\"course\" data-course=\"" + course + "\">\n"
+        return "<div class=\"course" + (isCompressed ? " compressed" : "") + "\" data-course=\"" + course + "\">\n"
              +     "<div class=\"course-department\">"  + courseInfo.department + "</div>\n"
              +     "<div class=\"course-code\">"        + courseInfo.code       + "</div>\n"
              +     "<div class=\"course-offered\">\n"
@@ -28,7 +28,7 @@ module.exports = {
     disabledCourseCard: function(course, year, term) {
         var courseInfo = courses[course];
 
-        return "<div class=\"course disabled\" data-course=\"" + course + "\">\n"
+        return "<div class=\"course compressed disabled\" data-course=\"" + course + "\">\n"
              +     "<div class=\"course-department\">" + courseInfo.department + "</div>\n"
              +     "<div class=\"course-code\">"       + courseInfo.code       + "</div>\n"
              +     "<div class=\"course-appears\">\n"

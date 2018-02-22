@@ -34,6 +34,12 @@ html {
     text-align: center;
     font-size: .75rem;
 
+    @include transition-multiple(margin-left 250ms, margin-right 250ms);
+    &.compressed {
+        margin-left: .2rem;
+        margin-right: .2rem;
+    }
+
     > .course-department {
         grid-row: 1 / 2;
     }

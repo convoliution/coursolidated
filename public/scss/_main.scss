@@ -55,14 +55,6 @@ main {
                 }
 
                 @include display-flex();
-
-                > .course {
-                    @include transition-multiple(margin-left 250ms, margin-right 250ms);
-                    &.compressed {
-                        margin-left: .2rem;
-                        margin-right: .2rem;
-                    }
-                }
             }
         }
     }

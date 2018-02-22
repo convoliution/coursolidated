@@ -203,14 +203,6 @@ main {
           grid-row: 4 / 5; }
         main > .schedule > .year > .term.summer-II {
           grid-row: 5 / 6; }
-        main > .schedule > .year > .term > .course {
-          -webkit-transition: margin-left 250ms, margin-right 250ms;
-          -moz-transition: margin-left 250ms, margin-right 250ms;
-          -o-transition: margin-left 250ms, margin-right 250ms;
-          transition: margin-left 250ms, margin-right 250ms; }
-          main > .schedule > .year > .term > .course.compressed {
-            margin-left: .2rem;
-            margin-right: .2rem; }
 
 .course {
   width: 3rem;
@@ -224,7 +216,14 @@ main {
   display: grid;
   grid-template-rows: 2fr 3fr 4fr;
   text-align: center;
-  font-size: .75rem; }
+  font-size: .75rem;
+  -webkit-transition: margin-left 250ms, margin-right 250ms;
+  -moz-transition: margin-left 250ms, margin-right 250ms;
+  -o-transition: margin-left 250ms, margin-right 250ms;
+  transition: margin-left 250ms, margin-right 250ms; }
+  .course.compressed {
+    margin-left: .2rem;
+    margin-right: .2rem; }
   .course > .course-department {
     grid-row: 1 / 2; }
   .course > .course-code {
