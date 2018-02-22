@@ -85,7 +85,7 @@ function isReqsMet(coursesTakenSet, reqs) {
         return true;
     }
 
-    var numReqs = reqs[0];
+    var numReqs = (reqs[0] === 0) ? (reqs.length - 1) : reqs[0];
 
     for (let req of reqs.slice(1)) {
         if ((req.constructor === Array && isReqsMet(coursesTakenSet, req)) || coursesTakenSet.has(req)) {
@@ -99,31 +99,30 @@ function isReqsMet(coursesTakenSet, reqs) {
 }
 
 // returns requirements that have not been met
-// doesn't work!
-/*function unmetReqs(coursesTakenSet, reqs) {
+function unmetReqs(coursesTakenSet, reqs) {
     if (reqs.length === 0) {
         return reqs;
     }
 
-    ret = reqs.slice();
-    var numReqs = reqs[0];
+    var numReqs = (reqs[0] === 0) ? (reqs.length - 1) : reqs[0];
 
-    var i = ret.length - 1;
-    while (i--) {
-        console.log(ret[i+1]);
-        if ((ret[i+1].constructor === Array && isReqsMet(coursesTakenSet, ret[i+1])) || coursesTakenSet.has(ret[i+1])) {
+    ret = reqs.slice();
+    for (let i = ret.length; i >= 0; --i) {
+        if (ret[i].constructor === Array) {
+            ret[i] = unmetReqs(coursesTakenSet, ret[i]);
+            if (ret[i] === []) {
+                ret.splice(i, 1);
+                numReqs--;
+            }
+        } else if (coursesTakenSet.has(ret[i])) {
             ret.splice(i, 1);
             numReqs--;
-            if (numReqs == 0) {
-                return [];
-            }
+        }
+        if (numReqs === 0) {
+            return [];
         }
     }
 
-    if (ret.length === 1) { // if it's just [ 0 ]
-        return [];
-    } else {
-        ret[0] = ret.length - 1;
-        return ret;
-    }
-}*/
+    ret[0] = numReqs;
+    return ret;
+}

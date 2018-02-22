@@ -28,17 +28,14 @@ var handlebars = expresshbs.create({
                 's2': "summer II"
             }[termId];
 
-            ret = "<div class=\"term-label\">" + termLabel + "</div>\n"
-                + "<div class=\"term " + termLabel.replace(/\s/g, '-') + "\" data-term=\"" + termId + "\">\n"
+            var html = "<div class=\"term-label\">" + termLabel.replace(/\s/g, '&nbsp;') + "</div>\n"
+                     + "<div class=\"term " + termLabel.replace(/\s/g, '-') + "\" data-term=\"" + termId + "\">\n"
             for (let course of courses) {
-                ret += templates.courseCard(course);
+                html += templates.courseCard(course);
             }
-            ret += "</div>"
+            html += "</div>"
 
-            return ret;
-        },
-        populateToAdd: function(user, majors, minors, colleges, courses) {
-
+            return html;
         }
     }
 });
@@ -66,6 +63,7 @@ if ('development' == app.get('env')) {
 
 var index = require('./routes/index');
 var plan = require('./routes/plan');
+var add = require('./routes/add');
 var schedule = require('./routes/schedule');
 
 app.get('/', index.view);
@@ -74,6 +72,8 @@ app.post('/plan-major', plan.major);
 app.post('/plan-minor', plan.minor);
 app.post('/plan-college', plan.college);
 app.post('/plan-course', plan.course);
+
+app.get('/populate-toadd', add.populate);
 
 app.post('/schedule-change', schedule.change);
 app.get('/schedule-check/:userName/:scheduleName', schedule.check);
