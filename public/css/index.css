@@ -273,7 +273,7 @@ main {
     .course > .course-offered > .offered {
       color: #000000; }
 
-#course-info {
+#course-info, #login {
   padding: .5em; }
 
 /*# sourceMappingURL=index.css.map */
