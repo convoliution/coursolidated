@@ -94,6 +94,9 @@ html {
       width: 100%; }
       .menu > .menu-content > .set .requirement {
         width: 100%;
+        border-top: 2px solid black;
+        border-left: 2px solid black;
+        border-bottom: 2px solid black;
         display: grid;
         grid-template-columns: 1.5rem 1fr; }
         .menu > .menu-content > .set .requirement > .requirement-label {
@@ -252,5 +255,8 @@ main {
       grid-column: 4 / 6; }
     .course > .course-offered > .offered {
       color: #000000; }
+
+#course-info {
+  padding: .5em; }
 
 /*# sourceMappingURL=index.css.map */
