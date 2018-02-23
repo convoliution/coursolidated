@@ -3,6 +3,43 @@ $(function() {
     $.mobile.loading().hide();
 });
 
+// login dialog
+$(function() {
+    $('#login').dialog({
+        draggable: false,
+        modal: true,
+        resizable: false,
+        classes: {
+            "ui-dialog": "login-dialog"
+        }
+    });
+    $('.ui-dialog.login-dialog').css({
+        "z-index": "4",
+        "background-color": "white",
+        "border": "4px solid black",
+        "border-radius": "4px"
+    });
+    /*$('.ui-dialog.login-dialog .ui-dialog-titlebar-close').css({
+        "display": "none"
+    });*/
+});
+function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+    });
+}
+function statusChangeCallback(response) {
+    $('#login').dialog("close");
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+        // Logged into your app and Facebook.
+        console.log('Successfully logged in with Facebook');
+    }
+}
+
 // course info
 $(function() {
     $('#course-info').dialog({
@@ -11,16 +48,16 @@ $(function() {
         modal: true,
         resizable: false,
         classes: {
-            "ui-dialog": "course-info"
+            "ui-dialog": "course-info-dialog"
         }
     });
-    $('.ui-dialog.course-info').css({
+    $('.ui-dialog.course-info-dialog').css({
         "z-index": "4",
         "background-color": "white",
         "border": "4px solid black",
         "border-radius": "4px"
     });
-    $('.ui-dialog.course-info .ui-dialog-titlebar-close').css({
+    $('.ui-dialog.course-info-dialog .ui-dialog-titlebar-close').css({
         "float": "right"
     });
     $('.schedule .course').tap(showCourseInfoDialog);
