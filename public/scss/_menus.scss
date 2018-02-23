@@ -87,6 +87,10 @@
             .requirement {
                 width: 100%;
 
+                border-top: 2px solid black;
+                border-left: 2px solid black;
+                border-bottom: 2px solid black;
+
                 display: grid;
                 grid-template-columns: 1.5rem 1fr;
 
