@@ -5,14 +5,38 @@ $(function() {
 
 // course info
 $(function() {
-    $('.schedule .course').tap(function(event) {
-        event.preventDefault();
-        var course = $(this).data('course');
-        $.get('/schedule-course-info/'+course, function(result) {
-            console.log("Success");
+    $('#course-info').dialog({
+        autoOpen: false,
+        draggable: false,
+        modal: true,
+        resizable: false,
+        classes: {
+            "ui-dialog": "course-info"
+        }
+    });
+    $('.ui-dialog.course-info').css({
+        "z-index": "4",
+        "background-color": "white",
+        "border": "4px solid black",
+        "border-radius": "4px"
+    });
+    $('.ui-dialog.course-info .ui-dialog-titlebar-close').css({
+        "float": "right"
+    });
+    $('.schedule .course').tap(showCourseInfoDialog);
+});
+
+function showCourseInfoDialog(event) {
+    event.preventDefault();
+    var course = $(this).data('course');
+    $.get('/schedule-course-info/'+course, function(result) {
+        $('#course-info').html("hello");
+        $('#course-info').dialog('open');
+        $('#course-info').dialog({
+            title: course
         });
     });
-});
+}
 
 // schedules
 $(function() {
@@ -26,7 +50,8 @@ $(function() {
         receive: function(event, ui) {
             updateUserData(this, setCardOutlineColors);
             setCardTermColors.apply(ui.item);
-            //populateToadd();
+            ui.item.tap(showCourseInfoDialog);
+            populateToadd();
             if ($(this).children().length >= 6) {
                 $(this).addClass('full');
             }
@@ -123,7 +148,10 @@ function showMenu(menu, animTime) {
             marginLeft: menu.outerWidth() - $('#topbar').outerHeight()
         }, animTime);
     } else if (menu.attr('id') === 'toadd-menu') {
-        //populateToadd();
+        populateToadd();
+        setTimeout(function() {// hide main menu to work around clipping bug
+            $('#main-menu').css('left', -menu.outerWidth());
+        }, 500);
     }
     menu.animate({
         left: 0
@@ -140,6 +168,8 @@ function hideMenu(menu, animTime) {
         $('#tabs').animate({
             marginLeft: 0
         }, animTime);
+    } else if (menu.attr('id') === 'toadd-menu') { // show main menu (for clipping bug)
+        $('#main-menu').css('left', 0);
     }
     if (menu.data('activeChoice') != null) { // deactivate active choice
         menu.data('activeChoice').removeClass('active');
