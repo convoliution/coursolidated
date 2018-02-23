@@ -96,8 +96,14 @@ $lato: 'Lato', sans-serif;
         > .set {
             width: 100%;
 
+            .set-label {
+                text-align: center;
+            }
+
             .requirement {
                 width: 100%;
+
+                font-size: 1rem;
 
                 border-top: 2px solid black;
                 border-left: 2px solid black;

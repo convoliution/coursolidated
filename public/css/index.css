@@ -100,8 +100,11 @@ html {
         height: calc(2 * 4rem); }
     .menu > .menu-content > .set {
       width: 100%; }
+      .menu > .menu-content > .set .set-label {
+        text-align: center; }
       .menu > .menu-content > .set .requirement {
         width: 100%;
+        font-size: 1rem;
         border-top: 2px solid black;
         border-left: 2px solid black;
         border-bottom: 2px solid black;
