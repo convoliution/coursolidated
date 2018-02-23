@@ -30,7 +30,15 @@ function showCourseInfoDialog(event) {
     event.preventDefault();
     var course = $(this).data('course');
     $.get('/schedule-course-info/'+course, function(result) {
-        $('#course-info').html("hello");
+        var html = "";
+        if (result.unmetReqs.length > 0) {
+            html += "The following prerequisites have not been met:\n"
+            html += result.unmetReqs.slice(1);
+        } else {
+            html += "Prerequisites have been met!";
+        }
+
+        $('#course-info').html(html);
         $('#course-info').dialog('open');
         $('#course-info').dialog({
             title: course
@@ -42,7 +50,6 @@ function showCourseInfoDialog(event) {
 $(function() {
     setCardOutlineColors();
     $('.schedule .course').each(setCardTermColors);
-
     $('.term').sortable({
         connectWith: ".term:not(.full)",
         tolerance: "pointer",
@@ -207,6 +214,10 @@ $(function() {
         }
         menu.data('activeChoice', $(this).parent());
         menu.data('activeChoice').addClass('active');
+    });
+    $('.menu-content > .choice > button.confirm').tap(function(event) {
+        event.preventDefault();
+        $(this).text("done!");
     });
 });
 
