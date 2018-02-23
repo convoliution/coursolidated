@@ -11,6 +11,5 @@ var data = {
 }
 
 exports.view = function(req, res){
-    console.log("data contains: " + Object.keys(data));
     res.render('index', data);
 };
