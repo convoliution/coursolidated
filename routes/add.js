@@ -73,7 +73,7 @@ function createSet(set) {
     let setReq = set[setName];
 
     return "<div class=\"set\">\n"
-         +     "<div class=\"set-label\">" + setName.replace(/\s/g, '&nbsp;') + "</div>\n"
+         +     "<div class=\"set-label\">" + setName + "</div>\n"
          +     createRequirement(setReq)
          + "</div>\n";
 }
