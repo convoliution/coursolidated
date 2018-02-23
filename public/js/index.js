@@ -3,6 +3,17 @@ $(function() {
     $.mobile.loading().hide();
 });
 
+// course info
+$(function() {
+    $('.schedule .course').tap(function(event) {
+        event.preventDefault();
+        var course = $(this).data('course');
+        $.get('/schedule-course-info/'+course, function(result) {
+            console.log("Success");
+        });
+    });
+});
+
 // schedules
 $(function() {
     setCardOutlineColors();
@@ -15,7 +26,7 @@ $(function() {
         receive: function(event, ui) {
             updateUserData(this, setCardOutlineColors);
             setCardTermColors.apply(ui.item);
-            populateToadd();
+            //populateToadd();
             if ($(this).children().length >= 6) {
                 $(this).addClass('full');
             }
@@ -112,7 +123,7 @@ function showMenu(menu, animTime) {
             marginLeft: menu.outerWidth() - $('#topbar').outerHeight()
         }, animTime);
     } else if (menu.attr('id') === 'toadd-menu') {
-        populateToadd();
+        //populateToadd();
     }
     menu.animate({
         left: 0

@@ -1,4 +1,7 @@
 var user = require('../data/users.json')['Ian Drosos'];
+var majors = require('../data/majors.json');
+var minors = require('../data/minors.json');
+var colleges = require('../data/colleges.json');
 var courses = require('../data/courses.json');
 
 exports.change = function(req, res) {
@@ -79,6 +82,32 @@ exports.check = function(req, res) {
     res.json(isMet);
 };
 
+exports.courseInfo = function(req, res) {
+    var courseToFind = req.params.course;
+
+    var info = {};
+
+    var schedule = user.schedules[0]; // get first schedule because nothing matters anymore
+    var preceedingCourses = new Set();
+
+    getUnmetReqs:
+    for (let year of schedule.years) {
+        for (let term of year.terms) {
+            for (let course of term.courses) {
+                if (course === courseToFind) {
+                    info['unmetReqs'] = unmetReqs(preceedingCourses, courses[course].requirements);
+                    break getUnmetReqs;
+                }
+            }
+            for (let course of term.courses) {
+                preceedingCourses.add(course);
+            }
+        }
+    }
+
+    res.json(info);
+};
+
 // returns Boolean indicating whether requirements have been met
 function isReqsMet(coursesTakenSet, reqs) {
     if (reqs.length === 0) {
@@ -107,7 +136,7 @@ function unmetReqs(coursesTakenSet, reqs) {
     var numReqs = (reqs[0] === 0) ? (reqs.length - 1) : reqs[0];
 
     ret = reqs.slice();
-    for (let i = ret.length; i >= 0; --i) {
+    for (let i = ret.length - 1; i > 0; i--) {
         if (ret[i].constructor === Array) {
             ret[i] = unmetReqs(coursesTakenSet, ret[i]);
             if (ret[i] === []) {
@@ -123,6 +152,6 @@ function unmetReqs(coursesTakenSet, reqs) {
         }
     }
 
-    ret[0] = numReqs;
+    ret[0] = (numReqs === (ret.length - 1)) ? 0 : numReqs;
     return ret;
 }

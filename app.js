@@ -77,6 +77,7 @@ app.get('/populate-toadd', add.populate);
 
 app.post('/schedule-change', schedule.change);
 app.get('/schedule-check/:userName/:scheduleName', schedule.check);
+app.get('/schedule-course-info/:course', schedule.courseInfo);
 
 http.createServer(app).listen(app.get('port'), function(){
     console.log('Express server listening on port ' + app.get('port'));
