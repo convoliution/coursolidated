@@ -6,6 +6,7 @@ $(function() {
 // login dialog
 $(function() {
     $('#login').dialog({
+        title: "Log In",
         draggable: false,
         modal: true,
         resizable: false,
@@ -19,9 +20,13 @@ $(function() {
         "border": "4px solid black",
         "border-radius": "4px"
     });
-    /*$('.ui-dialog.login-dialog .ui-dialog-titlebar-close').css({
+    $('.ui-dialog.login-dialog .ui-dialog-titlebar-close').css({
         "display": "none"
-    });*/
+    });
+    $('#login > button').tap(function(event) {
+        event.preventDefault();
+        $('#login').dialog("close");
+    });
 });
 function checkLoginState() {
     FB.getLoginStatus(function(response) {
