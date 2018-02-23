@@ -39,7 +39,7 @@ function getCoursesToAdd() {
         toAdds.push({ [reqName]: areReqsMet(reqs, allFirstAppears) });
     }
 
-    {
+    if (userCollege.length > 0) {
         let reqName = userCollege + " college";
         let reqs = colleges[userCollege].requirements;
         toAdds.push({ [reqName]: areReqsMet(reqs, allFirstAppears) });

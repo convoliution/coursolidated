@@ -15,6 +15,7 @@ exports.major = function(req, res){
         user.majors.push(major);
         // notify user of addition of major
     }
+    res.send(majors[major].name);
 };
 
 exports.minor = function(req, res){
@@ -26,13 +27,19 @@ exports.minor = function(req, res){
         user.minors.push(minor);
         // notify user of addition of major
     }
+    res.send(minors[minor].name);
 };
 
 exports.college = function(req, res){
     var college = req.body.code;
     console.log("requested college: " + college);
-    // if no college
-    // if college already exists
+    if (user.college !== "") {
+        // notify user he/she already has a college chosen
+    } else {
+        user.college = college;
+        // notify user college has been set
+    }
+    res.send(college);
 };
 
 exports.course = function(req, res){

@@ -217,7 +217,53 @@ $(function() {
     });
     $('.menu-content > .choice > button.confirm').tap(function(event) {
         event.preventDefault();
-        $(this).text("done!");
+        var menuType = $(this).parents('.menu').attr('id').split('-')[0].slice(0, -1); // slice to get rid of plural 's'
+        var toAdd = {
+            "code": $(this).prev('.name').data('code')
+        }
+        $.post('/plan-'+menuType, toAdd, function(result) {
+            // add to user profile
+            var html = ""
+            var list = $('#user-'+menuType); // list of relevant things in profile
+            if (!/\S/.test(list.html())) { // if html is empty
+                switch(menuType) {
+                    case "major":
+                    case "minor":
+                        html += "You are " + menuType + "ing in:\n"
+                              + "<ul>\n"
+                              +     "<li>" + result + "</li>\n"
+                              + "</ul>"
+                        break;
+                    case "college":
+                        html += "You are in " + result + " College";
+                        break;
+                    default:
+                        throw "invalid user attribute " + menuType;
+                }
+                list.html(html);
+            } else {
+                switch(menuType) {
+                    case "major":
+                    case "minor":
+                        html += "<ul>\n"
+                              +     "<li>" + result + "</li>\n"
+                              + "</ul>"
+                        list.children('ul').append(html);
+                        break;
+                    case "college":
+                        html += "You are in " + result + " College";
+                        list.html(html);
+                        break;
+                    default:
+                        throw "invalid user attribute " + menuType;
+                }
+            }
+
+            // show confirmation
+            $('#'+menuType+'s-menu > .menu-content > .choice > button.name').filter(function() {
+                return $(this).data('code') === toAdd.code;
+            }).next('button.confirm').text('You got it!');
+        });
     });
 });
 
