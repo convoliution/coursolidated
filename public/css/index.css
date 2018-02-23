@@ -137,7 +137,7 @@ html {
     font-family: "Lato", sans-serif;
     font-weight: normal;
     font-size: 2.5rem; }
-  .menu#profile-menu, .menu#majors-menu, .menu#minors-menu, .menu#gened-menu, .menu#catalog-menu, .menu#toadd-menu, .menu#settings-menu {
+  .menu#profile-menu, .menu#majors-menu, .menu#minors-menu, .menu#colleges-menu, .menu#catalog-menu, .menu#toadd-menu, .menu#settings-menu {
     z-index: 3;
     font-family: "Lato", sans-serif;
     font-weight: normal;
