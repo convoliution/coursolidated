@@ -8,9 +8,9 @@
         <!-- totally more pragmatic than Reset -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
         <link rel="stylesheet" href="/css/index.css">
-        <!-- import lobster font -->
+        <!-- import Lato font -->
         <style>
-        @import url('https://fonts.googleapis.com/css?family=Lato|Lobster');
+        @import url('https://fonts.googleapis.com/css?family=Lato');
         </style>
     </head>
     <body>
@@ -171,9 +171,12 @@
 
         </div>
         <div id="login">
-            <p class="facebookLogin">Please login through Facebook</p>
-            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-            </fb:login-button>
+            <p>Username:<input type="text" name="user"></p>
+            <p>Password:<input type="text" name="user"></p>
+            <button>Log in</button>
+            <p class="facebookLogin"><center>or</center></p>
+            <center><fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+            </fb:login-button></center>
         </div>
         <div id="course-info">
 
