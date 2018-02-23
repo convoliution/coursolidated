@@ -107,7 +107,7 @@
 		"requirements": [],
 		"offered": ["f", "w", "s"]
 	},
-	
+
 	"CHEM6AH": {
 		"name": "Honors General Chemsitry I",
 		"department": "CHEM",
@@ -131,7 +131,7 @@
 		"requirements": [2, [1, "CHEM6A", "CHEM6AH"], [1, "MATH10A", "MATH20A"]],
 		"offered": ["f", "w", "s"]
 	},
-	
+
 	"CHEM6BH": {
 		"name": "Honors General Chemistry II",
 		"department": "CHEM",
@@ -155,7 +155,7 @@
 		"requirements": [1, "CHEM6B", "CHEM6BH"],
 		"offered": ["f", "w", "s"]
 	},
-	
+
 	"CHEM6CH": {
 		"name": "Honors General Chemistry III",
 		"department": "CHEM",
@@ -167,7 +167,7 @@
 		"requirements": [1, "CHEM6B", "CHEM6BH"],
 		"offered": ["s"]
 	},
-	
+
 	"CHEM11": {
 		"name": "The Periodic Table",
 		"department": "CHEM",
@@ -1095,7 +1095,7 @@
 		"requirements": [],
 		"offered": ["f", "w", "s"]
 	},
-	
+
 	"PHYS1A": {
 		"name": "Mechanics",
 		"department": "PHYS",
@@ -1107,7 +1107,7 @@
 		"requirements": [1, "MATH10A", "MATH20A"],
 		"offered": ["f", "w", "s"]
 	},
-	
+
 	"PHYS1AL": {
 		"name": "Mechanics Laboratory",
 		"department": "PHYS",
@@ -1119,7 +1119,7 @@
 		"requirements": [1, "MATH10A", "MATH20A"],
 		"offered": ["f", "w", "s"]
 	},
-	
+
 	"PHYS1B": {
 		"name": "Electricity and Magnetism",
 		"department": "PHYS",
@@ -1131,7 +1131,7 @@
 		"requirements": [0, [1, "PHYS1A", "PHYS2A"], [1, "PHYS1AL", "PHYS1BL"], [1, "MATH10B", "MATH20B"]],
 		"offered": ["f", "w", "s"]
 	},
-	
+
 	"PHYS1BL": {
 		"name": "Electricity and Magnetism Laboratory",
 		"department": "PHYS",
@@ -1143,7 +1143,7 @@
 		"requirements": [0, [1, "PHYS1A", "PHYS2A"], [1, "PHYS1AL", "PHYS2AL"], [1, "MATH10B", "MATH20B"]],
 		"offered": ["f", "w", "s"]
 	},
-	
+
 	"PHYS1C": {
 		"name": "Waves, Optics, and Modern Physics",
 		"department": "PHYS",
@@ -1155,7 +1155,7 @@
 		"requirements": [0, [1, "PHYS1B", "PHYS2B"], [1, "PHYS1BL", "PHYS2BL"], [1, "MATH10C", "MATH20C", "MATH31BH", "MATH11"]],
 		"offered": ["f", "w", "s"]
 	},
-	
+
 	"PHYS1CL": {
 		"name": "Waves, Optics, and Modern Physics Laboratory",
 		"department": "PHYS",
@@ -1179,7 +1179,7 @@
 		"requirements": [0, "MATH20A"],
 		"offered": ["f", "w", "s"]
 	},
-	
+
 	"PHYS2B": {
 		"name": "Physics—Electricity and Magnetism",
 		"department": "PHYS",
@@ -1191,7 +1191,7 @@
 		"requirements": [0, [1, "PHYS2A", "PHYS4A"], "MATH20A", "MATH20B"],
 		"offered": ["f", "w", "s"]
 	},
-	
+
 	"PHYS2C": {
 		"name": "Physics—Fluids, Waves, Thermodynamics, and Optics",
 		"department": "PHYS",
@@ -1200,10 +1200,10 @@
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [0, [1, "PHYS2A", "PHYS4A"], "MATH20A", "MATH20B", [1, "MATH20C", "MATH31BH"],
+		"requirements": [0, [1, "PHYS2A", "PHYS4A"], "MATH20A", "MATH20B", [1, "MATH20C", "MATH31BH"]],
 		"offered": ["f", "w", "s"]
 	},
-	
+
 	"PHYS2D": {
 		"name": "Physics—Relativity and Quantum Physics",
 		"department": "PHYS",
@@ -1215,7 +1215,7 @@
 		"requirements": [0, [1, "PHYS2A", "PHYS4A"], "PHYS2B", "MATH20B"],
 		"offered": ["f", "w", "s"]
 	},
-	
+
 	"PHYS4A": {
 		"name": "Physics for Physics Majors-Mechanics",
 		"department": "PHYS",
@@ -1227,7 +1227,7 @@
 		"requirements": [0, "MATH20A"],
 		"offered": ["w"]
 	},
-	
+
 	"PHYS4B": {
 		"name": "Physics for Physics Majors-Fluids, Waves, and Heat",
 		"department": "PHYS",
@@ -1236,10 +1236,10 @@
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [0, "MATH20B", [1, "PHYS2A", "PHYS4A"],
+		"requirements": [0, "MATH20B", [1, "PHYS2A", "PHYS4A"]],
 		"offered": ["s"]
 	},
-	
+
 	"PHYS4C": {
 		"name": "Physics for Physics Majors-Electricity and Magnetism",
 		"department": "PHYS",
@@ -1248,10 +1248,10 @@
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [0, [1, "PHYS2A", "PHYS4A"], [1, "PHYS2C", "PHYS4B"], [1, "MATH20C", "MATH31BH"], [1, "MATH18", "MATH20F", "MATH31AH"],
+		"requirements": [0, [1, "PHYS2A", "PHYS4A"], [1, "PHYS2C", "PHYS4B"], [1, "MATH20C", "MATH31BH"], [1, "MATH18", "MATH20F", "MATH31AH"]],
 		"offered": ["s"]
 	},
-	
+
 	"PHYS4D": {
 		"name": "Physics for Physics Majors-Electromagnetic Waves, Optics, and Special Relativity",
 		"department": "PHYS",
@@ -1260,7 +1260,7 @@
 		"division": 0,
 		"reqUpperDiv": false,
 		"consent": false,
-		"requirements": [0, [1, "PHYS2A", "PHYS4A"], [1, "PHYS2C", "PHYS4B"], [1, "MATH20C", "MATH31BH"], [1, "MATH18", "MATH20F", "MATH31AH"],
+		"requirements": [0, [1, "PHYS2A", "PHYS4A"], [1, "PHYS2C", "PHYS4B"], [1, "MATH20C", "MATH31BH"], [1, "MATH18", "MATH20F", "MATH31AH"]],
 		"offered": ["s"]
 	},
 
@@ -1335,7 +1335,7 @@
 		"requirements": [1, "MATH10A", "MATH20A"],
 		"offered": ["w"]
 	},
-	
+
 	"PHYS12": {
 		"name": "Energy and Environment",
 		"department": "PHYS",
@@ -1347,7 +1347,7 @@
 		"requirements": [],
 		"offered": []
 	},
-	
+
 	"PHYS13": {
 		"name": "Life in the Universe",
 		"department": "PHYS",
