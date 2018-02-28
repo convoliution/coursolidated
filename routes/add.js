@@ -83,7 +83,7 @@ function createRequirement(req) {
         return "";
     }
 
-    var reqLabel = ((req[0] === 0) ? "all" : req[0].toString()) + "&nbsp;of:";
+    var reqLabel = "choose&nbsp;" + ((req[0] === 0) ? "all" : req[0].toString()) + ":";
 
     html  = "<div class=\"requirement\">\n"
           +     "<div class=\"requirement-label\">" + reqLabel + "</div>\n"
