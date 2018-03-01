@@ -67,6 +67,7 @@ var add = require('./routes/add');
 var schedule = require('./routes/schedule');
 
 app.get('/', index.view);
+app.get('/alt', index.viewAlt);
 
 app.post('/plan-major', plan.major);
 app.post('/plan-minor', plan.minor);
