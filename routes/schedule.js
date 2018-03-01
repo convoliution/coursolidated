@@ -102,6 +102,12 @@ exports.courseInfo = function(req, res) {
             for (let course of term.courses) {
                 preceedingCourses.add(course);
             }
+            // remove courses
+            // for ...{
+            //    preceedingCourses.remove(course);
+            //}
+          }
+
         }
     }
 

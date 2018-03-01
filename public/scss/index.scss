@@ -85,3 +85,8 @@ html {
 #course-info, #login {
     padding: .5em;
 }
+
+#course-info > button.delete {
+  height: 1rem;
+  width: 1rem;
+}
