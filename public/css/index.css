@@ -102,6 +102,8 @@ html {
       width: 100%; }
       .menu > .menu-content > .set .set-label {
         text-align: center; }
+      .menu > .menu-content > .set > .requirement .requirement {
+        margin: .5rem; }
       .menu > .menu-content > .set .requirement {
         width: 100%;
         border: 2px solid black;
