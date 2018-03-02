@@ -3,6 +3,8 @@ $(function() {
     $.mobile.loading().hide();
 });
 
+var animTime = 250;
+
 // login dialog
 $(function() {
     $('#login').dialog({
@@ -169,21 +171,19 @@ $(function() {
 
 // menu show/hide
 $(function() {
-    let animTime = 250;
-
     $('#topbar > button').tap(function(event) {
         event.preventDefault();
         showMenu($('#main-menu'), animTime);
     });
     $('.menu-top > button').tap(function(event) {
         event.preventDefault();
-        let menu = $("#" + $(this).parent().parent().attr('id'));
-        hideMenu(menu, animTime);
+        let menuID = "#" + $(this).parent().parent().attr('id');
+        hideMenu($(menuID), animTime);
     });
     $('#main-menu > .menu-content > button').tap(function(event) {
         event.preventDefault();
-        let menu = $("#" + $(this).text().replace(/\s/g, '').toLowerCase() + "-menu");
-        showMenu(menu, animTime);
+        let menuID = "#" + $(this).text().replace(/\s/g, '').toLowerCase() + "-menu";
+        showMenu($(menuID), animTime);
     });
 });
 
@@ -203,6 +203,8 @@ function showMenu(menu, animTime) {
         }, 500);
     } else if (menu.attr('id') === 'profile-menu') {
         populateProfile();
+    } else if (['majors-menu', 'minors-menu', 'colleges-menu'].includes(menu.attr('id'))) {
+        populateReqMenu(menu);
     }
     menu.animate({
         left: 0
@@ -232,28 +234,65 @@ function hideMenu(menu, animTime) {
     menu.prop('visible', false);
 }
 
+function populateReqMenu(menu) {
+    var userName = "Ian Drosos";
+    $.get('/'+menu.attr('id')+'/'+userName, function(result) {
+        var menuContent = menu.children('.menu-content').first(); // first and only
+
+        var html = "";
+        if (['majors-menu', 'minors-menu'].includes(menu.attr('id'))) {
+            for (let item of result.items) {
+                html += "<div class=\"choice\">"
+                      +     "<button class=\"name\" data-code=\"" + item[0] + "\">" + item[1] + "</button>"
+                      +     "<button class=\"confirm\">Add</button>"
+                      + "</div>";
+            }
+        } else { // colleges-menu
+            for (let item of result.items) {
+                html += "<div class=\"choice\">"
+                      +     "<button class=\"name\" data-code=\"" + item + "\">" + item + "</button>"
+                      +     "<button class=\"confirm\">Select</button>"
+                      + "</div>";
+            }
+        }
+
+        menuContent.html(html);
+        activateMenuButtons(menu.attr('id'));
+    })
+}
+
 function populateProfile() {
     var userName = "Ian Drosos";
-    $.get('/profile-info/'+userName, function(result) {
+    $.get('/profile-menu/'+userName, function(result) {
         for (let menuType in result) {
-            let html = "";
+            var html = "";
             if (result[menuType].length) {
                 if (menuType === "major" || menuType === "minor") {
-                    html += "You are " + menuType + "ing in:\n";
+                    html += "You are " + menuType + "ing in:\n"
+                          + "<ul>\n";
                     for (let item of result[menuType]) {
-                        html += "<ul>\n"
-                              +     "<li>" + item + "</li>\n"
-                              + "</ul>\n";
+                        html += "<li>" + item + "</li>\n";
                     }
+                    html +=     "<li class=\"add\">+ add "+menuType+"</li>\n"
+                          + "</ul>\n";
                 } else if (menuType === "college") {
                     html += "You are in:\n"
                           + "<ul>\n"
-                          +     "<li>" + result[menuType] + " College</li>\n"
+                          +     "<li>" + result[menuType] + "</li>\n"
                           + "</ul>\n";
                 }
+            } else {
+                html += "<ul>\n"
+                      +     "<li class=\"add\">+ add "+menuType+"</li>\n"
+                      + "</ul>\n"
             }
             $('#user-'+menuType).html(html);
         }
+        $('#profile-menu > .menu-content > .user-attribute > ul > li.add').tap(function(event) {
+            event.preventDefault();
+            var menuID = "#" + $(this).parent('ul').parent('.user-attribute').attr('id').split('-')[1] + "s-menu";
+            showMenu($(menuID), animTime);
+        });
     });
 }
 
@@ -270,8 +309,8 @@ function populateToadd() {
 }
 
 // submenu buttons
-$(function() {
-    $('.menu-content > .choice > button.name').tap(function(event) {
+function activateMenuButtons(menuID) {
+    $('#'+menuID+' > .menu-content > .choice > button.name').tap(function(event) {
         event.preventDefault();
         let menu = $(this).parents('.menu').first();
         if (menu.data('activeChoice') != null) {                  // if some choice is active,
@@ -284,20 +323,39 @@ $(function() {
         menu.data('activeChoice', $(this).parent());
         menu.data('activeChoice').addClass('active');
     });
-    $('.menu-content > .choice > button.confirm').tap(function(event) {
+    $('#'+menuID+' > .menu-content > .choice > button.confirm').tap(function(event) {
         event.preventDefault();
         var menuType = $(this).parents('.menu').attr('id').split('-')[0].slice(0, -1); // slice to get rid of plural 's'
         var toAdd = {
-            "code": $(this).prev('.name').data('code')
+            "code": $(this).prev('.name').data('code'),
+            "name": $(this).prev('.name').text()
         }
         $.post('/plan-'+menuType, toAdd, function(result) {
             // show confirmation
             $('#'+menuType+'s-menu > .menu-content > .choice > button.name').filter(function() {
                 return $(this).data('code') === toAdd.code;
-            }).next('button.confirm').text('You got it!');
+            }).next('button.confirm').animate({
+                backgroundColor: '#ffffff'
+            }, 150);
+            populateProfile();
+            setTimeout(function() {
+                // automatically retract menu
+                hideMenu($('#'+menuType+'s-menu'), animTime);
+                // flash added item
+                var newItem = $('#profile-menu > .menu-content li').filter(function() {
+                    return $(this).text() === toAdd.name;
+                });
+                var origBgColor = newItem.css('background-color');
+                newItem.css('background-color', 'lightgreen');
+                setTimeout(function() {
+                    newItem.animate({
+                        backgroundColor: origBgColor
+                    }, 250);
+                }, 250);
+            }, 150);
         });
     });
-});
+}
 
 // Array.prototype.includes polyfill
 // https://tc39.github.io/ecma262/#sec-array.prototype.includes

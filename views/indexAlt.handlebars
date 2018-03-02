@@ -21,9 +21,6 @@
             </div>
             <div class="menu-content">
                 <button>Profile</button>
-                <button>Majors</button>
-                <button>Minors</button>
-                <button>Colleges</button>
                 <button>Catalog</button>
                 <button>To Add</button>
                 <button>Settings</button>
@@ -35,15 +32,15 @@
                 <div class="name">Profile</div>
             </div>
             <div class="menu-content">
-                {{#with user}}
-                    <h1>Hello, {{firstName}}!</h1>
-                        <div id="user-major">
-                        </div>
-                        <div id="user-minor">
-                        </div>
-                        <div id="user-college">
-                        </div>
-                {{/with}}
+            {{#with user}}
+                <h1>Hello, {{firstName}}!</h1>
+                    <div class="user-attribute" id="user-major">
+                    </div>
+                    <div class="user-attribute" id="user-minor">
+                    </div>
+                    <div class="user-attribute" id="user-college">
+                    </div>
+            {{/with}}
             </div>
         </div>
         <div class="menu" id="majors-menu">
@@ -52,14 +49,6 @@
                 <div class="name">Majors</div>
             </div>
             <div class="menu-content">
-            {{#each majors}}
-                {{#unless (isIn @key ../user/majors)}}
-                <div class="choice">
-                    <button class="name" data-code="{{@key}}">{{name}}</button>
-                    <button class="confirm">Add</button>
-                </div>
-                {{/unless}}
-            {{/each}}
             </div>
         </div>
         <div class="menu" id="minors-menu">
@@ -68,14 +57,6 @@
                 <div class="name">Minors</div>
             </div>
             <div class="menu-content">
-            {{#each minors}}
-                {{#unless (isIn @key ../user/minors)}}
-                <div class="choice">
-                    <button class="name" data-code="{{@key}}">{{name}}</button>
-                    <button class="confirm">Add</button>
-                </div>
-                {{/unless}}
-            {{/each}}
             </div>
         </div>
         <div class="menu" id="colleges-menu">
@@ -84,14 +65,6 @@
                 <div class="name">Colleges</div>
             </div>
             <div class="menu-content">
-            {{#each colleges}}
-                {{#unless (isEqual @key ../user/college)}}
-                <div class="choice">
-                    <button class="name" data-code="{{@key}}">{{@key}}</button>
-                    <button class="confirm">Select</button>
-                </div>
-                {{/unless}}
-            {{/each}}
             </div>
         </div>
         <div class="menu" id="catalog-menu">

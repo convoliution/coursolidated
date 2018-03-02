@@ -99,15 +99,28 @@ $lato: 'Lato', sans-serif;
 
         h1 {
             font-size: 2.1rem;
+            margin-top: 0;
         }
-        > #user-major, > #user-minor, > #user-college {
+        > .user-attribute {
             font-size: 1.2rem;
             font-weight: 600;
-            > ul > li {
-                    font-size: 2.1rem;
+            > ul {
+                > li {
+                    font-size: 1.5rem;
                     font-weight: 400;
 
+                    margin-bottom: 1.25rem;
+
                     list-style-type: none;
+
+                    &.add {
+                        color: $gray;
+                    }
+                }
+            }
+            &#user-minor, &#user-college {
+                padding-top: .5rem;
+                border-top: 1px solid $lighter-gray;
             }
         }
     }

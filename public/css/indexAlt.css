@@ -103,14 +103,21 @@ html {
   .menu#profile-menu > .menu-content {
     padding: .5rem; }
     .menu#profile-menu > .menu-content h1 {
-      font-size: 2.1rem; }
-    .menu#profile-menu > .menu-content > #user-major, .menu#profile-menu > .menu-content > #user-minor, .menu#profile-menu > .menu-content > #user-college {
+      font-size: 2.1rem;
+      margin-top: 0; }
+    .menu#profile-menu > .menu-content > .user-attribute {
       font-size: 1.2rem;
       font-weight: 600; }
-      .menu#profile-menu > .menu-content > #user-major > ul > li, .menu#profile-menu > .menu-content > #user-minor > ul > li, .menu#profile-menu > .menu-content > #user-college > ul > li {
-        font-size: 2.1rem;
+      .menu#profile-menu > .menu-content > .user-attribute > ul > li {
+        font-size: 1.5rem;
         font-weight: 400;
+        margin-bottom: 1.25rem;
         list-style-type: none; }
+        .menu#profile-menu > .menu-content > .user-attribute > ul > li.add {
+          color: #747678; }
+      .menu#profile-menu > .menu-content > .user-attribute#user-minor, .menu#profile-menu > .menu-content > .user-attribute#user-college {
+        padding-top: .5rem;
+        border-top: 1px solid #e8e8e8; }
   .menu#toadd-menu > .menu-content > .set {
     width: 100%; }
     .menu#toadd-menu > .menu-content > .set .set-label {

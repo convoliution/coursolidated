@@ -63,7 +63,7 @@ if ('development' == app.get('env')) {
 
 var index = require('./routes/index');
 var plan = require('./routes/plan');
-var profile = require('./routes/profile');
+var menus = require('./routes/menus');
 var add = require('./routes/add');
 var schedule = require('./routes/schedule');
 
@@ -75,7 +75,10 @@ app.post('/plan-minor', plan.minor);
 app.post('/plan-college', plan.college);
 app.post('/plan-course', plan.course);
 
-app.get('/profile-info/:userName', profile.getInfo);
+app.get('/profile-menu/:userName', menus.getProfile);
+app.get('/majors-menu/:userName', menus.getMajors);
+app.get('/minors-menu/:userName', menus.getMinors);
+app.get('/colleges-menu/:userName', menus.getColleges);
 
 app.get('/populate-toadd', add.populate);
 
