@@ -63,6 +63,7 @@ if ('development' == app.get('env')) {
 
 var index = require('./routes/index');
 var plan = require('./routes/plan');
+var profile = require('./routes/profile');
 var add = require('./routes/add');
 var schedule = require('./routes/schedule');
 
@@ -73,6 +74,8 @@ app.post('/plan-major', plan.major);
 app.post('/plan-minor', plan.minor);
 app.post('/plan-college', plan.college);
 app.post('/plan-course', plan.course);
+
+app.get('/profile-info/:userName', profile.getInfo);
 
 app.get('/populate-toadd', add.populate);
 

@@ -201,6 +201,8 @@ function showMenu(menu, animTime) {
         setTimeout(function() {// hide main menu to work around clipping bug
             $('#main-menu').css('left', -menu.outerWidth());
         }, 500);
+    } else if (menu.attr('id') === 'profile-menu') {
+        populateProfile();
     }
     menu.animate({
         left: 0
@@ -228,6 +230,31 @@ function hideMenu(menu, animTime) {
         left: -menu.outerWidth()
     }, animTime);
     menu.prop('visible', false);
+}
+
+function populateProfile() {
+    var userName = "Ian Drosos";
+    $.get('/profile-info/'+userName, function(result) {
+        for (let menuType in result) {
+            let html = "";
+            if (result[menuType].length) {
+                if (menuType === "major" || menuType === "minor") {
+                    html += "You are " + menuType + "ing in:\n";
+                    for (let item of result[menuType]) {
+                        html += "<ul>\n"
+                              +     "<li>" + item + "</li>\n"
+                              + "</ul>\n";
+                    }
+                } else if (menuType === "college") {
+                    html += "You are in:\n"
+                          + "<ul>\n"
+                          +     "<li>" + result[menuType] + " College</li>\n"
+                          + "</ul>\n";
+                }
+            }
+            $('#user-'+menuType).html(html);
+        }
+    });
 }
 
 function populateToadd() {
@@ -264,43 +291,6 @@ $(function() {
             "code": $(this).prev('.name').data('code')
         }
         $.post('/plan-'+menuType, toAdd, function(result) {
-            // add to user profile
-            var html = ""
-            var list = $('#user-'+menuType); // list of relevant things in profile
-            if (!/\S/.test(list.html())) { // if html is empty
-                switch(menuType) {
-                    case "major":
-                    case "minor":
-                        html += "You are " + menuType + "ing in:\n"
-                              + "<ul>\n"
-                              +     "<li>" + result + "</li>\n"
-                              + "</ul>"
-                        break;
-                    case "college":
-                        html += "You are in " + result + " College";
-                        break;
-                    default:
-                        throw "invalid user attribute " + menuType;
-                }
-                list.html(html);
-            } else {
-                switch(menuType) {
-                    case "major":
-                    case "minor":
-                        html += "<ul>\n"
-                              +     "<li>" + result + "</li>\n"
-                              + "</ul>"
-                        list.children('ul').append(html);
-                        break;
-                    case "college":
-                        html += "You are in " + result + " College";
-                        list.html(html);
-                        break;
-                    default:
-                        throw "invalid user attribute " + menuType;
-                }
-            }
-
             // show confirmation
             $('#'+menuType+'s-menu > .menu-content > .choice > button.name').filter(function() {
                 return $(this).data('code') === toAdd.code;

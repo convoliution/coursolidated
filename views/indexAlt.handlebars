@@ -38,29 +38,10 @@
                 {{#with user}}
                     <h1>Hello, {{firstName}}!</h1>
                         <div id="user-major">
-                        {{#if majors}}
-                            You are majoring in:
-                            <ul>
-                            {{#each majors}}
-                                <li>{{this}}</li>
-                            {{/each}}
-                            </ul>
-                        {{/if}}
                         </div>
                         <div id="user-minor">
-                        {{#if minors}}
-                            You are minoring in:
-                            <ul>
-                                {{#each minors}}
-                                <li>{{this}}</li>
-                                {{/each}}
-                            </ul>
-                        {{/if}}
                         </div>
                         <div id="user-college">
-                        {{#if college}}
-                            You are in {{college}} College
-                        {{/if}}
                         </div>
                 {{/with}}
             </div>
