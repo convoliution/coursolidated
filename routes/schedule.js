@@ -105,8 +105,7 @@ exports.courseInfo = function(req, res) {
             // remove courses
             // for ...{
             //    preceedingCourses.remove(course);
-            //}
-          }
+            //
 
         }
     }

@@ -131,7 +131,7 @@ $(function() {
     setCardOutlineColors();
     $('.schedule .course').each(setCardTermColors);
     $('.term').sortable({
-        connectWith: ".term:not(.full)",
+        connectWith: ".term:not(.full), .requirement-courses",
         tolerance: "pointer",
         revert: 100,
         receive: function(event, ui) {
@@ -264,7 +264,13 @@ function populateToadd() {
             tolerance: "pointer",
             revert: 100,
             receive: function(event, ui){
+                $(ui.item).remove();
+                var temp = $(ui.sender);
 
+                updateUserData(temp, function(result){
+                  console.log("Success");
+                  populateToadd();
+                });
             }
         });
     });
