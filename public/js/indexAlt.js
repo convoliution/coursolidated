@@ -72,6 +72,7 @@ $(function() {
 
 function showCourseInfoDialog(event) {
     event.preventDefault();
+    var courseCard = this;
     var course = $(this).data('course');
     $.get('/schedule-course-info/'+course, function(result) {
         var html = "";
@@ -83,6 +84,16 @@ function showCourseInfoDialog(event) {
         }
 
         $('#course-info').html(html);
+        //append a button
+        $('#course-info').append("<button class=\"delete\"></button>");
+        $('#course-info > button.delete').tap(function(event) {
+            event.preventDefault();
+            // delete the class and send the parent term div to server
+            var temp = $(courseCard).parent();
+            $(courseCard).remove();
+            updateUserData(temp, populateToadd);
+            $('#course-info').dialog('close');
+        });
         $('#course-info').dialog('open');
         $('#course-info').dialog({
             title: course
@@ -90,12 +101,25 @@ function showCourseInfoDialog(event) {
     });
 }
 
+function updateUserData(termElem, callback) {
+    var newCourses = {
+        "userName": "Ian Drosos",
+        "scheduleName": "My Schedule",
+        "yearName": $(termElem).siblings('.year-label').text(),
+        "termId": $(termElem).data('term'),
+        "courses": $(termElem).children().map(function() {
+            return $(this).data('course');
+        }).get()
+    }
+    $.post('/schedule-change', newCourses, callback);
+}
+
 // schedules
 $(function() {
     setCardOutlineColors();
     $('.schedule .course').each(setCardTermColors);
     $('.term').sortable({
-        connectWith: ".term:not(.full)",
+        connectWith: ".term:not(.full), .requirement-courses, #catalog-menu > .menu-content",
         tolerance: "pointer",
         revert: 100,
         receive: function(event, ui) {
@@ -114,19 +138,6 @@ $(function() {
             }
         },
     });
-
-    function updateUserData(termElem, callback) {
-        var newCourses = {
-            "userName": "Ian Drosos",
-            "scheduleName": "My Schedule",
-            "yearName": $(termElem).siblings('.year-label').text(),
-            "termId": $(termElem).data('term'),
-            "courses": $(termElem).children().map(function() {
-                return $(this).data('course');
-            }).get()
-        }
-        $.post('/schedule-change', newCourses, callback);
-    }
 
     function setCardOutlineColors() {
         var userName = "Ian Drosos";
@@ -312,7 +323,14 @@ function populateToadd() {
             items: ".course:not(.disabled)",
             connectWith: ".term:not(.full)",
             tolerance: "pointer",
-            revert: 100
+            revert: 100,
+            receive: function(event, ui){
+                $(ui.item).remove();
+                var term = $(ui.sender);
+                updateUserData(term, function(result){
+                    populateToadd();
+                });
+            }
         });
     });
 }
