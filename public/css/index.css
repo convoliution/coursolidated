@@ -132,6 +132,10 @@ html {
                 grid-row: 1 / 2; }
               .menu > .menu-content > .set .requirement > .requirement-courses > .course.disabled > .course-appears > .course-appears-term {
                 grid-row: 2 / 3; }
+  .menu#catalog-menu > .menu-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end; }
   .menu#main-menu {
     z-index: 2;
     font-family: "Lato", sans-serif;

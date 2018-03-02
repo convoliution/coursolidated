@@ -5,7 +5,7 @@ var colleges = require('./data/colleges.json');
 var courses = require('./data/courses.json');
 
 module.exports = {
-    courseCard: function(course, isCompressed = false) {
+    courseCard: function(course, isCompressed=false) {
         var courseInfo = courses[course];
 
         // if course info isn't in our system yet, just return COGS120

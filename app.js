@@ -33,9 +33,12 @@ var handlebars = expresshbs.create({
             for (let course of courses) {
                 html += templates.courseCard(course);
             }
-            html += "</div>"
+            html += "</div>";
 
             return html;
+        },
+        populateCatalog: function(course) {
+            return templates.courseCard(course, isCompressed=true);
         }
     }
 });

@@ -196,9 +196,9 @@ function showMenu(menu, animTime) {
         $('#tabs').animate({
             marginLeft: menu.outerWidth() - $('#topbar').outerHeight()
         }, animTime);
-    } else if (menu.attr('id') === 'toadd-menu') {
+    } else if (['catalog-menu', 'toadd-menu'].includes(menu.attr('id'))) {
         populateToadd();
-        setTimeout(function() {// hide main menu to work around clipping bug
+        setTimeout(function() { // hide main menu to work around clipping bug
             $('#main-menu').css('left', -menu.outerWidth());
         }, 500);
     }
@@ -217,7 +217,7 @@ function hideMenu(menu, animTime) {
         $('#tabs').animate({
             marginLeft: 0
         }, animTime);
-    } else if (menu.attr('id') === 'toadd-menu') { // show main menu (for clipping bug)
+    } else if (['catalog-menu', 'toadd-menu'].includes(menu.attr('id'))) { // show main menu (for clipping bug)
         $('#main-menu').css('left', 0);
     }
     if (menu.data('activeChoice') != null) { // deactivate active choice
@@ -229,6 +229,15 @@ function hideMenu(menu, animTime) {
     }, animTime);
     menu.prop('visible', false);
 }
+
+$(function() {
+    $('#catalog-menu > .menu-content').sortable({
+        items: ".course:not(.disabled)",
+        connectWith: ".term:not(.full)",
+        tolerance: "pointer",
+        revert: 100
+    });
+});
 
 function populateToadd() {
     $.get('/populate-toadd', function(result) {

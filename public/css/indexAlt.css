@@ -118,6 +118,10 @@ html {
       .menu#profile-menu > .menu-content > .user-attribute#user-minor, .menu#profile-menu > .menu-content > .user-attribute#user-college {
         padding-top: .5rem;
         border-top: 1px solid #e8e8e8; }
+  .menu#catalog-menu > .menu-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end; }
   .menu#toadd-menu > .menu-content > .set {
     width: 100%; }
     .menu#toadd-menu > .menu-content > .set .set-label {

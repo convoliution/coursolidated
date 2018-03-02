@@ -125,6 +125,12 @@ $lato: 'Lato', sans-serif;
         }
     }
 
+    &#catalog-menu > .menu-content {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+    }
+
     &#toadd-menu > .menu-content {
         > .set {
             width: 100%;

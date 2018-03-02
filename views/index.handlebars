@@ -119,12 +119,9 @@
                 <div class="name">Catalog</div>
             </div>
             <div class="menu-content">
-                {{#each courses}}
-                    <div class="choice">
-                        <button class="name" data-code="{{@key}}">{{@key}}</button>
-                        <button class="confirm">Plan</button>
-                    </div>
-                {{/each}}
+            {{#each courses}}
+                {{{populateCatalog @key}}}
+            {{/each}}
             </div>
         </div>
         <div class="menu" id="toadd-menu">
