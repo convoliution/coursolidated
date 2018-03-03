@@ -105,11 +105,14 @@ $lato: 'Lato', sans-serif;
             font-size: 1.2rem;
             font-weight: 600;
             > ul {
+                margin: 0;
+
                 > li {
                     font-size: 1.5rem;
                     font-weight: 400;
 
-                    margin-bottom: 1.25rem;
+                    padding: .5rem 0;
+                    margin: .750rem 0;
 
                     list-style-type: none;
 

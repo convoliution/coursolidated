@@ -108,13 +108,16 @@ html {
     .menu#profile-menu > .menu-content > .user-attribute {
       font-size: 1.2rem;
       font-weight: 600; }
-      .menu#profile-menu > .menu-content > .user-attribute > ul > li {
-        font-size: 1.5rem;
-        font-weight: 400;
-        margin-bottom: 1.25rem;
-        list-style-type: none; }
-        .menu#profile-menu > .menu-content > .user-attribute > ul > li.add {
-          color: #747678; }
+      .menu#profile-menu > .menu-content > .user-attribute > ul {
+        margin: 0; }
+        .menu#profile-menu > .menu-content > .user-attribute > ul > li {
+          font-size: 1.5rem;
+          font-weight: 400;
+          padding: .5rem 0;
+          margin: .750rem 0;
+          list-style-type: none; }
+          .menu#profile-menu > .menu-content > .user-attribute > ul > li.add {
+            color: #747678; }
       .menu#profile-menu > .menu-content > .user-attribute#user-minor, .menu#profile-menu > .menu-content > .user-attribute#user-college {
         padding-top: .5rem;
         border-top: 1px solid #e8e8e8; }
