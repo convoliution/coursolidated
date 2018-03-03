@@ -25,14 +25,18 @@ html {
     border-radius: 4px;
     padding: .2rem;
     margin: .6rem;
-    overflow: hidden; // disable expanding, mostly for testing purposes
+    overflow: hidden;
     transition: background-color 0.3s;
+
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+
+    font-size: .65rem;
 
     display: grid;
     grid-template-rows: 2fr 3fr 4fr;
 
     text-align: center;
-    font-size: .75rem;
 
     @include transition-multiple(margin-left 250ms, margin-right 250ms);
     &.compressed {
@@ -45,7 +49,8 @@ html {
     }
     > .course-code {
         grid-row: 2 / 3;
-        font-size: 1rem;
+
+        font-size: .9rem;
     }
     > .course-offered {
         grid-row: 3 / 4;

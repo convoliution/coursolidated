@@ -260,10 +260,12 @@ main {
   margin: .6rem;
   overflow: hidden;
   transition: background-color 0.3s;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: .65rem;
   display: grid;
   grid-template-rows: 2fr 3fr 4fr;
   text-align: center;
-  font-size: .75rem;
   -webkit-transition: margin-left 250ms, margin-right 250ms;
   -moz-transition: margin-left 250ms, margin-right 250ms;
   -o-transition: margin-left 250ms, margin-right 250ms;
@@ -275,7 +277,7 @@ main {
     grid-row: 1 / 2; }
   .course > .course-code {
     grid-row: 2 / 3;
-    font-size: 1rem; }
+    font-size: .9rem; }
   .course > .course-offered {
     grid-row: 3 / 4;
     display: grid;
