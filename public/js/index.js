@@ -51,6 +51,24 @@ function statusChangeCallback(response) {
     }
 }
 
+$function() {
+    var schedule = users[userName].schedules[0];
+    let counter = 0;
+    
+    for (let year of schedule.years) {
+        for (let term of year.terms) {
+            for (let course of term.courses) {
+                counter++;
+            }
+        }
+    }
+    
+    if (counter == 0)
+    {
+        showMenu($("#main-menu"), animTime);
+    }           
+}
+
 // course info
 $(function() {
     $('#course-info').dialog({
