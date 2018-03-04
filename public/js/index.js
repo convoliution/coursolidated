@@ -273,7 +273,7 @@ function populateReqMenu(menu) {
             for (let item of result.items) {
                 html += "<div class=\"choice\">"
                       +     "<button class=\"name\" data-code=\"" + item + "\">" + item + "</button>"
-                      +     "<button class=\"confirm\">Select</button>"
+                      +     "<button class=\"confirm\">Add</button>"
                       + "</div>";
             }
         }
