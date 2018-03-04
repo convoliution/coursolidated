@@ -51,6 +51,28 @@ function statusChangeCallback(response) {
     }
 }
 
+$(function() {
+    let counter = 0;
+    var scheduleName = "My Schedule";
+        $.get('/schedule-check/'+userName+'/'+scheduleName, function(result) {
+            var years = result[scheduleName];
+            for (let year in years) {
+                for (let term in years[year]) {
+                    for (let course in years[year][term]) {
+                        counter++;
+                    }
+                }
+            }
+        });
+                        
+    if (counter == 0)
+    {
+        showMenu($("#main-menu"), animTime);
+        showMenu($("#profile-menu"), animTime);
+    }           
+});
+
+
 // course info
 $(function() {
     $('#course-info').dialog({
