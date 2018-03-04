@@ -9,6 +9,19 @@ $.post('/users-new', {'userName':USER_NAME}, function(result) {
     console.log("Null data initialized. Good luck with using the app.")
 });
 
+var startTime;
+$(function() {
+    startTime = Date.now();
+});
+var firstCourse = true;
+function recordEndTime() {
+    gtag('event', 'add', {
+        'event_category': 'first_course',
+        'event_label': (Date.now() - startTime).toString()
+    });
+    firstCourse = false;
+}
+
 // login dialog
 $(function() {
     $('#login').dialog({
@@ -148,6 +161,9 @@ $(function() {
         tolerance: "pointer",
         revert: 100,
         receive: function(event, ui) {
+            if (firstCourse) {
+                recordEndTime();
+            }
             updateUserData(this, setCardOutlineColors);
             setCardTermColors.apply(ui.item);
             ui.item.tap(showCourseInfoDialog);
