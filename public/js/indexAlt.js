@@ -3,9 +3,9 @@ $(function() {
     $.mobile.loading().hide();
 });
 
-var animTime = 250;
-var userName = Math.floor(Math.random()*Math.pow(10, 20)).toString();
-$.post('/users-new', {'userName':userName}, function(result) {
+const ANIM_TIME = 250;
+const USER_NAME = Math.floor(Math.random()*Math.pow(10, 20)).toString();
+$.post('/users-new', {'userName':USER_NAME}, function(result) {
     console.log("Null data initialized. Good luck with using the app.")
 });
 
@@ -64,14 +64,13 @@ $(function() {
                 }
             }
         });
-                        
+
     if (counter == 0)
     {
         showMenu($("#main-menu"), animTime);
         showMenu($("#profile-menu"), animTime);
-    }           
+    }
 });
-
 
 // course info
 $(function() {
@@ -100,7 +99,7 @@ function showCourseInfoDialog(event) {
     event.preventDefault();
     var courseCard = this;
     var course = $(this).data('course');
-    $.get('/schedule-course-info/'+userName+'/'+course, function(result) {
+    $.get('/schedule-course-info/'+USER_NAME+'/'+course, function(result) {
         var html = "";
         if (result.unmetReqs.length > 0) {
             html += "The following prerequisites have not been met:\n"
@@ -129,7 +128,7 @@ function showCourseInfoDialog(event) {
 
 function updateUserData(termElem, callback) {
     var newCourses = {
-        "userName": userName,
+        "userName": USER_NAME,
         "scheduleName": "My Schedule",
         "yearName": $(termElem).siblings('.year-label').text(),
         "termId": $(termElem).data('term'),
@@ -167,7 +166,7 @@ $(function() {
 
     function setCardOutlineColors() {
         var scheduleName = "My Schedule";
-        $.get('/schedule-check/'+userName+'/'+scheduleName, function(result) {
+        $.get('/schedule-check/'+USER_NAME+'/'+scheduleName, function(result) {
             var years = result[scheduleName];
             for (let year in years) {
                 for (let term in years[year]) {
@@ -209,17 +208,17 @@ $(function() {
 $(function() {
     $('#topbar > button').tap(function(event) {
         event.preventDefault();
-        showMenu($('#main-menu'), animTime);
+        showMenu($('#main-menu'), ANIM_TIME);
     });
     $('.menu-top > button').tap(function(event) {
         event.preventDefault();
         let menuID = "#" + $(this).parent().parent().attr('id');
-        hideMenu($(menuID), animTime);
+        hideMenu($(menuID), ANIM_TIME);
     });
     $('#main-menu > .menu-content > button').tap(function(event) {
         event.preventDefault();
         let menuID = "#" + $(this).text().replace(/\s/g, '').toLowerCase() + "-menu";
-        showMenu($(menuID), animTime);
+        showMenu($(menuID), ANIM_TIME);
     });
 });
 
@@ -280,7 +279,7 @@ $(function() {
 });
 
 function populateReqMenu(menu) {
-    $.get('/'+menu.attr('id')+'/'+userName, function(result) {
+    $.get('/'+menu.attr('id')+'/'+USER_NAME, function(result) {
         var menuContent = menu.children('.menu-content').first(); // first and only
 
         var html = "";
@@ -306,7 +305,7 @@ function populateReqMenu(menu) {
 }
 
 function populateProfile() {
-    $.get('/profile-menu/'+userName, function(result) {
+    $.get('/profile-menu/'+USER_NAME, function(result) {
         for (let menuType in result) {
             var html = "";
             if (result[menuType].length) {
@@ -334,13 +333,13 @@ function populateProfile() {
         $('#profile-menu > .menu-content > .user-attribute > ul > li.add').tap(function(event) {
             event.preventDefault();
             var menuID = "#" + $(this).parent('ul').parent('.user-attribute').attr('id').split('-')[1] + "s-menu";
-            showMenu($(menuID), animTime);
+            showMenu($(menuID), ANIM_TIME);
         });
     });
 }
 
 function populateToadd() {
-    $.get('/populate-toadd/'+userName, function(result) {
+    $.get('/populate-toadd/'+USER_NAME, function(result) {
         $('#toadd-menu > .menu-content').html(result);
         $('#toadd-menu .requirement-courses').sortable({
             items: ".course:not(.disabled)",
@@ -377,7 +376,7 @@ function activateMenuButtons(menuID) {
         event.preventDefault();
         var menuType = $(this).parents('.menu').attr('id').split('-')[0].slice(0, -1); // slice to get rid of plural 's'
         var toAdd = {
-            "userName": userName,
+            "userName": USER_NAME,
             "code": $(this).prev('.name').data('code'),
             "name": $(this).prev('.name').text()
         }
@@ -391,7 +390,7 @@ function activateMenuButtons(menuID) {
             populateProfile();
             setTimeout(function() {
                 // automatically retract menu
-                hideMenu($('#'+menuType+'s-menu'), animTime);
+                hideMenu($('#'+menuType+'s-menu'), ANIM_TIME);
                 // flash added item
                 var newItem = $('#profile-menu > .menu-content li').filter(function() {
                     return $(this).text() === toAdd.name;
