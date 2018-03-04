@@ -65,6 +65,7 @@ if ('development' == app.get('env')) {
 }
 
 var index = require('./routes/index');
+var users = require('./routes/users');
 var plan = require('./routes/plan');
 var menus = require('./routes/menus');
 var add = require('./routes/add');
@@ -73,21 +74,22 @@ var schedule = require('./routes/schedule');
 app.get('/', index.view);
 app.get('/alt', index.viewAlt);
 
+app.post('/users-new', users.new)
+
 app.post('/plan-major', plan.major);
 app.post('/plan-minor', plan.minor);
 app.post('/plan-college', plan.college);
-app.post('/plan-course', plan.course);
 
 app.get('/profile-menu/:userName', menus.getProfile);
 app.get('/majors-menu/:userName', menus.getMajors);
 app.get('/minors-menu/:userName', menus.getMinors);
 app.get('/colleges-menu/:userName', menus.getColleges);
 
-app.get('/populate-toadd', add.populate);
+app.get('/populate-toadd/:userName', add.populate);
 
 app.post('/schedule-change', schedule.change);
 app.get('/schedule-check/:userName/:scheduleName', schedule.check);
-app.get('/schedule-course-info/:course', schedule.courseInfo);
+app.get('/schedule-course-info/:userName/:course', schedule.courseInfo);
 
 http.createServer(app).listen(app.get('port'), function(){
     console.log('Express server listening on port ' + app.get('port'));

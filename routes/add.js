@@ -1,4 +1,4 @@
-var user = require('../data/users.json')['Ian Drosos'];
+var users = require('../data/users.json');
 var majors = require('../data/majors.json');
 var minors = require('../data/minors.json');
 var colleges = require('../data/colleges.json');
@@ -7,7 +7,8 @@ var templates = require('../templates');
 var utils = require('../utils');
 
 exports.populate = function(req, res) {
-    var coursesToAdd = getCoursesToAdd();
+    var userName = req.params.userName;
+    var coursesToAdd = getCoursesToAdd(userName);
 
     var html = "";
 
@@ -16,12 +17,12 @@ exports.populate = function(req, res) {
     }
 
     res.send(html);
-}
+};
 
-function getCoursesToAdd() {
-    var userMajors = user.majors;
-    var userMinors = user.minors;
-    var userCollege = user.college;
+function getCoursesToAdd(userName) {
+    var userMajors = users[userName].majors;
+    var userMinors = users[userName].minors;
+    var userCollege = users[userName].college;
 
     var allFirstAppears = utils.allFirstAppears();
 

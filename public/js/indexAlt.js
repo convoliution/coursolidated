@@ -4,6 +4,10 @@ $(function() {
 });
 
 var animTime = 250;
+var userName = Math.floor(Math.random()*Math.pow(10, 20)).toString();
+$.post('/users-new', {'userName':userName}, function(result) {
+    console.log("Null data initialized. Good luck with using the app.")
+});
 
 // login dialog
 $(function() {
@@ -74,7 +78,7 @@ function showCourseInfoDialog(event) {
     event.preventDefault();
     var courseCard = this;
     var course = $(this).data('course');
-    $.get('/schedule-course-info/'+course, function(result) {
+    $.get('/schedule-course-info/'+userName+'/'+course, function(result) {
         var html = "";
         if (result.unmetReqs.length > 0) {
             html += "The following prerequisites have not been met:\n"
@@ -103,7 +107,7 @@ function showCourseInfoDialog(event) {
 
 function updateUserData(termElem, callback) {
     var newCourses = {
-        "userName": "Ian Drosos",
+        "userName": userName,
         "scheduleName": "My Schedule",
         "yearName": $(termElem).siblings('.year-label').text(),
         "termId": $(termElem).data('term'),
@@ -140,7 +144,6 @@ $(function() {
     });
 
     function setCardOutlineColors() {
-        var userName = "Ian Drosos";
         var scheduleName = "My Schedule";
         $.get('/schedule-check/'+userName+'/'+scheduleName, function(result) {
             var years = result[scheduleName];
@@ -255,7 +258,6 @@ $(function() {
 });
 
 function populateReqMenu(menu) {
-    var userName = "Ian Drosos";
     $.get('/'+menu.attr('id')+'/'+userName, function(result) {
         var menuContent = menu.children('.menu-content').first(); // first and only
 
@@ -282,7 +284,6 @@ function populateReqMenu(menu) {
 }
 
 function populateProfile() {
-    var userName = "Ian Drosos";
     $.get('/profile-menu/'+userName, function(result) {
         for (let menuType in result) {
             var html = "";
@@ -317,7 +318,7 @@ function populateProfile() {
 }
 
 function populateToadd() {
-    $.get('/populate-toadd', function(result) {
+    $.get('/populate-toadd/'+userName, function(result) {
         $('#toadd-menu > .menu-content').html(result);
         $('#toadd-menu .requirement-courses').sortable({
             items: ".course:not(.disabled)",
@@ -354,6 +355,7 @@ function activateMenuButtons(menuID) {
         event.preventDefault();
         var menuType = $(this).parents('.menu').attr('id').split('-')[0].slice(0, -1); // slice to get rid of plural 's'
         var toAdd = {
+            "userName": userName,
             "code": $(this).prev('.name').data('code'),
             "name": $(this).prev('.name').text()
         }

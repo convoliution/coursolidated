@@ -1,4 +1,4 @@
-var user = require('../data/users.json')['Ian Drosos'];
+var users = require('../data/users.json');
 var majors = require('../data/majors.json');
 var minors = require('../data/minors.json');
 var colleges = require('../data/colleges.json');
@@ -11,7 +11,7 @@ exports.change = function(req, res) {
     var termId = req.body.termId;
     var courses = req.body.courses || []; // AJAX apparetly doesn't deal with empty arrays
 
-    var schedules = user.schedules;
+    var schedules = users[userName].schedules;
     var numSchedules = schedules.length;
     for (var iSchedule = 0; iSchedule < numSchedules; iSchedule++) {
         if (schedules[iSchedule].name === scheduleName) {
@@ -43,15 +43,15 @@ exports.change = function(req, res) {
             throw "unable to find term " + termId + " in year " + yearName + " in schedule " + scheduleName;
         }
     }
-    user.schedules[iSchedule].years[iYear].terms[iTerm].courses = courses;
-    res.json(user);
+    users[userName].schedules[iSchedule].years[iYear].terms[iTerm].courses = courses;
+    res.json(users[userName]);
 };
 
 exports.check = function(req, res) {
     var userName = req.params.userName;
     var scheduleName = req.params.scheduleName;
 
-    var schedules = user.schedules;
+    var schedules = users[userName].schedules;
     var numSchedules = schedules.length;
     for (var iSchedule = 0; iSchedule < numSchedules; iSchedule++) {
         if (schedules[iSchedule].name === scheduleName) {
@@ -83,11 +83,12 @@ exports.check = function(req, res) {
 };
 
 exports.courseInfo = function(req, res) {
+    var userName = req.params.userName;
     var courseToFind = req.params.course;
 
     var info = {};
 
-    var schedule = user.schedules[0]; // get first schedule because nothing matters anymore
+    var schedule = users[userName].schedules[0]; // get first schedule because nothing matters anymore
     var preceedingCourses = new Set();
 
     getUnmetReqs:
