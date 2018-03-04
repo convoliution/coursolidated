@@ -113,13 +113,12 @@ html {
         .menu#profile-menu > .menu-content > .user-attribute > ul > li {
           font-size: 1.5rem;
           font-weight: 400;
-          padding: .5rem 0;
-          margin: .750rem 0;
+          padding: .25rem 0;
+          margin: 1rem 0;
           list-style-type: none; }
           .menu#profile-menu > .menu-content > .user-attribute > ul > li.add {
             color: #747678; }
       .menu#profile-menu > .menu-content > .user-attribute#user-minor, .menu#profile-menu > .menu-content > .user-attribute#user-college {
-        padding-top: .5rem;
         border-top: 1px solid #e8e8e8; }
   .menu#catalog-menu > .menu-content {
     display: flex;

@@ -111,8 +111,8 @@ $lato: 'Lato', sans-serif;
                     font-size: 1.5rem;
                     font-weight: 400;
 
-                    padding: .5rem 0;
-                    margin: .750rem 0;
+                    padding: .25rem 0;
+                    margin: 1rem 0;
 
                     list-style-type: none;
 
@@ -122,7 +122,6 @@ $lato: 'Lato', sans-serif;
                 }
             }
             &#user-minor, &#user-college {
-                padding-top: .5rem;
                 border-top: 1px solid $lighter-gray;
             }
         }
