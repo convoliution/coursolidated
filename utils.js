@@ -1,15 +1,15 @@
-var user = require('./data/users.json')['Ian Drosos']
-var majors = require('./data/majors.json')
-var minors = require('./data/minors.json')
-var colleges = require('./data/colleges.json')
-var courses = require('./data/courses.json')
+var users = require('./data/users.json');
+var majors = require('./data/majors.json');
+var minors = require('./data/minors.json');
+var colleges = require('./data/colleges.json');
+var courses = require('./data/courses.json');
 
 module.exports = {
     // if a course appears more than once in a schedule,
     // return the year and term of the first appearance
     // otherwise return null
-    firstAppears: function(courseToFind) {
-        var schedule = user.schedules[0];
+    firstAppears: function(courseToFind, userName) {
+        var schedule = users[userName].schedules[0];
         for (let year of schedule.years.slice().reverse()) {
             let yearName = year.name;
             for (let term of year.terms.slice().reverse()) {
@@ -27,10 +27,10 @@ module.exports = {
         }
         return null;
     },
-    allFirstAppears: function() {
+    allFirstAppears: function(userName) {
         var whenAllFirstAppears = {};
 
-        var schedule = user.schedules[0];
+        var schedule = users[userName].schedules[0];
         for (let year of schedule.years.slice().reverse()) {
             let yearName = year.name;
             for (let term of year.terms.slice().reverse()) {

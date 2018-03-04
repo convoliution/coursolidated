@@ -24,7 +24,8 @@ function getCoursesToAdd(userName) {
     var userMinors = users[userName].minors;
     var userCollege = users[userName].college;
 
-    var allFirstAppears = utils.allFirstAppears();
+    var allFirstAppears = utils.allFirstAppears(userName);
+    console.log(allFirstAppears)
 
     var toAdds = [];
 

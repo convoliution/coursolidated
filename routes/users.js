@@ -34,5 +34,6 @@ exports.new = function(req, res) {
 								"id": "s2","courses": []}
 						]}]}]}
 
+    console.log("user "+userName+" initialized");
     res.send("success!");
 };

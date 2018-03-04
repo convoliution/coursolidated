@@ -1,4 +1,3 @@
-var user = require('./data/users.json')['Ian Drosos'];
 var majors = require('./data/majors.json');
 var minors = require('./data/minors.json');
 var colleges = require('./data/colleges.json');
