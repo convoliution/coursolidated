@@ -92,7 +92,49 @@ $lato: 'Lato', sans-serif;
                 @include calc(height, '2 * #{$tile-height}');
             }
         }
+    }
 
+    &#profile-menu > .menu-content {
+        padding: .5rem;
+
+        h1 {
+            font-size: 2.1rem;
+            margin-top: 0;
+        }
+        > .user-attribute {
+            font-size: 1.2rem;
+            font-weight: 600;
+            > ul {
+                margin: 0;
+
+                > li {
+                    font-size: 1.5rem;
+                    font-weight: 400;
+
+                    padding: .5rem 0;
+                    margin: .750rem 0;
+
+                    list-style-type: none;
+
+                    &.add {
+                        color: $gray;
+                    }
+                }
+            }
+            &#user-minor, &#user-college {
+                padding-top: .5rem;
+                border-top: 1px solid $lighter-gray;
+            }
+        }
+    }
+
+    &#catalog-menu > .menu-content {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+    }
+
+    &#toadd-menu > .menu-content {
         > .set {
             width: 100%;
 
@@ -150,22 +192,24 @@ $lato: 'Lato', sans-serif;
         }
     }
 
-    &#catalog-menu > .menu-content {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-end;
-    }
 
     &#main-menu {
         z-index: 2;
-        font-family: $lato;
-        font-weight: normal;
+    }
+    &#profile-menu, &#catalog-menu, &#toadd-menu, &#settings-menu {
+        z-index: 3;
+    }
+    &#majors-menu, &#minors-menu, &#colleges-menu {
+        z-index: 4;
+
+    }
+
+    font-family: $lato;
+    font-weight: normal;
+    &#main-menu {
         font-size: 2.5rem;
     }
-    &#profile-menu, &#majors-menu, &#minors-menu, &#colleges-menu, &#catalog-menu, &#toadd-menu, &#settings-menu {
-        z-index: 3;
-        font-family: $lato;
-        font-weight: normal;
+    &#profile-menu, &#catalog-menu, &#toadd-menu, &#settings-menu, &#majors-menu, &#minors-menu, &#colleges-menu {
         font-size: 1.8rem;
     }
 }
