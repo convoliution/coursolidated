@@ -25,7 +25,6 @@ function getCoursesToAdd(userName) {
     var userCollege = users[userName].college;
 
     var allFirstAppears = utils.allFirstAppears(userName);
-    console.log(allFirstAppears)
 
     var toAdds = [];
 
