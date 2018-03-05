@@ -67,7 +67,7 @@ function statusChangeCallback(response) {
 $(function() {
     let counter = 0;
     var scheduleName = "My Schedule";
-        $.get('/schedule-check/'+userName+'/'+scheduleName, function(result) {
+        $.get('/schedule-check/'+USER_NAME+'/'+scheduleName, function(result) {
             var years = result[scheduleName];
             for (let year in years) {
                 for (let term in years[year]) {
