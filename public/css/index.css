@@ -306,6 +306,7 @@ main {
 
 #course-info > button.delete {
   height: 1rem;
-  width: 5rem; }
+  width: 5rem;
+  font: 1em; }
 
 /*# sourceMappingURL=index.css.map */
