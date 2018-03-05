@@ -124,7 +124,7 @@ function showCourseInfoDialog(event) {
         //append a button
         $('#course-info').append("<button class=\"delete\">TRUUU</button>");
         $("#\"delete\" span").text("My NEW Text");
-        $("#\"delete\"").html('Save');
+        $("#\"delete\"").html("Save");
         $('#course-info > button.delete').tap(function(event) {
             event.preventDefault();
             // delete the class and send the parent term div to server
