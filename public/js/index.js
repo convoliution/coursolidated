@@ -122,7 +122,7 @@ function showCourseInfoDialog(event) {
 
         $('#course-info').html(html);
         //append a button
-        $('#course-info').append("<button class=\"delete\"></button>");
+        $('#course-info').append("<button class=\"delete\">TRUUU</button>");
         $("#\"delete\" span").text("My NEW Text");
         $("#\"delete\"").html('Save');
         $('#course-info > button.delete').tap(function(event) {
