@@ -80,8 +80,8 @@ $(function() {
 
     if (counter == 0)
     {
-        showMenu($("#main-menu"), animTime);
-        showMenu($("#profile-menu"), animTime);
+        showMenu($("#main-menu"), ANIM_TIME);
+        showMenu($("#profile-menu"), ANIM_TIME);
     }
 });
 
