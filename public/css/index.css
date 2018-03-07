@@ -1,9 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
 html {
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 *, *:before, *:after {
-  box-sizing: inherit; }
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
 
 #topbar {
   height: 4rem;
@@ -15,9 +17,13 @@ html {
     width: 80%;
     grid-column: 1 / 2;
     justify-self: center;
-    align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
     background-image: url("../images/plusfinal.png");
     background-size: 100%; }
+  #topbar > #coursolidated {
+    font-size: 3.6rem;
+    padding-left: .5rem; }
 
 .menu {
   position: absolute;
@@ -61,16 +67,16 @@ html {
       width: 80%;
       grid-column: 1 / 2;
       justify-self: center;
-      align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
       background-image: url("../images/chevronleft.png");
       background-size: 100%; }
     .menu > .menu-top > div {
       grid-column: 2 / 3;
       justify-self: center;
-      align-self: center; }
+      -ms-flex-item-align: center;
+          align-self: center; }
   .menu > .menu-content {
-    height: -moz-calc(100% - 4rem);
-    height: -webkit-calc(100% - 4rem);
     height: calc(100% - 4rem);
     width: 100%;
     overflow-y: scroll; }
@@ -86,8 +92,6 @@ html {
       width: 100%;
       overflow-y: hidden;
       -webkit-transition: height 250ms;
-      -moz-transition: height 250ms;
-      -o-transition: height 250ms;
       transition: height 250ms; }
       .menu > .menu-content > .choice > button {
         height: 4rem;
@@ -97,8 +101,6 @@ html {
         .menu > .menu-content > .choice > button.confirm {
           background-color: lightgreen; }
       .menu > .menu-content > .choice.active {
-        height: -moz-calc(2 * 4rem);
-        height: -webkit-calc(2 * 4rem);
         height: calc(2 * 4rem); }
   .menu#profile-menu > .menu-content {
     padding: .5rem; }
@@ -121,9 +123,16 @@ html {
       .menu#profile-menu > .menu-content > .user-attribute#user-minor, .menu#profile-menu > .menu-content > .user-attribute#user-college {
         border-top: 1px solid #e8e8e8; }
   .menu#catalog-menu > .menu-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end; }
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
   .menu#toadd-menu > .menu-content > .set {
     width: 100%; }
     .menu#toadd-menu > .menu-content > .set .set-label {
@@ -139,15 +148,22 @@ html {
       .menu#toadd-menu > .menu-content > .set .requirement > .requirement-label {
         grid-column: 1 / 2;
         justify-self: center;
-        align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
         -webkit-transform: rotate(270deg);
-        -ms-transform: rotate(270deg);
         transform: rotate(270deg); }
       .menu#toadd-menu > .menu-content > .set .requirement > .requirement-courses {
         grid-column: 2 / 3;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-end; }
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end; }
         .menu#toadd-menu > .menu-content > .set .requirement > .requirement-courses > .course.disabled {
           border: dashed 0.2rem #747678; }
           .menu#toadd-menu > .menu-content > .set .requirement > .requirement-courses > .course.disabled > .course-appears {
@@ -171,41 +187,25 @@ html {
 
 main > #info {
   position: absolute;
-  left: -moz-calc(-100vw + 12rem);
-  left: -webkit-calc(-100vw + 12rem);
   left: calc(-100vw + 12rem);
-  height: -moz-calc(100vh - 4rem);
-  height: -webkit-calc(100vh - 4rem);
   height: calc(100vh - 4rem);
-  width: -moz-calc(100vw - 12rem);
-  width: -webkit-calc(100vw - 12rem);
   width: calc(100vw - 12rem);
   z-index: 1;
   background-color: white; }
   @media only screen and (min-width: 27rem) {
     main > #info {
-      left: -moz-calc(-100vw + 33vw);
-      left: -webkit-calc(-100vw + 33vw);
       left: calc(-100vw + 33vw); } }
   @media only screen and (min-width: 56rem) {
     main > #info {
-      left: -moz-calc(-100vw + 20rem);
-      left: -webkit-calc(-100vw + 20rem);
       left: calc(-100vw + 20rem); } }
   @media only screen and (min-width: 27rem) {
     main > #info {
-      width: -moz-calc(100vw - 33vw);
-      width: -webkit-calc(100vw - 33vw);
       width: calc(100vw - 33vw); } }
   @media only screen and (min-width: 56rem) {
     main > #info {
-      width: -moz-calc(100vw - 20rem);
-      width: -webkit-calc(100vw - 20rem);
       width: calc(100vw - 20rem); } }
 
 main {
-  height: -moz-calc(100vh - 4rem);
-  height: -webkit-calc(100vh - 4rem);
   height: calc(100vh - 4rem); }
   main > .schedule {
     height: 100%;
@@ -223,21 +223,22 @@ main {
         grid-column: 1 / 2;
         grid-row: 1 / 6;
         justify-self: center;
-        align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
         -webkit-transform: rotate(270deg);
-        -ms-transform: rotate(270deg);
         transform: rotate(270deg); }
       main > .schedule > .year > .term-label {
         grid-column: 2 / 3;
         justify-self: center;
-        align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
         -webkit-transform: rotate(270deg);
-        -ms-transform: rotate(270deg);
         transform: rotate(270deg); }
       main > .schedule > .year > .term {
         height: 6rem;
         grid-column: 3 / 4;
-        display: -webkit-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex; }
         main > .schedule > .year > .term.fall {
           grid-row: 1 / 2; }
@@ -258,6 +259,7 @@ main {
   padding: .2rem;
   margin: .6rem;
   overflow: hidden;
+  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -266,8 +268,6 @@ main {
   grid-template-rows: 2fr 3fr 4fr;
   text-align: center;
   -webkit-transition: margin-left 250ms, margin-right 250ms;
-  -moz-transition: margin-left 250ms, margin-right 250ms;
-  -o-transition: margin-left 250ms, margin-right 250ms;
   transition: margin-left 250ms, margin-right 250ms; }
   .course.compressed {
     margin-left: .2rem;
@@ -309,5 +309,3 @@ main {
   width: 5rem;
   text-align: center;
   font: 8px; }
-
-/*# sourceMappingURL=index.css.map */

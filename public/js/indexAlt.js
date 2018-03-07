@@ -244,7 +244,7 @@ function showMenu(menu, animTime) {
             marginLeft: menu.outerWidth()
         }, animTime);
         $('.term > .course').addClass('compressed');
-        $('#tabs').animate({
+        $('#coursolidated').animate({
             marginLeft: menu.outerWidth() - $('#topbar').outerHeight()
         }, animTime);
     } else if (['catalog-menu', 'toadd-menu'].includes(menu.attr('id'))) {
@@ -269,7 +269,7 @@ function hideMenu(menu, animTime) {
             marginLeft: 0
         }, animTime);
         $('.term > .course').removeClass('compressed');
-        $('#tabs').animate({
+        $('#coursolidated').animate({
             marginLeft: 0
         }, animTime);
     } else if (['catalog-menu', 'toadd-menu'].includes(menu.attr('id'))) { // show main menu (for clipping bug)
