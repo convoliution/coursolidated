@@ -15,10 +15,7 @@ $(function() {
 });
 var firstCourse = true;
 function recordEndTime() {
-    gtag('event', 'add', {
-        'event_category': 'first_course',
-        'event_label': (Date.now() - startTime).toString()+"A"
-    });
+    console.log((Date.now() - startTime).toString()+"A");
     firstCourse = false;
 }
 
