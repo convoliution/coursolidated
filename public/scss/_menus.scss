@@ -121,7 +121,7 @@
         }
     }
 
-    &#toadd-menu > .menu-content {
+    &#reqs-menu > .menu-content {
         > .set {
             width: 100%;
 
@@ -188,7 +188,7 @@
     &#main-menu {
         z-index: 2;
     }
-    &#profile-menu, &#toadd-menu, &#catalog-menu, &#settings-menu {
+    &#profile-menu, &#reqs-menu, &#catalog-menu, &#settings-menu {
         z-index: 3;
     }
     &#majors-menu, &#minors-menu, &#colleges-menu {
@@ -201,7 +201,7 @@
     &#main-menu {
         font-size: 2.5rem;
     }
-    &#profile-menu, &#toadd-menu, &#catalog-menu, &#settings-menu, &#majors-menu, &#minors-menu, &#colleges-menu {
+    &#profile-menu, &#reqs-menu, &#catalog-menu, &#settings-menu, &#majors-menu, &#minors-menu, &#colleges-menu {
         font-size: 1.8rem;
     }
 }
