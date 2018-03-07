@@ -21,6 +21,9 @@ html {
         align-self: center;
     background-image: url("../images/plusfinal.png");
     background-size: 100%; }
+  #topbar > #coursolidated {
+    font-size: 3.6rem;
+    padding-left: .5rem; }
 
 .menu {
   position: absolute;
