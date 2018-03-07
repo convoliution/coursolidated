@@ -128,7 +128,7 @@ function showCourseInfoDialog(event) {
             // delete the class and send the parent term div to server
             var temp = $(courseCard).parent();
             $(courseCard).remove();
-            updateUserData(temp, populateToadd);
+            updateUserData(temp, populateReqs);
             $('#course-info').dialog('close');
         });
         $('#course-info').dialog('open');
@@ -166,7 +166,7 @@ $(function() {
             updateUserData(this, setCardOutlineColors);
             setCardTermColors.apply(ui.item);
             ui.item.tap(showCourseInfoDialog);
-            populateToadd();
+            populateReqs();
             if ($(this).children().length >= 6) {
                 $(this).addClass('full');
             }
@@ -246,15 +246,15 @@ function showMenu(menu, animTime) {
         $('#coursolidated').animate({
             marginLeft: menu.outerWidth() - $('#topbar').outerHeight()
         }, animTime);
-    } else if (['catalog-menu', 'toadd-menu'].includes(menu.attr('id'))) {
-        populateToadd();
+    } else if (['catalog-menu', 'reqs-menu'].includes(menu.attr('id'))) {
+        populateReqs();
         setTimeout(function() {// hide main menu to work around clipping bug
             $('#main-menu').css('left', -menu.outerWidth());
         }, 500);
     } else if (menu.attr('id') === 'profile-menu') {
         populateProfile();
     } else if (['majors-menu', 'minors-menu', 'colleges-menu'].includes(menu.attr('id'))) {
-        populateReqMenu(menu);
+        populateMajMinCol(menu);
     }
     menu.animate({
         left: 0
@@ -271,7 +271,7 @@ function hideMenu(menu, animTime) {
         $('#coursolidated').animate({
             marginLeft: 0
         }, animTime);
-    } else if (['catalog-menu', 'toadd-menu'].includes(menu.attr('id'))) { // show main menu (for clipping bug)
+    } else if (['catalog-menu', 'reqs-menu'].includes(menu.attr('id'))) { // show main menu (for clipping bug)
         $('#main-menu').css('left', 0);
     }
     if (menu.data('activeChoice') != null) { // deactivate active choice
@@ -293,7 +293,7 @@ $(function() {
     });
 });
 
-function populateReqMenu(menu) {
+function populateMajMinCol(menu) {
     $.get('/'+menu.attr('id')+'/'+USER_NAME, function(result) {
         var menuContent = menu.children('.menu-content').first(); // first and only
 
@@ -353,10 +353,10 @@ function populateProfile() {
     });
 }
 
-function populateToadd() {
-    $.get('/populate-toadd/'+USER_NAME, function(result) {
-        $('#toadd-menu > .menu-content').html(result);
-        $('#toadd-menu .requirement-courses').sortable({
+function populateReqs() {
+    $.get('/populate-reqs/'+USER_NAME, function(result) {
+        $('#reqs-menu > .menu-content').html(result);
+        $('#reqs-menu .requirement-courses').sortable({
             items: ".course:not(.disabled)",
             connectWith: ".term:not(.full)",
             tolerance: "pointer",
@@ -365,7 +365,7 @@ function populateToadd() {
                 $(ui.item).remove();
                 var term = $(ui.sender);
                 updateUserData(term, function(result){
-                    populateToadd();
+                    populateReqs();
                 });
             }
         });

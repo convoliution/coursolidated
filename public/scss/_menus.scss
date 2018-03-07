@@ -121,13 +121,7 @@
         }
     }
 
-    &#catalog-menu > .menu-content {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-end;
-    }
-
-    &#toadd-menu > .menu-content {
+    &#reqs-menu > .menu-content {
         > .set {
             width: 100%;
 
@@ -185,11 +179,16 @@
         }
     }
 
+    &#catalog-menu > .menu-content {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+    }
 
     &#main-menu {
         z-index: 2;
     }
-    &#profile-menu, &#catalog-menu, &#toadd-menu, &#settings-menu {
+    &#profile-menu, &#reqs-menu, &#catalog-menu, &#settings-menu {
         z-index: 3;
     }
     &#majors-menu, &#minors-menu, &#colleges-menu {
@@ -202,7 +201,7 @@
     &#main-menu {
         font-size: 2.5rem;
     }
-    &#profile-menu, &#catalog-menu, &#toadd-menu, &#settings-menu, &#majors-menu, &#minors-menu, &#colleges-menu {
+    &#profile-menu, &#reqs-menu, &#catalog-menu, &#settings-menu, &#majors-menu, &#minors-menu, &#colleges-menu {
         font-size: 1.8rem;
     }
 }
