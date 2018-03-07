@@ -123,17 +123,6 @@ html {
             color: #747678; }
       .menu#profile-menu > .menu-content > .user-attribute#user-minor, .menu#profile-menu > .menu-content > .user-attribute#user-college {
         border-top: 1px solid #e8e8e8; }
-  .menu#catalog-menu > .menu-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end; }
   .menu#toadd-menu > .menu-content > .set {
     width: 100%; }
     .menu#toadd-menu > .menu-content > .set .set-label {
@@ -175,15 +164,26 @@ html {
               grid-row: 1 / 2; }
             .menu#toadd-menu > .menu-content > .set .requirement > .requirement-courses > .course.disabled > .course-appears > .course-appears-term {
               grid-row: 2 / 3; }
+  .menu#catalog-menu > .menu-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
   .menu#main-menu {
     z-index: 2; }
-  .menu#profile-menu, .menu#catalog-menu, .menu#toadd-menu, .menu#settings-menu {
+  .menu#profile-menu, .menu#toadd-menu, .menu#catalog-menu, .menu#settings-menu {
     z-index: 3; }
   .menu#majors-menu, .menu#minors-menu, .menu#colleges-menu {
     z-index: 4; }
   .menu#main-menu {
     font-size: 2.5rem; }
-  .menu#profile-menu, .menu#catalog-menu, .menu#toadd-menu, .menu#settings-menu, .menu#majors-menu, .menu#minors-menu, .menu#colleges-menu {
+  .menu#profile-menu, .menu#toadd-menu, .menu#catalog-menu, .menu#settings-menu, .menu#majors-menu, .menu#minors-menu, .menu#colleges-menu {
     font-size: 1.8rem; }
 
 main > #info {
