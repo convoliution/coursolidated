@@ -15,23 +15,7 @@ Users:
 						"name": "",
 						"terms": [
 							{
-								"name: "",
-								"courses": [""],
-							},
-							{
-								"name: "",
-								"courses": [""],
-							},
-							{
-								"name: "",
-								"courses": [""],
-							},
-							{
-								"name: "",
-								"courses": [""],
-							},
-							{
-								"name: "",
+								"id: "",
 								"courses": [""],
 							}
 						]
@@ -42,9 +26,9 @@ Users:
 	}
 }
 
-users is a dictionary where the keys are the full names of users
+Users is a dictionary where the keys are the full names of users.
 
-	each user is a dictionary with the following fields:
+	Each user is a dictionary with the following fields:
 		firstName
 		lastName
 		majors
@@ -52,28 +36,28 @@ users is a dictionary where the keys are the full names of users
 		college
 		schedules
 
-		firstName is a string
-		secondName is a string
-		majors is a list of strings
-		minors is a list of strings
-		college is a string
+		FirstName is a string.
+		LastName is a string.
+		Majors is a list of strings.
+		Minors is a list of strings.
+		College is a string.
 
-		schedule is a list of dictionaries, with the following fields
+		Schedule is a list of dictionaries, with the following fields:
 			name
 			years
 
-			name is a string (eg. My Schedule)
-			years is a list of dictionaries, each with the following fields
+			Name is a string (eg. My Schedule).
+			Years is a list of dictionaries, each with the following fields:
 				name
 				terms
 
-				name is a string (eg. Year 1)
-				terms is a list of dictionaries, each with the following fields
+				Name is a string (eg. Year 1).
+				Terms is a list of dictionaries, each with the following fields:
 					id
 					courses
 
-					id is a string (one of: "f", "w", "s", "s1", "s2")
-					courses is a list of strings
+					Id is a string (one of: "f", "w", "s", "s1", "s2")
+					Courses is a list of strings
 
 
 
@@ -90,14 +74,14 @@ Majors:
 	}
 }
 
-majors is a dictionary where the keys are all the major codes (eg. CG25)
+Majors is a dictionary where the keys are all the major codes (eg. CG25).
 
-	each major is a dictionary, with the following fields
+	Each major is a dictionary, with the following fields:
 		name
 		requirements
 
-		name is a string with the name of the major
-		requirements is a list
+		Name is a string with the name of the major.
+		Requirements is a list:
 			The first item in the list is a number. This is the number of items in that list that must be chosen to satisfy the requirements.
 			A 0 denotes that all items in the list must be met.
 			The rest of the list consists of strings representing classes, or of lists representing a choice between two or more classes.
@@ -119,7 +103,7 @@ Minors:
 	}
 }
 
-minors work the same way majors do
+Minors work the same way majors do.
 
 
 
@@ -135,7 +119,7 @@ Colleges:
 	}
 }
 
-colleges work the same way majors and minors do, just without a "name" field
+Colleges work the same way majors and minors do, just without a "name" field.
 
 
 
@@ -146,34 +130,44 @@ Courses:
 		"name": "",
 		"department": "",
 		"code": "",
+		"units": 0,
 		"division": 0,
-		"reqUpperDiv": 0,
-		"consent": 0,
+		"consent": [upperDiv, canConsent, mustConsent, department],
 		"requirements": [0, ""],
+		"crosslist": [[]],
 		"offered": [""]
 	}
 }
 
-courses is a dictionary where the keys are all of the course codes
+Courses is a dictionary where the keys are all of the course codes.
 
-	each of these keys corresponds to a dictionary with the following fields:
+	Each of these keys corresponds to a dictionary with the following fields:
 		name
 		department
 		code
+		units
 		division
-		reqUpperDiv
 		consent
 		requirements
+		crosslist
 		offered
 
-		name is the name of the course
-		department is the letter part of the course code (eg. COGS, from COGS 1)
-		code is the number part of the course code (eg. 6A, from CHEM 6A)
-		division is 0 if the course is lower division, 1 if the course is upper division
-		reqUpperDiv is true if the course requires upper division standing, false otherwise
-		consent is true if the course can be taken with professor/department consent, false otherwise
-		requirements is a list of prerequisites, formatted in the same way requirements have been formatted above.
-		offered is a list of strings, where each string corresponds to a quarter:
+		Name is the name of the course.
+		Department is the letter part of the course code (eg. COGS, from COGS 1).
+		Code is the number part of the course code (eg. 6A, from CHEM 6A).
+		Division is 0 if the course is lower division, 1 if the course is upper division.
+		Units is the number of units that the student will receive upon completion of this course.
+		Consent is a four-member list of 1's and 0's:
+			The first digit in the list is 1 if upper division status is required for this course, and 0 otherwise.
+			The second digit in the list is a 1 if the course can be taken with with instructor consent (regardless of other requirements), and 0 otherwise.
+			The third digit in the list is a 1 if the course requires instructor consent, and 0 otherwise.
+			The fourth digit in the list is a 1 if the course requires department consent, and 0 otherwise.
+		Requirements is a list of prerequisites, formatted in the same way requirements have been formatted above.
+		Crosslist is a list of lists
+			Each item in the list is a two-member list.
+				The first item in this two-member list is the name of a course which is cross-listed with this course.
+				The second item in this two-member list is the number of units the student will receive if they take the cross-listed course after this course.
+		Offered is a list of strings, where each string corresponds to a quarter:
 			"f" is Fall
 			"w" is Winter
 			"s" is Spring

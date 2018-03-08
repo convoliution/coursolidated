@@ -5,10 +5,34 @@
 		"code": "1",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [0, "CHEM6A"],
 		"offered": ["f", "w", "s", "s1", "s2"]
+	},
+	
+	"BILD10": {
+		"name": "Fundamental Concepts of Modern Biology",
+		"department": "BILD",
+		"code": "10",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [],
+		"offered": ["f", "s2"]
+	},
+	
+	"BILD12": {
+		"name": "Neurobiology and Behavior",
+		"department": "BILD",
+		"code": "12",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [],
+		"offered": ["w", "s2"]
 	},
 
 	"BILD2": {
@@ -17,10 +41,22 @@
 		"code": "2",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [0, "BILD1"],
 		"offered": ["f", "w", "s", "s1", "s2"]
+	},
+	
+	"BILD26": {
+		"name": "Human Physiology",
+		"department": "BILD",
+		"code": "26",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [],
+		"offered": ["f"]
 	},
 
 	"BILD3": {
@@ -29,8 +65,8 @@
 		"code": "3",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["f", "w", "s", "s1", "s2"]
 	},
@@ -41,130 +77,10 @@
 		"code": "7",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": []
-	},
-
-	"BILD10": {
-		"name": "Fundamental Concepts of Modern Biology",
-		"department": "BILD",
-		"code": "10",
-		"units": 4,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [],
-		"offered": ["f", "s2"]
-	},
-
-	"BILD12": {
-		"name": "Neurobiology and Behavior",
-		"department": "BILD",
-		"code": "12",
-		"units": 4,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [],
-		"offered": ["w", "s2"]
-	},
-
-	"BILD26": {
-		"name": "Human Physiology",
-		"department": "BILD",
-		"code": "26",
-		"units": 4,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [],
-		"offered": ["f"]
-	},
-
-	"CHEM4": {
-		"name": "Basic Chemistry",
-		"department": "CHEM",
-		"code": "4",
-		"units": 4,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [],
-		"offered": ["f"]
-	},
-
-	"CHEM6A": {
-		"name": "General Chemistry I",
-		"department": "CHEM",
-		"code": "6A",
-		"units": 4,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [],
-		"offered": ["f", "w", "s"]
-	},
-
-	"CHEM6AH": {
-		"name": "Honors General Chemsitry I",
-		"department": "CHEM",
-		"code": "6AH",
-		"units": 4,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [],
-		"offered": ["f"]
-	},
-
-	"CHEM6B": {
-		"name": "General Chemistry II",
-		"department": "CHEM",
-		"code": "6B",
-		"units": 4,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [2, [1, "CHEM6A", "CHEM6AH"], [1, "MATH10A", "MATH20A"]],
-		"offered": ["f", "w", "s"]
-	},
-
-	"CHEM6BH": {
-		"name": "Honors General Chemistry II",
-		"department": "CHEM",
-		"code": "6BH",
-		"units": 4,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [1, "CHEM6A", "CHEM6AH"],
-		"offered": ["w"]
-	},
-
-	"CHEM6C": {
-		"name": "General Chemistry III",
-		"department": "CHEM",
-		"code": "6C",
-		"units": 4,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [1, "CHEM6B", "CHEM6BH"],
-		"offered": ["f", "w", "s"]
-	},
-
-	"CHEM6CH": {
-		"name": "Honors General Chemistry III",
-		"department": "CHEM",
-		"code": "6CH",
-		"units": 4,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [1, "CHEM6B", "CHEM6BH"],
-		"offered": ["s"]
 	},
 
 	"CHEM11": {
@@ -173,8 +89,8 @@
 		"code": "11",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["f", "s"]
 	},
@@ -185,8 +101,8 @@
 		"code": "12",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [0, "CHEM11"],
 		"offered": ["w"]
 	},
@@ -197,20 +113,104 @@
 		"code": "13",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["s"]
 	},
 
+	"CHEM4": {
+		"name": "Basic Chemistry",
+		"department": "CHEM",
+		"code": "4",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [],
+		"offered": ["f"]
+	},
+
+	"CHEM6A": {
+		"name": "General Chemistry I",
+		"department": "CHEM",
+		"code": "6A",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [],
+		"offered": ["f", "w", "s"]
+	},
+
+	"CHEM6AH": {
+		"name": "Honors General Chemsitry I",
+		"department": "CHEM",
+		"code": "6AH",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [],
+		"offered": ["f"]
+	},
+
+	"CHEM6B": {
+		"name": "General Chemistry II",
+		"department": "CHEM",
+		"code": "6B",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [2, [1, "CHEM6A", "CHEM6AH"], [1, "MATH10A", "MATH20A"]],
+		"offered": ["f", "w", "s"]
+	},
+
+	"CHEM6BH": {
+		"name": "Honors General Chemistry II",
+		"department": "CHEM",
+		"code": "6BH",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [1, "CHEM6A", "CHEM6AH"],
+		"offered": ["w"]
+	},
+
+	"CHEM6C": {
+		"name": "General Chemistry III",
+		"department": "CHEM",
+		"code": "6C",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [1, "CHEM6B", "CHEM6BH"],
+		"offered": ["f", "w", "s"]
+	},
+
+	"CHEM6CH": {
+		"name": "Honors General Chemistry III",
+		"department": "CHEM",
+		"code": "6CH",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [1, "CHEM6B", "CHEM6BH"],
+		"offered": ["s"]
+	},
+	
 	"COGS1": {
 		"name": "Introduction to Cognitive Science",
 		"department": "COGS",
 		"code": "1",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["f", "w", "s"]
 	},
@@ -221,8 +221,8 @@
 		"code": "10",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["s", "s2"]
 	},
@@ -233,9 +233,8 @@
 		"code": "100",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [["COGS102A", 0]],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [["COGS102A", 0]],
 		"requirements": [1, "COGS1", "COGS10"],
 		"offered": ["f", "s"]
 	},
@@ -244,9 +243,10 @@
 		"name": "Sensation and Perception",
 		"department": "COGS",
 		"code": "101A",
+		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [0, "COGS1"],
 		"offered": ["f", "s", "s1"]
 	},
@@ -257,8 +257,8 @@
 		"code": "101B",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [0, "COGS1"],
 		"offered": ["w", "s2"]
 	},
@@ -269,8 +269,8 @@
 		"code": "101C",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [0, "COGS1", "COGS14A"],
 		"offered": ["s", "s1"]
 	},
@@ -281,9 +281,8 @@
 		"code": "102A",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [["COGS100", 0]],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [["COGS100", 0]],
 		"requirements": [0, "COGS1", "COGS14A"],
 		"offered": ["s2"]
 	},
@@ -294,8 +293,8 @@
 		"code": "102B",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": true,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["w"]
 	},
@@ -306,8 +305,8 @@
 		"code": "102C",
 		"units": 6,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": true,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [0, "COGS102B"],
 		"offered": ["s"]
 	},
@@ -318,8 +317,8 @@
 		"code": "107A",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [1, "COGS1", "COGS17"],
 		"offered": ["f", "w", "s", "s1"]
 	},
@@ -330,8 +329,8 @@
 		"code": "107B",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [0, "COGS107A"],
 		"offered": ["w"]
 	},
@@ -342,8 +341,8 @@
 		"code": "107C",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [0, "COGS107B"],
 		"offered": ["s"]
 	},
@@ -354,8 +353,8 @@
 		"code": "108",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [1, "CSE11", "CSE8A", "CSE7", "COGS18"],
 		"offered": ["w"]
 	},
@@ -366,8 +365,8 @@
 		"code": "11",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["f", "w", "s", "s1"]
 	},
@@ -378,10 +377,22 @@
 		"code": "115",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [1, "BILD10", "BILD12", "COGS107A", "COGS107B", "COGS17", "HDP110"],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [1, "BILD10", "BILD12", "COGS107A", "COGS107B", "COGS17"],
 		"offered": []
+	},
+	
+	"HDP110": {
+		"name": "Ensemble: Undergraduate Production",
+		"department": "HDP",
+		"code": "110",
+		"units": 4,
+		"division": 1,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, "TDAC102"],
+		"offered": ["f", "w", "s"]
 	},
 
 	"COGS120": {
@@ -390,10 +401,10 @@
 		"code": "120",
 		"units": 5,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [["COGS170", 0]],
-		"requirements": [0, [1, "CSE11", "CSE8A"], [1, "COGS1", "COGS187A", "DSGN1"]],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [["COGS170", 0]],
+		"requirements": [0, [1, "CSE11", "CSE8A"], 
+                                       [1, "COGS1", "COGS187A", "DSGN1"]],
 		"offered": ["f", "w"]
 	},
 
@@ -403,8 +414,8 @@
 		"code": "121",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [0, [1, "COGS120"], [1, "CSE8B", "CSE11"]],
 		"offered": ["s"]
 	},
@@ -415,8 +426,8 @@
 		"code": "13",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["s"]
 	},
@@ -427,8 +438,8 @@
 		"code": "14A",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["f", "w"]
 	},
@@ -439,8 +450,8 @@
 		"code": "14B",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [0, "COGS14A"],
 		"offered": ["w", "s", "s1"]
 	},
@@ -451,8 +462,8 @@
 		"code": "163",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": true,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["s"]
 	},
@@ -463,8 +474,8 @@
 		"code": "164",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": true,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["s"]
 	},
@@ -475,8 +486,8 @@
 		"code": "169",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": true,
+		"consent": [0, 1, 0, 0],
+		"crosslist": [],
 		"requirements": [0, "COGS1", "COGS107A"],
 		"offered": ["w"]
 	},
@@ -487,9 +498,8 @@
 		"code": "17",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [["BILD12", 0]],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [["BILD12", 0]],
 		"requirements": [],
 		"offered": ["f", "w", "s", "s1"]
 	},
@@ -500,8 +510,8 @@
 		"code": "171",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": true,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["s2"]
 	},
@@ -512,9 +522,8 @@
 		"code": "172",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [["PSYC139", 0]],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [["PSYC139", 0]],
 		"requirements": [0, "COGS107A"],
 		"offered": ["w"]
 	},
@@ -525,8 +534,8 @@
 		"code": "174",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": true,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["f", "s2"]
 	},
@@ -537,8 +546,8 @@
 		"code": "175",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [1, "COGS101A", "COGS107A"],
 		"offered": ["f"]
 	},
@@ -549,8 +558,8 @@
 		"code": "176",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": true,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["w"]
 	},
@@ -561,8 +570,8 @@
 		"code": "177",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": true,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["w"]
 	},
@@ -573,8 +582,8 @@
 		"code": "178",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": true,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [0, "COGS107A", "COGS107B"],
 		"offered": ["s"]
 	},
@@ -585,9 +594,10 @@
 		"code": "179",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [0, [1, "COGS107A", "PSYC106"], [1, "COGS101A", "PSYC105"]],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, [1, "COGS107A", "PSYC106"], 
+			                          [1, "COGS101A", "PSYC105"]],
 		"offered": ["f"]
 	},
 
@@ -597,9 +607,8 @@
 		"code": "18",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [["CSE7", 0]],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [["CSE7", 0]],
 		"requirements": [],
 		"offered": []
 	},
@@ -610,13 +619,12 @@
 		"code": "180",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [0, [1, "BILD12", "COGS107B", "PSYC106"],
-	                        [1, "MATH31AH", "MATH18", "MATH20F"],
-	                        [1, "MATH20B"],
-	                        [1, "COGS108", "COGS109", "CSE7", "CSE8A", "CSE11"]],
+	                                   [1, "MATH31AH", "MATH18"],
+	                                   [1, "MATH20B"],
+	                                   [1, "COGS108", "COGS109", "CSE7", "CSE8A", "CSE11"]],
 		"offered": []
 	},
 
@@ -626,9 +634,8 @@
 		"code": "184",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [1, "COGS17", "COGS107A", "COGS107B", "COGS107C"],
 		"offered": ["w"]
 	},
@@ -639,9 +646,8 @@
 		"code": "187A",
 		"units": 6,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [0, "CSE7"],
 		"offered": ["f", "s2"]
 	},
@@ -652,9 +658,8 @@
 		"code": "187B",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": true,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [0, "COGS187A"],
 		"offered": ["w"]
 	},
@@ -665,9 +670,8 @@
 		"code": "10",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["f", "w", "s1", "s2"]
 	},
@@ -678,11 +682,34 @@
 		"code": "100A",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [["COHI100", 0]],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [["COHI100", 0]],
 		"requirements": [0, "COMM10"],
 		"offered": ["f"]
+	},
+	
+	"COMM100B": {
+		"name": "Communication, Culture, and Representation",
+		"department": "COMM",
+		"code": "100B",
+		"units": 4,
+		"division": 1,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [["COCU100", 0]],
+		"requirements": [0, "COMM10"],
+		"offered": ["w"]
+	},
+	
+	"COMM100C": {
+		"name": "Communication, Institutions, and Power",
+		"department": "COMM",
+		"code": "100C",
+		"units": 4,
+		"division": 1,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [["COSF100", 0]],
+		"requirements": [0, "COMM10"],
+		"offered": ["s"]
 	},
 
 	"COMM111D": {
@@ -691,9 +718,8 @@
 		"code": "111D",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": []
 	},
@@ -704,10 +730,9 @@
 		"code": "124A",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
-		"requirements": [1, "COMM10", "COGS1", "ESYS10", "POLI10", "POLI10D", "USP1"],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [1, "COMM10", "COGS1"],
 		"offered": ["f"]
 	},
 
@@ -717,9 +742,8 @@
 		"code": "124B",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [0, "COMM124A"],
 		"offered": ["w"]
 	},
@@ -730,9 +754,8 @@
 		"code": "11",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["f", "w", "s", "s1", "s2"]
 	},
@@ -743,9 +766,8 @@
 		"code": "110",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": true,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [0, "CSE100"],
 		"offered": ["f", "w", "s"]
 	},
@@ -756,10 +778,9 @@
 		"code": "118",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": true,
-		"Crosslist": [],
-		"requirements": [1, "CSE131", "CSE132B", "COGS102C", "COGS121", "COGS184", "COMT111B", "COMT115", "ECE111", "ECE118", "ECE191", "ECE192", "ICAM160B"],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [1, "COGS102C", "COGS121", "COGS184"],
 		"offered": ["f"]
 	},
 
@@ -769,9 +790,8 @@
 		"code": "7",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["w", "s", "s2"]
 	},
@@ -782,9 +802,8 @@
 		"code": "8A",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["f", "w", "s"]
 	},
@@ -795,9 +814,8 @@
 		"code": "1",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["f", "w"]
 	},
@@ -808,9 +826,8 @@
 		"code": "100",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [0, "DSGN1"],
 		"offered": ["w"]
 	},
@@ -821,9 +838,8 @@
 		"code": "119",
 		"units": 2,
 		"division": 1,
-		"reqUpperDiv": true,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [1, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["f", "w", "s"]
 	},
@@ -834,9 +850,8 @@
 		"code": "160",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": true,
-		"consent": true,
-		"Crosslist": [],
+		"consent": [1, 0, 0, 1],
+		"crosslist": [],
 		"requirements": [],
 		"offered": []
 	},
@@ -847,12 +862,71 @@
 		"code": "195",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": true,
-		"consent": true,
-		"Crosslist": [],
+		"consent": [1, 0, 1, 1],
+		"crosslist": [],
 		"requirements": [],
 		"offered": []
 	},
+	
+	"ECON1": {
+		"name": "Principles of Microeconomics",
+		"department": "ECON",
+		"code": "1",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist":[],
+		"requirements": [],
+		"offered": ["f", "w", "s"]	
+	}
+	
+	"ECON2": {
+		"name": "Market Imperfections and Policy",
+		"department": "ECON",
+		"code": "2",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist":[],
+		"requirements": [0, "ECON1"],
+		"offered": ["f", "w"]	
+	}
+	
+		"ECON3": {
+		"name": "Principles of Macroeconomics",
+		"department": "ECON",
+		"code": "3",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist":[],
+		"requirements": [0, "ECON1"],
+		"offered": ["f", "w", "s"]	
+	}
+	
+	"ECON4": {
+		"name": "Financial Accounting",
+		"department": "ECON",
+		"code": "2",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist":[["MGT4", 0]],
+		"requirements": [],
+		"offered": ["f", "w", "s"]	
+	}
+	
+	"ECON5": {
+		"name": "Data Analytics for the Social Sciences",
+		"department": "ECON",
+		"code": "5",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist":[["POLI5", 0], ["POLI5D", 0]],
+		"requirements": [],
+		"offered": ["w", "s"]	
+	}
 
 	"ENG100D": {
 		"name": "Design for Development",
@@ -860,10 +934,9 @@
 		"code": "100D",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
-		"requirements": [1, "CAT2", "DOC2", "HUM2", "MCWP40", "MMW2", "WCWP10B"],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, "HUM2"]
 		"offered": []
 	},
 
@@ -873,10 +946,9 @@
 		"code": "100L",
 		"units": 2,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": true,
-		"Crosslist": [],
-		"requirements": [1, "ENG100", "ENG100A", "ENG100D"],
+		"consent": [0, 0, 0, 1],
+		"crosslist": [],
+		"requirements": [0, "ENG100D"],
 		"offered": ["f", "w", "s", "s1", "s2"]
 	},
 
@@ -886,8 +958,7 @@
 		"code": "1",
 		"units": 6,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
 		"requirements": [],
 		"offered": ["w"]
 	},
@@ -898,8 +969,7 @@
 		"code": "2",
 		"units": 6,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
 		"requirements": [],
 		"offered": ["s"]
 	},
@@ -910,8 +980,7 @@
 		"code": "3",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
 		"requirements": [],
 		"offered": ["f"]
 	},
@@ -922,8 +991,7 @@
 		"code": "4",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
 		"requirements": [],
 		"offered": ["w"]
 	},
@@ -934,8 +1002,7 @@
 		"code": "5",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
 		"requirements": [],
 		"offered": ["s"]
 	},
@@ -946,8 +1013,8 @@
 		"code": "7",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["w", "s"]
 	},
@@ -958,9 +1025,8 @@
 		"code": "3",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": true,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [1, "PHYS2A", "PHYS2B"],
 		"offered": []
 	},
@@ -971,9 +1037,8 @@
 		"code": "10A",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["f", "w", "s"]
 	},
@@ -984,9 +1049,8 @@
 		"code": "10B",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [1, "MATH10A", "MATH20A"],
 		"offered": ["f", "w", "s"]
 	},
@@ -997,9 +1061,8 @@
 		"code": "10C",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [1, "MATH10B", "MATH20B"],
 		"offered": ["f", "w", "s"]
 	},
@@ -1010,9 +1073,8 @@
 		"code": "11",
 		"units": 5,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [1, "MATH10B", "MATH20B"],
 		"offered": ["f", "w", "s"]
 	},
@@ -1023,9 +1085,8 @@
 		"code": "18",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": true,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [1, "MATH10A", "MATH20A"],
 		"offered": ["f", "w", "s"]
 	},
@@ -1036,9 +1097,8 @@
 		"code": "20A",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["f", "w", "s"]
 	},
@@ -1049,9 +1109,8 @@
 		"code": "20B",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [1, "MATH20A", "MATH10B", "MATH10C"],
 		"offered": ["f", "w", "s"]
 	},
@@ -1062,11 +1121,34 @@
 		"code": "20C",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [0, "MATH20B"],
 		"offered": ["f", "w", "s"]
+	},
+
+	"MATH31AH": {
+		"name": "Honors Linear Algebra",
+		"department": "MATH",
+		"code": "31AH",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 1, 0, 0],
+		"crosslist": [],
+		"requirements": [],
+		"offered": ["f"]
+	},
+	
+	"MATH31BH": {
+		"name": "Honors Multivariable Calculus",
+		"department": "MATH",
+		"code": "31BH",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 1, 0, 0],
+		"crosslist": [],
+		"requirements": [],
+		"offered": ["w"]
 	},
 
 	"MGT103": {
@@ -1075,9 +1157,8 @@
 		"code": "103",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": true,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [1, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["f", "w", "s", "s1", "s2"]
 	},
@@ -1088,237 +1169,32 @@
 		"code": "121A",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": true,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [1, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["f", "w", "s"]
 	},
-
-	"PHYS1A": {
-		"name": "Mechanics",
-		"department": "PHYS",
-		"code": "1A",
-		"units": 3,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [1, "MATH10A", "MATH20A"],
-		"offered": ["f", "w", "s"]
-	},
-
-	"PHYS1AL": {
-		"name": "Mechanics Laboratory",
-		"department": "PHYS",
-		"code": "1AL",
-		"units": 2,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [1, "MATH10A", "MATH20A"],
-		"offered": ["f", "w", "s"]
-	},
-
-	"PHYS1B": {
-		"name": "Electricity and Magnetism",
-		"department": "PHYS",
-		"code": "1B",
-		"units": 3,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [0, [1, "PHYS1A", "PHYS2A"], [1, "PHYS1AL", "PHYS1BL"], [1, "MATH10B", "MATH20B"]],
-		"offered": ["f", "w", "s"]
-	},
-
-	"PHYS1BL": {
-		"name": "Electricity and Magnetism Laboratory",
-		"department": "PHYS",
-		"code": "1BL",
-		"units": 2,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [0, [1, "PHYS1A", "PHYS2A"], [1, "PHYS1AL", "PHYS2AL"], [1, "MATH10B", "MATH20B"]],
-		"offered": ["f", "w", "s"]
-	},
-
-	"PHYS1C": {
-		"name": "Waves, Optics, and Modern Physics",
-		"department": "PHYS",
-		"code": "1C",
-		"units": 3,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [0, [1, "PHYS1B", "PHYS2B"], [1, "PHYS1BL", "PHYS2BL"], [1, "MATH10C", "MATH20C", "MATH31BH", "MATH11"]],
-		"offered": ["f", "w", "s"]
-	},
-
-	"PHYS1CL": {
-		"name": "Waves, Optics, and Modern Physics Laboratory",
-		"department": "PHYS",
-		"code": "1CL",
-		"units": 2,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [0, [1, "PHYS1B", "PHYS2B"], [1, "PHYS1BL", "PHYS2BL"], [1, "MATH10C", "MATH20C", "MATH31BH", "MATH11"]],
-		"offered": ["f", "w", "s"]
-	},
-
-	"PHYS2A": {
-		"name": "Physics—Mechanics",
-		"department": "PHYS",
-		"code": "2A",
+	
+	"PHIL10": {
+		"name": "Introduction to Logic",
+		"department": "PHIL",
+		"code": "10",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [0, "MATH20A"],
-		"offered": ["f", "w", "s"]
-	},
-
-	"PHYS2B": {
-		"name": "Physics—Electricity and Magnetism",
-		"department": "PHYS",
-		"code": "2B",
-		"units": 4,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [0, [1, "PHYS2A", "PHYS4A"], "MATH20A", "MATH20B"],
-		"offered": ["f", "w", "s"]
-	},
-
-	"PHYS2C": {
-		"name": "Physics—Fluids, Waves, Thermodynamics, and Optics",
-		"department": "PHYS",
-		"code": "2C",
-		"units": 4,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [0, [1, "PHYS2A", "PHYS4A"], "MATH20A", "MATH20B", [1, "MATH20C", "MATH31BH"]],
-		"offered": ["f", "w", "s"]
-	},
-
-	"PHYS2D": {
-		"name": "Physics—Relativity and Quantum Physics",
-		"department": "PHYS",
-		"code": "2C",
-		"units": 4,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [0, [1, "PHYS2A", "PHYS4A"], "PHYS2B", "MATH20B"],
-		"offered": ["f", "w", "s"]
-	},
-
-	"PHYS4A": {
-		"name": "Physics for Physics Majors-Mechanics",
-		"department": "PHYS",
-		"code": "4A",
-		"units": 4,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [0, "MATH20A"],
-		"offered": ["w"]
-	},
-
-	"PHYS4B": {
-		"name": "Physics for Physics Majors-Fluids, Waves, and Heat",
-		"department": "PHYS",
-		"code": "4B",
-		"units": 4,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [0, "MATH20B", [1, "PHYS2A", "PHYS4A"]],
-		"offered": ["s"]
-	},
-
-	"PHYS4C": {
-		"name": "Physics for Physics Majors-Electricity and Magnetism",
-		"department": "PHYS",
-		"code": "4C",
-		"units": 4,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [0, [1, "PHYS2A", "PHYS4A"], [1, "PHYS2C", "PHYS4B"], [1, "MATH20C", "MATH31BH"], [1, "MATH18", "MATH20F", "MATH31AH"]],
-		"offered": ["s"]
-	},
-
-	"PHYS4D": {
-		"name": "Physics for Physics Majors-Electromagnetic Waves, Optics, and Special Relativity",
-		"department": "PHYS",
-		"code": "4D",
-		"units": 4,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [0, [1, "PHYS2A", "PHYS4A"], [1, "PHYS2C", "PHYS4B"], [1, "MATH20C", "MATH31BH"], [1, "MATH18", "MATH20F", "MATH31AH"]],
-		"offered": ["s"]
-	},
-
-	"PHYS5": {
-		"name": "Stars and Black Holes",
-		"department": "PHYS",
-		"code": "5",
-		"units": 4,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [1, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
-		"offered": ["f"]
+		"offered": ["f", "w", "s"]
 	},
-
-	"PHYS7": {
-		"name": "Galaxies and Cosmology",
-		"department": "PHYS",
-		"code": "7",
-		"units": 4,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [],
-		"offered": ["w"]
-	},
-
-	"PHYS8": {
-		"name": "Physics of Everyday Life",
-		"department": "PHYS",
-		"code": "8",
-		"units": 4,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [],
-		"offered": ["s"]
-	},
-
-	"PHYS9": {
-		"name": "The Solar System",
-		"department": "PHYS",
-		"code": "9",
-		"units": 4,
-		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [],
-		"offered": ["s"]
-	},
-
-	"PHYS10": {
+	
+		"PHYS10": {
 		"name": "Concepts in Physics",
 		"department": "PHYS",
 		"code": "10",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["s"]
 	},
@@ -1329,8 +1205,8 @@
 		"code": "11",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [1, "MATH10A", "MATH20A"],
 		"offered": ["w"]
 	},
@@ -1341,8 +1217,8 @@
 		"code": "12",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": []
 	},
@@ -1353,22 +1229,277 @@
 		"code": "13",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["f"]
 	},
 
-	"PHIL10": {
-		"name": "Introduction to Logic",
-		"department": "PHIL",
-		"code": "10",
+	"PHYS1A": {
+		"name": "Mechanics",
+		"department": "PHYS",
+		"code": "1A",
+		"units": 3,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [1, "MATH10A", "MATH20A"],
+		"offered": ["f", "w", "s"]
+	},
+
+	"PHYS1AL": {
+		"name": "Mechanics Laboratory",
+		"department": "PHYS",
+		"code": "1AL",
+		"units": 2,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [1, "MATH10A", "MATH20A"],
+		"offered": ["f", "w", "s"]
+	},
+
+	"PHYS1B": {
+		"name": "Electricity and Magnetism",
+		"department": "PHYS",
+		"code": "1B",
+		"units": 3,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, [1, "PHYS1A", "PHYS2A"], 
+			                           [1, "PHYS1AL", "PHYS1BL"], 
+			                           [1, "MATH10B", "MATH20B"]],
+		"offered": ["f", "w", "s"]
+	},
+
+	"PHYS1BL": {
+		"name": "Electricity and Magnetism Laboratory",
+		"department": "PHYS",
+		"code": "1BL",
+		"units": 2,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, [1, "PHYS1A", "PHYS2A"], 
+			                [1, "PHYS1AL", "PHYS2AL"], 
+			                [1, "MATH10B", "MATH20B"]],
+		"offered": ["f", "w", "s"]
+	},
+
+	"PHYS1C": {
+		"name": "Waves, Optics, and Modern Physics",
+		"department": "PHYS",
+		"code": "1C",
+		"units": 3,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, [1, "PHYS1B", "PHYS2B"], 
+			                          [1, "PHYS1BL", "PHYS2BL"], 
+			                          [1, "MATH10C", "MATH20C", "MATH31BH", "MATH11"]],
+		"offered": ["f", "w", "s"]
+	},
+
+	"PHYS1CL": {
+		"name": "Waves, Optics, and Modern Physics Laboratory",
+		"department": "PHYS",
+		"code": "1CL",
+		"units": 2,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, [1, "PHYS1B", "PHYS2B"], 
+		                              [1, "PHYS1BL", "PHYS2BL"], 
+		                              [1, "MATH10C", "MATH20C", "MATH31BH", "MATH11"]],
+		"offered": ["f", "w", "s"]
+	},
+
+	"PHYS2A": {
+		"name": "Physics—Mechanics",
+		"department": "PHYS",
+		"code": "2A",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"requirements": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, "MATH20A"],
 		"offered": ["f", "w", "s"]
+	},
+
+	"PHYS2B": {
+		"name": "Physics—Electricity and Magnetism",
+		"department": "PHYS",
+		"code": "2B",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, [1, "PHYS2A", "PHYS4A"], "MATH20A", "MATH20B"],
+		"offered": ["f", "w", "s"]
+	},
+
+	"PHYS2C": {
+		"name": "Physics—Fluids, Waves, Thermodynamics, and Optics",
+		"department": "PHYS",
+		"code": "2C",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, [1, "PHYS2A", "PHYS4A"], "MATH20A", "MATH20B", 
+			                [1, "MATH20C", "MATH31BH"]],
+		"offered": ["f", "w", "s"]
+	},
+
+	"PHYS2D": {
+		"name": "Physics—Relativity and Quantum Physics",
+		"department": "PHYS",
+		"code": "2C",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, [1, "PHYS2A", "PHYS4A"], "PHYS2B", "MATH20B"],
+		"offered": ["f", "w", "s"]
+	},
+
+	"PHYS4A": {
+		"name": "Physics for Physics Majors-Mechanics",
+		"department": "PHYS",
+		"code": "4A",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, "MATH20A"],
+		"offered": ["w"]
+	},
+
+	"PHYS4B": {
+		"name": "Physics for Physics Majors-Fluids, Waves, and Heat",
+		"department": "PHYS",
+		"code": "4B",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, "MATH20B", [1, "PHYS2A", "PHYS4A"]],
+		"offered": ["s"]
+	},
+
+	"PHYS4C": {
+		"name": "Physics for Physics Majors-Electricity and Magnetism",
+		"department": "PHYS",
+		"code": "4C",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, [1, "PHYS2A", "PHYS4A"], [1, "PHYS2C", "PHYS4B"], [1, "MATH20C", "MATH31BH"], [1, "MATH18", "MATH20F", "MATH31AH"]],
+		"offered": ["f"]
+	},
+
+	"PHYS4D": {
+		"name": "Physics for Physics Majors-Electromagnetic Waves, Optics, and Special Relativity",
+		"department": "PHYS",
+		"code": "4D",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, [1, "PHYS2A", "PHYS4A"], [1, "PHYS2C", "PHYS4B"], [1, "MATH20C", "MATH31BH"], [1, "MATH18", "MATH20F", "MATH31AH"]],
+		"offered": ["w"]
+	},
+	
+	"PHYS4E": {
+		"name": "Physics for Physics Majors—Quantum Physics",
+		"department": "PHYS",
+		"code": "4E",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, [1, "PHYS2A", "PHYS4A"], 
+		                              [1, "PHYS2B", "PHYS4C"], 
+		                              [1, "PHYS2C", "PHYS4B"], 
+		                              [1, "PHYS2D", "PHYS4D"], 
+		                              [0, "MATH20A", "MATH20B", "MATH20D"],
+		                              [1, "MATH20C", "MATH31BH"], 
+		                              [1, "MATH18", "MATH20F", "MATH31AH"]],
+		"offered": ["s"]
+	},
+
+	"PHYS5": {
+		"name": "Stars and Black Holes",
+		"department": "PHYS",
+		"code": "5",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [],
+		"offered": ["f"]
+	},
+
+	"PHYS7": {
+		"name": "Galaxies and Cosmology",
+		"department": "PHYS",
+		"code": "7",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [],
+		"offered": ["w"]
+	},
+
+	"PHYS8": {
+		"name": "Physics of Everyday Life",
+		"department": "PHYS",
+		"code": "8",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [],
+		"offered": ["s"]
+	},
+
+	"PHYS9": {
+		"name": "The Solar System",
+		"department": "PHYS",
+		"code": "9",
+		"units": 4,
+		"division": 0,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [],
+		"offered": ["s"]
+	},
+	
+	"PSYC105": {
+		"name": "Cognitive Psychology",
+		"department": "PSYC",
+		"code": "105",
+		"units": 4,
+		"division": 1,
+		"consent": [1, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [],
+		"offered": ["s"]
+	},
+	
+	"PSYC106": {
+		"name": "Behavioural Neuroscience",
+		"department": "PSYC",
+		"code": "105",
+		"units": 4,
+		"division": 1,
+		"consent": [1, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [],
+		"offered": ["f"]
 	},
 
 	"PSYC148": {
@@ -1377,9 +1508,8 @@
 		"code": "148",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": true,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [1, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": []
 	},
@@ -1390,9 +1520,8 @@
 		"code": "176",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["w"]
 	},
@@ -1403,9 +1532,213 @@
 		"code": "1",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
+		"offered": ["f", "w", "s"]
+	},
+	
+	"TDAC101": {
+		"name": "Acting I",
+		"department": "TDAC",
+		"code": "101",
+		"units": 4,
+		"division": 1,
+		"consent": [0, 1, 0, 0],
+		"crosslist": [],
+		"requirements": [1, "THAC1", "TDAC1"],
+		"offered": ["f", "w", "s"]
+	},
+	
+	"TDAC102": {
+		"name": "Acting II",
+		"department": "TDAC",
+		"code": "102",
+		"units": 4,
+		"division": 1,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, "TDAC101"],
+		"offered": ["f", "w", "s"]
+	},
+	
+	"TDAC103A": {
+		"name": "Acting Intensive I",
+		"department": "TDAC",
+		"code": "103A",
+		"units": 4,
+		"division": 1,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, "TDAC102"],
+		"offered": ["f"]
+	},
+	
+	"TDAC103B": {
+		"name": "Acting Intensive II",
+		"department": "TDAC",
+		"code": "103B",
+		"units": 4,
+		"division": 1,
+		"consent": [0, 0, 1, 1],
+		"crosslist": [],
+		"requirements": [0, "TDAC103A"],
+		"offered": ["w"]
+	},
+	
+"TDAC104": {
+		"name": "Classical Text",
+		"department": "TDAC",
+		"code": "104",
+		"units": 4,
+		"division": 1,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, "TDAC102"],
+		"offered": []
+	},
+	
+	"TDAC105": {
+		"name": "Rehearing Shakespeare",
+		"department": "TDAC",
+		"code": "105",
+		"units": 4,
+		"division": 1,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, "TDAC102"],
+		"offered": []
+	},
+	
+	"TDAC106": {
+		"name": "Chekhov Acting",
+		"department": "TDAC",
+		"code": "106",
+		"units": 4,
+		"division": 1,
+		"consent": [0, 0, 1, 0],
+		"crosslist": [],
+		"requirements": [0, "TDAC102"],
+		"offered": []
+	},
+	
+	"TDAC107": {
+		"name": "Improvisation for the Theatre",
+		"department": "TDAC",
+		"code": "107",
+		"units": 4,
+		"division": 1,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [1, "THAC1", "TDAC1"],
+		"offered": ["f"]
+	},
+	
+	"TDAC108": {
+		"name": "Advanced Topics",
+		"department": "TDAC",
+		"code": "108",
+		"units": 4,
+		"division": 1,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, "TDAC102"],
+		"offered": ["f", "w"]
+	},
+	
+	"TDAC109": {
+		"name": "Singing for Actors",
+		"department": "TDAC",
+		"code": "109",
+		"units": 4,
+		"division": 1,
+		"consent": [0, 0, 1, 1],
+		"crosslist": [],
+		"requirements": [1, "TDAC1", "THAC1"],
+		"offered": ["s"]
+	},
+	
+	"TDAC110": {
+		"name": "Acting for the Camera",
+		"department": "TDAC",
+		"code": "110",
+		"units": 4,
+		"division": 1,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, "TDAC102"],
+		"offered": ["s"]
+	},
+	
+	"TDAC111": {
+		"name": "Freeing the Voice",
+		"department": "TDAC",
+		"code": "111",
+		"units": 4,
+		"division": 1,
+		"consent": [0, 0, 1, 0],
+		"crosslist": [],
+		"requirements": [0, "TDAC101"],
+		"offered": ["s"]
+	},
+	
+	"TDAC112": {
+		"name": "Senior Seminar in Acting",
+		"department": "TDAC",
+		"code": "112",
+		"units": 4,
+		"division": 1,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [0, "TDAC102"],
+		"offered": ["f"]
+	},
+	
+	"TDAC115": {
+		"name": "Movement for Actors",
+		"department": "TDAC",
+		"code": "115",
+		"units": 4,
+		"division": 1,
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
+		"requirements": [1, "TDAC1", "THAC1"],
+		"offered": ["w"]
+	},
+
+"TDAC120": {
+		"name": "Ensemble",
+		"department": "TDAC",
+		"code": "120",
+		"units": 4,
+		"division": 1,
+		"consent": [1, 1, 0, 0],
+		"crosslist": [["ETHN146A", 0],
+		"requirements": [0, "TDAC102"],
+		"offered": []
+	},
+	
+	"TDAC122": {
+		"name": "Ensemble: Undergraduate Production",
+		"department": "TDAC",
+		"code": "122",
+		"units": 4,
+		"division": 1,
+		"consent": [0, 0, 1, 1],
+		"crosslist": [],
+		"requirements": [0, "TDAC102"],
+		"offered": ["f", "w", "s"]
+	},
+	
+	"TDAC123": {
+		"name": "Advanced Studies in Performance",
+		"department": "TDAC",
+		"code": "123",
+		"units": 4,
+		"division": 1,
+		"consent": [0, 0, 1, 1],
+		"crosslist": [],
+		"requirements": [0, "TDAC102"],
 		"offered": ["f", "w", "s"]
 	},
 
@@ -1415,9 +1748,8 @@
 		"code": "100",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": true,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [1, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["s"]
 	},
@@ -1428,9 +1760,8 @@
 		"code": "100A",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [0, "VIS100"],
 		"offered": ["f"]
 	},
@@ -1441,9 +1772,8 @@
 		"code": "101A",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [0, "VIS101"],
 		"offered": ["w"]
 	},
@@ -1454,9 +1784,8 @@
 		"code": "142",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": true,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [1, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["f"]
 	},
@@ -1467,9 +1796,8 @@
 		"code": "148",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": true,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [1, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["f", "w", "s", "s1", "s2"]
 	},
@@ -1480,9 +1808,8 @@
 		"code": "159",
 		"units": 4,
 		"division": 1,
-		"reqUpperDiv": true,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [1, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["w"]
 	},
@@ -1493,9 +1820,8 @@
 		"code": "30",
 		"units": 4,
 		"division": 0,
-		"reqUpperDiv": false,
-		"consent": false,
-		"Crosslist": [],
+		"consent": [0, 0, 0, 0],
+		"crosslist": [],
 		"requirements": [],
 		"offered": ["f"]
 	}
