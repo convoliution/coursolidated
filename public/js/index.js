@@ -15,22 +15,12 @@ $(function() {
 });
 var firstCourse = true;
 function recordEndTime() {
-    var timeElapsed = (Date.now() - startTime).toString()+"A"
     gtag('event', 'add', {
         'event_category': 'first_course',
-        'event_label': timeElapsed
+        'event_label': (Date.now() - startTime).toString()+"A"
     });
-    $.post('/record', {'time':timeElapsed});
     firstCourse = false;
 }
-$(function() {
-    $('#get-record').tap(function(event) {
-        event.preventDefault();
-        $.get('/get-record', function(result) {
-            console.log(result);
-        })
-    })
-});
 
 // login dialog
 $(function() {

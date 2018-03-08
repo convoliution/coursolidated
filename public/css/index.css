@@ -26,12 +26,6 @@ html {
     font-size: 3.6rem;
     padding-left: .5rem; }
 
-#get-record {
-  height: 4rem;
-  width: 100%;
-  position: absolute;
-  bottom: 0; }
-
 .menu {
   position: absolute;
   left: -12rem;
