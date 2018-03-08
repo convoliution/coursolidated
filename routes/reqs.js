@@ -96,12 +96,7 @@ function createRequirement(req) {
         } else {
             let course = Object.keys(subreq)[0]; // there should only be one key
             let appears = subreq[course];
-            if (!appears) {
-                html += templates.courseCard(course, true);
-            } else {
-                [year, term] = appears.split(' ');
-                html += templates.disabledCourseCard(course, year, term);
-            }
+            html += templates.courseCard(course, true, appears);
         }
     }
 

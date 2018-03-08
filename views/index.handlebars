@@ -64,17 +64,6 @@
             <div class="menu-content">
             </div>
         </div>
-        <div class="menu" id="catalog-menu">
-            <div class="menu-top">
-                <button></button>
-                <div class="name">Catalog</div>
-            </div>
-            <div class="menu-content">
-                {{#each courses}}
-                    {{{populateCatalog @key}}}
-                {{/each}}
-            </div>
-        </div>
         <div class="menu" id="reqs-menu">
             <div class="menu-top">
                 <button></button>
@@ -82,6 +71,19 @@
             </div>
             <div class="menu-content">
 
+            </div>
+        </div>
+        <div class="menu" id="catalog-menu">
+            <div class="menu-top">
+                <button></button>
+                <div class="name">Catalog</div>
+            </div>
+            <div class="menu-content">
+                <div class="catalog-courses">
+                    {{#each courses}}
+                        {{{populateCatalog @key}}}
+                    {{/each}}
+                </div>
             </div>
         </div>
         <div class="menu" id="settings-menu">

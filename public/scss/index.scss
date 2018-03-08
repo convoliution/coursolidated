@@ -17,9 +17,15 @@ html {
 @import 'menus';
 @import 'main';
 
-.course {
+.course, .term > .no-placeholder {
     width: 3rem;
+}
+.course.compressed, .term > .no-placeholder {
+    margin-left: .2rem;
+    margin-right: .2rem;
+}
 
+.course {
     background-color: $lightest-gray;
     border: solid .2rem $black;
     border-radius: 4px;
@@ -39,10 +45,6 @@ html {
     text-align: center;
 
     @include transition-multiple(margin-left 250ms, margin-right 250ms);
-    &.compressed {
-        margin-left: .2rem;
-        margin-right: .2rem;
-    }
 
     > .course-department {
         grid-row: 1 / 2;

@@ -150,6 +150,7 @@
 
                     @include transform(rotate(270deg));
                 }
+
                 > .requirement-courses {
                     grid-column: 2 / 3;
 
@@ -157,9 +158,19 @@
                     flex-flow: row wrap;
                     justify-content: flex-end;
 
+                    > .no-placeholder {
+                        display: none;
+                    }
+
                     > .course.disabled {
                         border: dashed .2rem $gray;
 
+                        > .course-offered {
+                            display: none;
+                        }
+
+                        /* originally described where the
+                           course is on the user's schedule
                         > .course-appears {
                             grid-row: 3 / 4;
 
@@ -172,14 +183,14 @@
                             > .course-appears-term {
                                 grid-row: 2 / 3;
                             }
-                        }
+                        }*/
                     }
                 }
             }
         }
     }
 
-    &#catalog-menu > .menu-content {
+    &#catalog-menu .catalog-courses {
         display: flex;
         flex-flow: row wrap;
         justify-content: flex-end;
