@@ -71,6 +71,10 @@ var menus = require('./routes/menus');
 var reqs = require('./routes/reqs');
 var schedule = require('./routes/schedule');
 
+var record = require('./routes/record');
+app.post('/record', record.time);
+app.get('/get-record', record.get);
+
 app.get('/', index.view);
 
 app.post('/users-new', users.new)
