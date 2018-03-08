@@ -3,7 +3,7 @@
 		"requirements": [0,
 			[0, "HUM1", "HUM2", "HUM3", "HUM4", "HUM5"],
 			[0, [1, "MATH10A", "MATH20A"],
-                [1, "MATH10A", "MATH20B"],
+                [1, "MATH20B", "MATH20B"],
                 [1, "MATH10C", "MATH20C", "MATH11", "MATH18", "PHIL10"]],
 			[0, [1, "BILD7", "BILD10", "BILD12", "BILD26", "BILD1", "BILD2", "BILD3"],
 				[1, "CHEM11", "CHEM12", "CHEM13", "CHEM4", "CHEM6A", "CHEM6B", "CHEM6C", "CHEM6AH", "CHEM6BH", "CHEM6CH"],
