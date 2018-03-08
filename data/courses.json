@@ -10,7 +10,7 @@
 		"requirements": [0, "CHEM6A"],
 		"offered": ["f", "w", "s", "s1", "s2"]
 	},
-	
+
 	"BILD10": {
 		"name": "Fundamental Concepts of Modern Biology",
 		"department": "BILD",
@@ -22,7 +22,7 @@
 		"requirements": [],
 		"offered": ["f", "s2"]
 	},
-	
+
 	"BILD12": {
 		"name": "Neurobiology and Behavior",
 		"department": "BILD",
@@ -46,7 +46,7 @@
 		"requirements": [0, "BILD1"],
 		"offered": ["f", "w", "s", "s1", "s2"]
 	},
-	
+
 	"BILD26": {
 		"name": "Human Physiology",
 		"department": "BILD",
@@ -202,7 +202,7 @@
 		"requirements": [1, "CHEM6B", "CHEM6BH"],
 		"offered": ["s"]
 	},
-	
+
 	"COGS1": {
 		"name": "Introduction to Cognitive Science",
 		"department": "COGS",
@@ -382,7 +382,7 @@
 		"requirements": [1, "BILD10", "BILD12", "COGS107A", "COGS107B", "COGS17"],
 		"offered": []
 	},
-	
+
 	"HDP110": {
 		"name": "Ensemble: Undergraduate Production",
 		"department": "HDP",
@@ -403,7 +403,7 @@
 		"division": 1,
 		"consent": [0, 0, 0, 0],
 		"crosslist": [["COGS170", 0]],
-		"requirements": [0, [1, "CSE11", "CSE8A"], 
+		"requirements": [0, [1, "CSE11", "CSE8A"],
                                        [1, "COGS1", "COGS187A", "DSGN1"]],
 		"offered": ["f", "w"]
 	},
@@ -596,7 +596,7 @@
 		"division": 1,
 		"consent": [0, 0, 0, 0],
 		"crosslist": [],
-		"requirements": [0, [1, "COGS107A", "PSYC106"], 
+		"requirements": [0, [1, "COGS107A", "PSYC106"],
 			                          [1, "COGS101A", "PSYC105"]],
 		"offered": ["f"]
 	},
@@ -687,7 +687,7 @@
 		"requirements": [0, "COMM10"],
 		"offered": ["f"]
 	},
-	
+
 	"COMM100B": {
 		"name": "Communication, Culture, and Representation",
 		"department": "COMM",
@@ -699,7 +699,7 @@
 		"requirements": [0, "COMM10"],
 		"offered": ["w"]
 	},
-	
+
 	"COMM100C": {
 		"name": "Communication, Institutions, and Power",
 		"department": "COMM",
@@ -867,7 +867,7 @@
 		"requirements": [],
 		"offered": []
 	},
-	
+
 	"ECON1": {
 		"name": "Principles of Microeconomics",
 		"department": "ECON",
@@ -877,9 +877,9 @@
 		"consent": [0, 0, 0, 0],
 		"crosslist":[],
 		"requirements": [],
-		"offered": ["f", "w", "s"]	
-	}
-	
+		"offered": ["f", "w", "s"]
+	},
+
 	"ECON2": {
 		"name": "Market Imperfections and Policy",
 		"department": "ECON",
@@ -889,9 +889,9 @@
 		"consent": [0, 0, 0, 0],
 		"crosslist":[],
 		"requirements": [0, "ECON1"],
-		"offered": ["f", "w"]	
-	}
-	
+		"offered": ["f", "w"]
+	},
+
 		"ECON3": {
 		"name": "Principles of Macroeconomics",
 		"department": "ECON",
@@ -901,9 +901,9 @@
 		"consent": [0, 0, 0, 0],
 		"crosslist":[],
 		"requirements": [0, "ECON1"],
-		"offered": ["f", "w", "s"]	
-	}
-	
+		"offered": ["f", "w", "s"]
+	},
+
 	"ECON4": {
 		"name": "Financial Accounting",
 		"department": "ECON",
@@ -913,9 +913,9 @@
 		"consent": [0, 0, 0, 0],
 		"crosslist":[["MGT4", 0]],
 		"requirements": [],
-		"offered": ["f", "w", "s"]	
-	}
-	
+		"offered": ["f", "w", "s"]
+	},
+
 	"ECON5": {
 		"name": "Data Analytics for the Social Sciences",
 		"department": "ECON",
@@ -925,8 +925,8 @@
 		"consent": [0, 0, 0, 0],
 		"crosslist":[["POLI5", 0], ["POLI5D", 0]],
 		"requirements": [],
-		"offered": ["w", "s"]	
-	}
+		"offered": ["w", "s"]
+	},
 
 	"ENG100D": {
 		"name": "Design for Development",
@@ -936,7 +936,7 @@
 		"division": 1,
 		"consent": [0, 0, 0, 0],
 		"crosslist": [],
-		"requirements": [0, "HUM2"]
+		"requirements": [0, "HUM2"],
 		"offered": []
 	},
 
@@ -1138,7 +1138,7 @@
 		"requirements": [],
 		"offered": ["f"]
 	},
-	
+
 	"MATH31BH": {
 		"name": "Honors Multivariable Calculus",
 		"department": "MATH",
@@ -1174,7 +1174,7 @@
 		"requirements": [],
 		"offered": ["f", "w", "s"]
 	},
-	
+
 	"PHIL10": {
 		"name": "Introduction to Logic",
 		"department": "PHIL",
@@ -1186,7 +1186,7 @@
 		"requirements": [],
 		"offered": ["f", "w", "s"]
 	},
-	
+
 		"PHYS10": {
 		"name": "Concepts in Physics",
 		"department": "PHYS",
@@ -1267,9 +1267,9 @@
 		"division": 0,
 		"consent": [0, 0, 0, 0],
 		"crosslist": [],
-		"requirements": [0, [1, "PHYS1A", "PHYS2A"], 
-			                           [1, "PHYS1AL", "PHYS1BL"], 
-			                           [1, "MATH10B", "MATH20B"]],
+		"requirements": [0, [1, "PHYS1A", "PHYS2A"],
+			                [1, "PHYS1AL", "PHYS1BL"],
+			                [1, "MATH10B", "MATH20B"]],
 		"offered": ["f", "w", "s"]
 	},
 
@@ -1281,8 +1281,8 @@
 		"division": 0,
 		"consent": [0, 0, 0, 0],
 		"crosslist": [],
-		"requirements": [0, [1, "PHYS1A", "PHYS2A"], 
-			                [1, "PHYS1AL", "PHYS2AL"], 
+		"requirements": [0, [1, "PHYS1A", "PHYS2A"],
+			                [1, "PHYS1AL", "PHYS2AL"],
 			                [1, "MATH10B", "MATH20B"]],
 		"offered": ["f", "w", "s"]
 	},
@@ -1295,8 +1295,8 @@
 		"division": 0,
 		"consent": [0, 0, 0, 0],
 		"crosslist": [],
-		"requirements": [0, [1, "PHYS1B", "PHYS2B"], 
-			                          [1, "PHYS1BL", "PHYS2BL"], 
+		"requirements": [0, [1, "PHYS1B", "PHYS2B"],
+			                          [1, "PHYS1BL", "PHYS2BL"],
 			                          [1, "MATH10C", "MATH20C", "MATH31BH", "MATH11"]],
 		"offered": ["f", "w", "s"]
 	},
@@ -1309,8 +1309,8 @@
 		"division": 0,
 		"consent": [0, 0, 0, 0],
 		"crosslist": [],
-		"requirements": [0, [1, "PHYS1B", "PHYS2B"], 
-		                              [1, "PHYS1BL", "PHYS2BL"], 
+		"requirements": [0, [1, "PHYS1B", "PHYS2B"],
+		                              [1, "PHYS1BL", "PHYS2BL"],
 		                              [1, "MATH10C", "MATH20C", "MATH31BH", "MATH11"]],
 		"offered": ["f", "w", "s"]
 	},
@@ -1347,7 +1347,7 @@
 		"division": 0,
 		"consent": [0, 0, 0, 0],
 		"crosslist": [],
-		"requirements": [0, [1, "PHYS2A", "PHYS4A"], "MATH20A", "MATH20B", 
+		"requirements": [0, [1, "PHYS2A", "PHYS4A"], "MATH20A", "MATH20B",
 			                [1, "MATH20C", "MATH31BH"]],
 		"offered": ["f", "w", "s"]
 	},
@@ -1411,7 +1411,7 @@
 		"requirements": [0, [1, "PHYS2A", "PHYS4A"], [1, "PHYS2C", "PHYS4B"], [1, "MATH20C", "MATH31BH"], [1, "MATH18", "MATH20F", "MATH31AH"]],
 		"offered": ["w"]
 	},
-	
+
 	"PHYS4E": {
 		"name": "Physics for Physics Majors—Quantum Physics",
 		"department": "PHYS",
@@ -1420,13 +1420,13 @@
 		"division": 0,
 		"consent": [0, 0, 0, 0],
 		"crosslist": [],
-		"requirements": [0, [1, "PHYS2A", "PHYS4A"], 
-		                              [1, "PHYS2B", "PHYS4C"], 
-		                              [1, "PHYS2C", "PHYS4B"], 
-		                              [1, "PHYS2D", "PHYS4D"], 
-		                              [0, "MATH20A", "MATH20B", "MATH20D"],
-		                              [1, "MATH20C", "MATH31BH"], 
-		                              [1, "MATH18", "MATH20F", "MATH31AH"]],
+		"requirements": [0, [1, "PHYS2A", "PHYS4A"],
+		                    [1, "PHYS2B", "PHYS4C"],
+		                    [1, "PHYS2C", "PHYS4B"],
+		                    [1, "PHYS2D", "PHYS4D"],
+		                    [0, "MATH20A", "MATH20B", "MATH20D"],
+		                    [1, "MATH20C", "MATH31BH"],
+		                    [1, "MATH18", "MATH20F", "MATH31AH"]],
 		"offered": ["s"]
 	},
 
@@ -1477,7 +1477,7 @@
 		"requirements": [],
 		"offered": ["s"]
 	},
-	
+
 	"PSYC105": {
 		"name": "Cognitive Psychology",
 		"department": "PSYC",
@@ -1489,7 +1489,7 @@
 		"requirements": [],
 		"offered": ["s"]
 	},
-	
+
 	"PSYC106": {
 		"name": "Behavioural Neuroscience",
 		"department": "PSYC",
@@ -1537,7 +1537,7 @@
 		"requirements": [],
 		"offered": ["f", "w", "s"]
 	},
-	
+
 	"TDAC101": {
 		"name": "Acting I",
 		"department": "TDAC",
@@ -1549,7 +1549,7 @@
 		"requirements": [1, "THAC1", "TDAC1"],
 		"offered": ["f", "w", "s"]
 	},
-	
+
 	"TDAC102": {
 		"name": "Acting II",
 		"department": "TDAC",
@@ -1561,7 +1561,7 @@
 		"requirements": [0, "TDAC101"],
 		"offered": ["f", "w", "s"]
 	},
-	
+
 	"TDAC103A": {
 		"name": "Acting Intensive I",
 		"department": "TDAC",
@@ -1573,7 +1573,7 @@
 		"requirements": [0, "TDAC102"],
 		"offered": ["f"]
 	},
-	
+
 	"TDAC103B": {
 		"name": "Acting Intensive II",
 		"department": "TDAC",
@@ -1585,8 +1585,8 @@
 		"requirements": [0, "TDAC103A"],
 		"offered": ["w"]
 	},
-	
-"TDAC104": {
+
+	"TDAC104": {
 		"name": "Classical Text",
 		"department": "TDAC",
 		"code": "104",
@@ -1597,7 +1597,7 @@
 		"requirements": [0, "TDAC102"],
 		"offered": []
 	},
-	
+
 	"TDAC105": {
 		"name": "Rehearing Shakespeare",
 		"department": "TDAC",
@@ -1609,7 +1609,7 @@
 		"requirements": [0, "TDAC102"],
 		"offered": []
 	},
-	
+
 	"TDAC106": {
 		"name": "Chekhov Acting",
 		"department": "TDAC",
@@ -1621,7 +1621,7 @@
 		"requirements": [0, "TDAC102"],
 		"offered": []
 	},
-	
+
 	"TDAC107": {
 		"name": "Improvisation for the Theatre",
 		"department": "TDAC",
@@ -1633,7 +1633,7 @@
 		"requirements": [1, "THAC1", "TDAC1"],
 		"offered": ["f"]
 	},
-	
+
 	"TDAC108": {
 		"name": "Advanced Topics",
 		"department": "TDAC",
@@ -1645,7 +1645,7 @@
 		"requirements": [0, "TDAC102"],
 		"offered": ["f", "w"]
 	},
-	
+
 	"TDAC109": {
 		"name": "Singing for Actors",
 		"department": "TDAC",
@@ -1657,7 +1657,7 @@
 		"requirements": [1, "TDAC1", "THAC1"],
 		"offered": ["s"]
 	},
-	
+
 	"TDAC110": {
 		"name": "Acting for the Camera",
 		"department": "TDAC",
@@ -1669,7 +1669,7 @@
 		"requirements": [0, "TDAC102"],
 		"offered": ["s"]
 	},
-	
+
 	"TDAC111": {
 		"name": "Freeing the Voice",
 		"department": "TDAC",
@@ -1681,7 +1681,7 @@
 		"requirements": [0, "TDAC101"],
 		"offered": ["s"]
 	},
-	
+
 	"TDAC112": {
 		"name": "Senior Seminar in Acting",
 		"department": "TDAC",
@@ -1693,7 +1693,7 @@
 		"requirements": [0, "TDAC102"],
 		"offered": ["f"]
 	},
-	
+
 	"TDAC115": {
 		"name": "Movement for Actors",
 		"department": "TDAC",
@@ -1713,11 +1713,11 @@
 		"units": 4,
 		"division": 1,
 		"consent": [1, 1, 0, 0],
-		"crosslist": [["ETHN146A", 0],
+		"crosslist": [["ETHN146A", 0]],
 		"requirements": [0, "TDAC102"],
 		"offered": []
 	},
-	
+
 	"TDAC122": {
 		"name": "Ensemble: Undergraduate Production",
 		"department": "TDAC",
@@ -1729,7 +1729,7 @@
 		"requirements": [0, "TDAC102"],
 		"offered": ["f", "w", "s"]
 	},
-	
+
 	"TDAC123": {
 		"name": "Advanced Studies in Performance",
 		"department": "TDAC",
