@@ -126,10 +126,10 @@ function showCourseInfoDialog(event) {
         $('#course-info > button.delete').tap(function(event) {
             event.preventDefault();
             // delete the class and send the parent term div to server
-            var temp = $(courseCard).parent();
+            var term = $(courseCard).parent();
             updateReqs(course, 'removed');
             $(courseCard).remove();
-            updateUserData(temp, populateReqs);
+            updateUserData(term, populateReqs);
             $('#course-info').dialog('close');
         });
         $('#course-info').dialog('open');
@@ -149,7 +149,37 @@ function updateUserData(termElem, callback) {
             return $(this).data('course');
         }).get()
     }
-    $.post('/schedule-change', newCourses, callback);
+    $.post('/schedule-change', newCourses, function(result) {
+        if (callback){
+            callback();
+        }
+        setCardOutlineColors();
+    });
+}
+
+function setCardOutlineColors() {
+    var scheduleName = "My Schedule";
+    $.get('/schedule-check/'+USER_NAME+'/'+scheduleName, function(result) {
+        var years = result[scheduleName];
+        for (let year in years) {
+            for (let term in years[year]) {
+                for (let course in years[year][term]) {
+                    let courseCard = $('.year').filter(function() {
+                        return $(this).data('year') === year;
+                    }).children('.term').filter(function() {
+                        return $(this).data('term') === term;
+                    }).children('.course').filter(function() {
+                        return $(this).data('course') === course;
+                    })
+                    if (years[year][term][course]) {
+                        courseCard.css('border-color', 'green');
+                    } else {
+                        courseCard.css('border-color', 'red');
+                    }
+                }
+            }
+        }
+    });
 }
 
 // schedules
@@ -167,7 +197,7 @@ $(function() {
             if (ui.sender.hasClass('requirement-courses') || ui.sender.hasClass('catalog-courses')) {
                 ui.sender.data('copyComplete', true);
             }
-            updateUserData(this, setCardOutlineColors);
+            updateUserData(this);
             setCardTermColors.apply(ui.item);
             ui.item.tap(showCourseInfoDialog);
             updateReqs(ui.item.data('course'), 'added');
@@ -182,31 +212,6 @@ $(function() {
             }
         },
     });
-
-    function setCardOutlineColors() {
-        var scheduleName = "My Schedule";
-        $.get('/schedule-check/'+USER_NAME+'/'+scheduleName, function(result) {
-            var years = result[scheduleName];
-            for (let year in years) {
-                for (let term in years[year]) {
-                    for (let course in years[year][term]) {
-                        let courseCard = $('.year').filter(function() {
-                            return $(this).data('year') === year;
-                        }).children('.term').filter(function() {
-                            return $(this).data('term') === term;
-                        }).children('.course').filter(function() {
-                            return $(this).data('course') === course;
-                        })
-                        if (years[year][term][course]) {
-                            courseCard.css('border-color', 'green');
-                        } else {
-                            courseCard.css('border-color', 'red');
-                        }
-                    }
-                }
-            }
-        });
-    }
 
     // only apply this to things; do not call on its own
     function setCardTermColors() {
