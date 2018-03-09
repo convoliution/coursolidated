@@ -17,6 +17,20 @@ html {
 @import 'menus';
 @import 'main';
 
+#mask {
+    display: none; // hidden initially
+
+    position: absolute;
+    top: 0;
+
+    height: 100vh;
+    width: 100vw;
+
+    background-color: rgba(141, 141, 141, .5);
+
+    z-index: 5; // should be one more than than index of highest menu
+}
+
 .course, .term > .no-placeholder {
     width: 3rem;
 }
@@ -98,4 +112,8 @@ html {
     width: 5rem;
     text-align: center;
     font: 8px;
+}
+
+* {
+    font-family: 'Lato', sans-serif;
 }

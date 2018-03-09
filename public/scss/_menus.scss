@@ -58,13 +58,15 @@
 
         overflow-y: scroll;
 
-        > button {
+        button {
             height: $tile-height;
             width: 100%;
-            background-color: white;
 
-            font-family: 'Lato', sans-serif;
             font-weight: 100;
+        }
+
+        > button {
+            background-color: white;
             font-size: 2.0rem;
         }
 
@@ -75,8 +77,6 @@
             overflow-y: hidden;
 
             > button {
-                height: $tile-height;
-                width: 100%;
                 &.name { background-color: white; }
                 &.confirm { background-color: lightgreen; }
             }
@@ -204,10 +204,8 @@
     }
     &#majors-menu, &#minors-menu, &#colleges-menu {
         z-index: 4;
-
     }
 
-    font-family: 'Lato', sans-serif;
     font-weight: 500;
     &#main-menu {
         font-size: 2.5rem;
@@ -215,27 +213,7 @@
     &#profile-menu, &#reqs-menu, &#catalog-menu, &#settings-menu, &#majors-menu, &#minors-menu, &#colleges-menu {
         font-size: 1.8rem;
     }
-}
-
-main > #info {
-    position: absolute;
-    @include calc(left, '-100vw + #{$menu-width-small}');
-    @include breakpoint(small) {
-        @include calc(left, '-100vw + #{$menu-width-medium}');
+    > .menu-top {
+        font-size: 2.1rem;
     }
-    @include breakpoint(medium) {
-        @include calc(left, '-100vw + #{$menu-width-large}');
-    }
-
-    @include calc(height, '100vh - #{$tile-height}');
-    @include calc(width, '100vw - #{$menu-width-small}');
-    @include breakpoint(small) {
-        @include calc(width, '100vw - #{$menu-width-medium}');
-    }
-    @include breakpoint(medium) {
-        @include calc(width, '100vw - #{$menu-width-large}');
-    }
-    z-index: 1;
-
-    background-color: white;
 }

@@ -111,6 +111,11 @@
             </div>
         </div>
         <main>
+            <div id="info">
+                <button id="close">close</button>
+                <div></div>
+                <button id="delete">delete<br>course</button>
+            </div>
             {{#with user}}
                 {{#each schedules}}
                     <div class="schedule" data-schedule="{{name}}">
@@ -126,9 +131,7 @@
                 {{/each}}
             {{/with}}
         </main>
-        <div id="info">
-
-        </div>
+        <div id="mask"></div>
         <div id="login">
             <p>Username:<input type="text" name="user"></p>
             <p>Password:<input type="text" name="user"></p>

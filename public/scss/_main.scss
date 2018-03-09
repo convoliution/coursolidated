@@ -1,6 +1,48 @@
 main {
     @include calc(height, '100vh - #{$tile-height}');
 
+    > #info {
+        display: none;
+
+        position: absolute;
+        right: 0;
+        @include calc(height, '.9*(100vh - #{$tile-height})');
+        @include calc(margin-top, '.05*(100vh - #{$tile-height})');
+        @include calc(width, '.9*(100vw - #{$menu-width-small})');
+        @include breakpoint(small) {
+            @include calc(width, '.9*(100vw - #{$menu-width-medium})');
+        }
+        @include breakpoint(medium) {
+            @include calc(width, '.9*(100vw - #{$menu-width-large})');
+        }
+        @include calc(margin-right, '.05*(100vw - #{$menu-width-small})');
+        @include breakpoint(small) {
+            @include calc(margin-right, '.05*(100vw - #{$menu-width-medium})');
+        }
+        @include breakpoint(medium) {
+            @include calc(margin-right, '.05*(100vw - #{$menu-width-large})');
+        }
+        z-index: 6; // should be two more than than index of highest menu
+
+        border: 2px solid black;
+        background-color: white;
+
+        grid-template-columns: 1fr 4rem 2rem;
+        grid-template-rows: 2rem 1fr 3rem;
+
+        > button {
+            background-color: white;
+            grid-column: 2 / 4;
+
+            &#close {
+                grid-row: 1 / 2;
+            }
+            &#delete {
+                grid-row: 3 / 4;
+            }
+        }
+    }
+
     > .schedule {
         height: 100%;
         overflow-y: scroll;
