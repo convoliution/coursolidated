@@ -148,7 +148,12 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="/js/jquery.ui.touch-punch.min.js"></script>
         <script src="/js/arrayIncludes.js"></script>
-        <script src="/js/index.js"></script>
+        {{#unless viewAlt}}
+            <script src="/js/index.js"></script>
+        {{else}}
+            <script src="/js/indexAlt.js"></script>
+        {{/unless}}
         {{> facebook}}
+
     </body>
 </html>
