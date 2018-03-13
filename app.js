@@ -72,7 +72,6 @@ var reqs = require('./routes/reqs');
 var schedule = require('./routes/schedule');
 
 app.get('/', index.view);
-app.get('/alt', index.viewAlt);
 
 app.post('/users-new', users.new)
 
